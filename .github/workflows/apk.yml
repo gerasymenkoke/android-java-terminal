@@ -4,11 +4,12 @@ on:
    branches: [ main ]
 
 jobs:
-  
-   runs-on: ubuntu-latest
+  build-with-upload-artifact:
+
+    runs-on: ubuntu-latest
 
    
-   steps:
+    steps:
     
  
       
