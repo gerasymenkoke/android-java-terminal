@@ -20,6 +20,8 @@ jobs:
           java-version: 18.0.2+9
           distribution: 'adopt'
 
-    - name: Setup Android SDK
-      id: 'setup-android'
-      uses: ./build/
+    - name: Android JDK install
+      run: |
+             sudo apt-get install libc6-dev-i386 lib32z1 openjdk-8-jdk
+             pwd
+             ls -l 
