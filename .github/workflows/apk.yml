@@ -25,6 +25,6 @@ jobs:
              sudo apt-get install libc6-dev-i386 lib32z1 openjdk-8-jdk
              pwd
              ls -l 
-             cd android_sdk/tools/
+             cd /usr/local/lib/android/sdk/cmdline-tools/latest/bin
              pwd
              ls -l
