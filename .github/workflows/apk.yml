@@ -28,7 +28,7 @@ jobs:
              # cd /usr/local/lib/android/sdk/cmdline-tools/latest/bin
              # pwd
              # ls -l
-             cd /home/runner/work
+             cd /home/runner/work/_actions
              pwd
              ls -l 
              #chmod +x build.sh
