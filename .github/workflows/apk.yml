@@ -22,9 +22,9 @@ jobs:
 
     - name: Android JDK install
       run: |
-             sudo apt-get install libc6-dev-i386 lib32z1 openjdk-8-jdk
-             pwd
-             ls -l 
+             # sudo apt-get install libc6-dev-i386 lib32z1 openjdk-8-jdk
+             # pwd
+             # ls -l 
              # cd /usr/local/lib/android/sdk/cmdline-tools/latest/bin
              #pwd
              #ls -l
