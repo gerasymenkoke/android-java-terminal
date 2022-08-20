@@ -28,7 +28,7 @@ jobs:
              # cd /usr/local/lib/android/sdk/cmdline-tools/latest/bin
              # pwd
              # ls -l
-               cd /home/runner/work/android-java-terminal
+               cd /home/runner/work/android-java-terminal/android-java-terminal
              pwd
              ls -l 
              # chmod +x build.sh
