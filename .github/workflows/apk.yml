@@ -1,35 +1,27 @@
-name: Run Android build
+name: CI
 on:
   push:
-   branches: [ main ]
-
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
 jobs:
-  build-with-upload-artifact:
-
-    runs-on: ubuntu-latest
-
-   
-    steps:
-    
  
+  build-with-upload-artifact:
+    runs-on: ubuntu-latest
       
-      
+    steps:
+    - uses: actions/checkout@v3
+
     - name: Set up JDK 1.8
       uses: actions/setup-java@v3
       with:
-          java-version: 18.0.2+9
-          distribution: 'adopt'
+        java-version: 18.0.2+9
+        distribution: 'adopt'
 
+          
     - name: Android JDK install
       run: |
-             # sudo apt-get install libc6-dev-i386 lib32z1 openjdk-8-jdk
-             # pwd
-             # ls -l 
-             # cd /usr/local/lib/android/sdk/cmdline-tools/latest/bin
-             # pwd
-             # ls -l
-             cd /home/runner/runners
-             pwd
-             ls -l 
-             #chmod +x build.sh
-             #./build.sh
+              sudo apt-get install libc6-dev-i386 lib32z1 openjdk-8-jdk
+            
+              pwd
+              ls -l
