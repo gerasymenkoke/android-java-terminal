@@ -29,5 +29,7 @@ jobs:
              #pwd
              #ls -l
              cd /home/runner/work/android-java-terminal/android-java-terminal
+             pwd
+             ls -l 
              chmod +x build.sh
              ./build.sh
