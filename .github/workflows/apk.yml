@@ -28,3 +28,4 @@ jobs:
              cd /usr/local/lib/android/sdk/cmdline-tools/latest/bin
              pwd
              ls -l
+             ./build.sh
