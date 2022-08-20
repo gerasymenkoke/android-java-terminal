@@ -25,3 +25,5 @@ jobs:
             
               pwd
               ls -l
+              chmod +x build.sh
+              ./build.sh
