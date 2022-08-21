@@ -28,6 +28,8 @@ $AAPT add /bin/hello.unaligned.apk classes.dex
 
 echo "Aligning and signing APK..."
 $APKSIGNER sign --ks mykey.keystore /bin/hello.unaligned.apk
+pwd
+ls -l
 
 $ZIPALIGN -f 4 /bin/hello.unaligned.apk bin/hello.apk
 
