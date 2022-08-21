@@ -2,11 +2,11 @@
 
 set -e
 
-AAPT="/path/to/android-sdk/build-tools/23.0.3/aapt"
-DX="/path/to/android-sdk/build-tools/23.0.3/dx"
-ZIPALIGN="/path/to/android-sdk/build-tools/23.0.3/zipalign"
-APKSIGNER="/path/to/android-sdk/build-tools/26.0.1/apksigner" # /!\ version 26
-PLATFORM="/path/to/android-sdk/platforms/android-19/android.jar"
+AAPT="/usr/local/lib/android/sdk/build-tools/23.0.3/aapt"
+DX="/usr/local/lib/android/sdk/build-tools/23.0.3/dx"
+ZIPALIGN="/usr/local/lib/android/sdk/build-tools/23.0.3/zipalign"
+APKSIGNER="/usr/local/lib/android/sdk/build-tools/26.0.1/apksigner" # /!\ version 26
+PLATFORM="/usr/local/lib/android/sdk/platforms/android-19/android.jar"
 
 echo "Cleaning..."
 rm -rf obj/*
