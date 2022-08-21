@@ -40,7 +40,7 @@ $AAPT add $PROJ/bin/hello.unaligned.apk classes.dex
 # $AAPT add /bin/hello.unaligned.apk classes.dex
 
 echo "Aligning and signing APK...."
-$APKSIGNER sign --ks $secrets.SIGNING_KEY $PROJ/bin/hello.unaligned.apk
+$APKSIGNER sign --ks mykey.keystore $PROJ/bin/hello.apk
 
 
 $ZIPALIGN -f 4 $PROJ/bin/hello.unaligned.apk bin/hello.apk
