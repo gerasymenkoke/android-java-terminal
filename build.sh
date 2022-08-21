@@ -1,7 +1,7 @@
 #!/bin/bash
 
 set -e
-PROJ="
+PROJ="/home/runner/work/android-java-terminal/android-java-terminal"
 AAPT="/usr/local/lib/android/sdk/build-tools/27.0.3/aapt"
 DX="/usr/local/lib/android/sdk/build-tools/27.0.3/dx"
 ZIPALIGN="/usr/local/lib/android/sdk/build-tools/27.0.3/zipalign"
