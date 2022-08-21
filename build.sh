@@ -45,7 +45,7 @@ $AAPT list $PROJ/bin/hello.unaligned.apk
 echo "Aligning and signing APK...."
 pwd
 ls -l
-$APKSIGNER sign --ks $PROJ/mykey.keystore $PROJ/bin/hello.apk
+$APKSIGNER sign --ks $PROJ/mykey.keystore  $PROJ/bin/hello.apk
 
 
 $ZIPALIGN -f 4 $PROJ/bin/hello.unaligned.apk bin/hello.apk
