@@ -32,9 +32,9 @@ echo "Making APK..."
 
 
 
-./aapt package -f -m -F $PROJ/bin/hello.unaligned.apk -M $PROJ/AndroidManifest.xml -S $PROJ/res -I $PLATFORM
+$AAPT package -f -m -F $PROJ/bin/hello.unaligned.apk -M $PROJ/AndroidManifest.xml -S $PROJ/res -I $PLATFORM
 cp $PROJ/bin/classes.dex
-./aapt add $PROJ/bin/hello.unaligned.apk classes.dex
+$AAPT add $PROJ/bin/hello.unaligned.apk classes.dex
 
 
 # $AAPT package -f -m -F /bin/hello.unaligned.apk -M AndroidManifest.xml -S res -I $PLATFORM
