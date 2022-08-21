@@ -1,7 +1,7 @@
 #!/bin/bash
 
 set -e
-
+PROJ="
 AAPT="/usr/local/lib/android/sdk/build-tools/27.0.3/aapt"
 DX="/usr/local/lib/android/sdk/build-tools/27.0.3/dx"
 ZIPALIGN="/usr/local/lib/android/sdk/build-tools/27.0.3/zipalign"
@@ -30,13 +30,15 @@ $DX --dex --output=classes.dex obj
 
 echo "Making APK..."
 
-cd /home/runner/work/android-java-terminal/android-java-terminal
-mkdir bin
-pwd
-ls -l
 
-$AAPT package -f -m -F /bin/hello.unaligned.apk -M AndroidManifest.xml -S res -I $PLATFORM
-$AAPT add /bin/hello.unaligned.apk classes.dex
+
+./aapt package -f -m -F $PROJ/bin/hello.unaligned.apk -M $PROJ/AndroidManifest.xml -S $PROJ/res -I $PLATFORM
+cp $PROJ/bin/classes.dex
+./aapt add $PROJ/bin/hello.unaligned.apk classes.dex
+
+
+# $AAPT package -f -m -F /bin/hello.unaligned.apk -M AndroidManifest.xml -S res -I $PLATFORM
+# $AAPT add /bin/hello.unaligned.apk classes.dex
 
 echo "Aligning and signing APK..."
 $APKSIGNER sign --ks mykey.keystore /bin/hello.unaligned.apk
