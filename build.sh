@@ -5,8 +5,8 @@ set -e
 AAPT="/usr/local/lib/android/sdk/build-tools/27.0.3/aapt"
 DX="/usr/local/lib/android/sdk/build-tools/27.0.3/dx"
 ZIPALIGN="/usr/local/lib/android/sdk/build-tools/27.0.3/zipalign"
-APKSIGNER="/usr/local/lib/android/sdk/build-tools/27.0.1/apksigner" # /!\ version 26
-PLATFORM="/usr/local/lib/android/sdk/platforms/android-19/android.jar"
+APKSIGNER="/usr/local/lib/android/sdk/build-tools/27.0.1/apksigner" # /!\ version 27
+PLATFORM="/usr/local/lib/android/sdk/platforms/android-27/android.jar"
 
 echo "Cleaning..."
 rm -rf obj/*
