@@ -39,6 +39,9 @@ $AAPT add $PROJ/bin/hello.unaligned.apk classes.dex
 # $AAPT package -f -m -F /bin/hello.unaligned.apk -M AndroidManifest.xml -S res -I $PLATFORM
 # $AAPT add /bin/hello.unaligned.apk classes.dex
 
+
+$AAPT list $PROJ/bin/hello.unaligned.apk
+
 echo "Aligning and signing APK...."
 pwd
 ls -l
