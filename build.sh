@@ -40,13 +40,13 @@ $AAPT add $PROJ/bin/hello.unaligned.apk classes.dex
 # $AAPT add /bin/hello.unaligned.apk classes.dex
 
 echo "Aligning and signing APK..."
-$APKSIGNER sign --ks mykey.keystore /bin/hello.unaligned.apk
+$APKSIGNER sign --ks mykey.keystore $PROJ/bin/hello.unaligned.apk
 
 
-$ZIPALIGN -f 4 /bin/hello.unaligned.apk bin/hello.apk
+$ZIPALIGN -f 4 $PROJ/bin/hello.unaligned.apk bin/hello.apk
 
 if [ "$1" == "test" ]; then
 	echo "Launching..."
-	adb install -r /bin/hello.apk
+	adb install -r $PROJ/bin/hello.apk
 	adb shell am start -n com.example.helloandroid/.MainActivity
 fi
