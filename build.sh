@@ -23,15 +23,15 @@ echo "Translating in Dalvik bytecode..."
 $DX --dex --output=classes.dex obj
 
 echo "Making APK..."
-$AAPT package -f -m -F bin/hello.unaligned.apk -M AndroidManifest.xml -S res -I $PLATFORM
-$AAPT add bin/hello.unaligned.apk classes.dex
+$AAPT package -f -m -F /usr/local/lib/android/sdk/platforms/android-27/bin/hello.unaligned.apk -M AndroidManifest.xml -S res -I $PLATFORM
+$AAPT add /usr/local/lib/android/sdk/platforms/android-27/bin/hello.unaligned.apk classes.dex
 
 echo "Aligning and signing APK..."
-$APKSIGNER sign --ks mykey.keystore bin/hello.unaligned.apk
-$ZIPALIGN -f 4 bin/hello.unaligned.apk bin/hello.apk
+$APKSIGNER sign --ks mykey.keystore /usr/local/lib/android/sdk/platforms/android-27/bin/hello.unaligned.apk
+$ZIPALIGN -f 4 /usr/local/lib/android/sdk/platforms/android-27/bin/hello.unaligned.apk bin/hello.apk
 
 if [ "$1" == "test" ]; then
 	echo "Launching..."
-	adb install -r bin/hello.apk
+	adb install -r /usr/local/lib/android/sdk/platforms/android-27/bin/hello.apk
 	adb shell am start -n com.example.helloandroid/.MainActivity
 fi
