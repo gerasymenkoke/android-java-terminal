@@ -11,7 +11,7 @@ PLATFORM="/usr/local/lib/android/sdk/platforms/android-27/android.jar"
 echo "Cleaning..."
 rm -rf obj/*
 rm -rf src/com/example/helloandroid/R.java
-
+mkdir bin
 
 
 
