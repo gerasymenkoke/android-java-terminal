@@ -23,6 +23,7 @@ echo "Translating in Dalvik bytecode..."
 $DX --dex --output=classes.dex obj
 
 echo "Making APK..."
+cd /home/runner/work/android-java-terminal/android-java-terminal/obj
 pwd
 ls -l
 $AAPT package -f -m -F /bin/hello.unaligned.apk -M AndroidManifest.xml -S res -I $PLATFORM
