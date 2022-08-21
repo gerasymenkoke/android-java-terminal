@@ -5,7 +5,7 @@ PROJ="/home/runner/work/android-java-terminal/android-java-terminal"
 AAPT="/usr/local/lib/android/sdk/build-tools/27.0.3/aapt"
 DX="/usr/local/lib/android/sdk/build-tools/27.0.3/dx"
 ZIPALIGN="/usr/local/lib/android/sdk/build-tools/27.0.3/zipalign"
-APKSIGNER="/usr/local/lib/android/sdk/build-tools/27.0.3/apksigner" #  /!\ version 27
+APKSIGNER="/usr/local/lib/android/sdk/build-tools/27.0.3/apksigner" 
 PLATFORM="/usr/local/lib/android/sdk/platforms/android-27/android.jar"
 
 echo "Cleaning..."
@@ -40,6 +40,8 @@ $AAPT add $PROJ/bin/hello.unaligned.apk classes.dex
 # $AAPT add /bin/hello.unaligned.apk classes.dex
 
 echo "Aligning and signing APK...."
+pwd
+ls -l
 $APKSIGNER sign --ks $PROJ/mykey.keystore $PROJ/bin/hello.apk
 
 
