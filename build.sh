@@ -42,6 +42,6 @@ $AAPT add $PROJ/bin/hello.unaligned.apk classes.dex
 
 
 $AAPT list $PROJ/bin/hello.unaligned.apk
-cd $PROJ/bin/hello.unaligned.apk
+cd $PROJ/bin
 pwd
 ls -l
