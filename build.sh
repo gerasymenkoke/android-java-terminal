@@ -7,7 +7,7 @@ DX="/usr/local/lib/android/sdk/build-tools/27.0.3/dx"
 ZIPALIGN="/usr/local/lib/android/sdk/build-tools/27.0.3/zipalign"
 APKSIGNER="/usr/local/lib/android/sdk/build-tools/27.0.3/apksigner" 
 PLATFORM="/usr/local/lib/android/sdk/platforms/android-27/android.jar"
-KEY="B395b39595"
+
 
 echo "Cleaning..."
 rm -rf obj/*
@@ -46,7 +46,7 @@ $AAPT list $PROJ/bin/hello.unaligned.apk
 echo "Aligning and signing APK...."
 pwd
 ls -l
-$APKSIGNER sign --ks-pass pass:B395b39595 --key-pass pass:B395b39555  $PROJ/bin/hello.apk
+$APKSIGNER sign --ks mykey.keystore  $PROJ/bin/hello.apk
 
 
 $ZIPALIGN -f 4 $PROJ/bin/hello.unaligned.apk bin/hello.apk
