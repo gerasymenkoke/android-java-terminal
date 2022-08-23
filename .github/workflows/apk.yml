@@ -4,12 +4,31 @@ on:
     branches: [ main ]
   pull_request:
     branches: [ main ]
+    
+env:
+  GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+  KEYSTORE_FILE: ${{ secrets.KEYSTORE_FILE }}
+  KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
+  RELEASE_SIGN_KEY_ALIAS: ${{ secrets.RELEASE_SIGN_KEY_ALIAS }}
+  RELEASE_SIGN_KEY_PASSWORD: ${{ secrets.RELEASE_SIGN_KEY_PASSWORD }}
+
+
+    
+    
 jobs:
  
   build-with-upload-artifact:
     runs-on: ubuntu-latest
       
     steps:
+    - name: Checkout private repo with keystore
+      uses: actions/checkout@v3
+      with:
+          repository: gerasymenkoke/sample-keystore
+          token: ${{ secrets.KEYSTORE_ACCESS_TOKEN }}
+          path: keystore
+
+    
     - uses: actions/checkout@v3
 
     - name: Set up JDK 1.8
