@@ -18,19 +18,27 @@ jobs:
           java-version: 18.0.2+9
           distribution: 'adopt'
 
-    - name: Android JDK install
+    - name: Android JDK install and apk build
       run: |
              sudo apt-get install libc6-dev-i386 lib32z1 openjdk-8-jdk
-             # pwd
-             # ls -l 
-             # cd /usr/local/lib/android/sdk/cmdline-tools/latest/bin
-             # pwd
-             # ls -l
-             cd /usr/local/lib/android/sdk/platforms
-             pwd
-             ls -l
-             cd /home/runner/work/android-java-terminal/android-java-terminal
              pwd
              ls -l 
              chmod +x build.sh
              ./build.sh
+             
+    - name: Upload APK
+      uses: actions/upload-artifact@v2
+      with:
+          name: app-release.apk
+          path: app/build/outputs/apk/release/app-release.apk         
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
