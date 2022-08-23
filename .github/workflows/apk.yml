@@ -17,9 +17,9 @@ jobs:
     steps:
     - name: Checkout private repo with keystore
       uses: actions/checkout@v3
-      with:
-          token: ${{ secrets.KEYSTORE_ACCESS_TOKEN }}
-          path: keystore
+      env:
+          KEYSTORE_ACCESS_TOKEN: ${{ secrets.KEYSTORE_ACCESS_TOKEN }}
+         
 
     
     - uses: actions/checkout@v3
