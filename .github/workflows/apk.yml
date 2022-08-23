@@ -18,7 +18,7 @@ jobs:
     - name: Checkout private repo with keystore
       uses: actions/checkout@v3
       with:
-          repository: gerasymenkoke
+          repository: gerasymenkoke/android-java-terminal
           token: ${{ secrets.KEYSTORE_ACCESS_TOKEN }}
           path: keystore
 
