@@ -18,7 +18,7 @@ jobs:
     - name: Checkout private repo with keystore
       uses: actions/checkout@v3
       with:
-          repository: gerasymenkoke/sample-keystore
+          repository: gerasymenkoke
           token: ${{ secrets.KEYSTORE_ACCESS_TOKEN }}
           path: keystore
 
