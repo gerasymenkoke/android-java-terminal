@@ -40,7 +40,15 @@ jobs:
           name: hello.unaligned.apk
           path: /home/runner/work/android-java-terminal/android-java-terminal/bin      
           
-          
+     
+    - name: mkdir app/....
+      run: |
+             mkdir  app/ 
+     
+     
+     
+     
+     
     - name: Sign APK
       id: sign_apk
       uses: r0adkll/sign-android-release@v1
