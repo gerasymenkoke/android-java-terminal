@@ -33,7 +33,8 @@ jobs:
              ls -l 
              chmod +x build.sh
              ./build.sh
-             
+        
+        
     - name: Upload APK
       uses: actions/upload-artifact@v2
       with:
@@ -43,7 +44,7 @@ jobs:
      
     - name: mkdir app/....
       run: |
-             mkdir  app/ 
+             mkdir /app/build/outputs/apk/release
      
      
      
