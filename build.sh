@@ -44,6 +44,7 @@ cd $PROJ/bin
 pwd
 ls -l
 
+keytool -genkeypair -validity 365 -keystore mykey.keystore -keyalg RSA -keysize 2048
 
 $APKSIGNER sign --ks mykey.keystore $PROJ/bin/hello.apk
 
