@@ -37,11 +37,16 @@ $AAPT package -f -m -F $PROJ/bin/hello.unaligned.apk -M $PROJ/AndroidManifest.xm
 $AAPT add $PROJ/bin/hello.unaligned.apk classes.dex
 
 
-# $AAPT package -f -m -F /bin/hello.unaligned.apk -M AndroidManifest.xml -S res -I $PLATFORM
-# $AAPT add /bin/hello.unaligned.apk classes.dex
 
 
 $AAPT list $PROJ/bin/hello.unaligned.apk
 cd $PROJ/bin
 pwd
 ls -l
+
+
+$APKSIGNER sign --ks mykey.keystore $PROJ/bin/hello.apk
+
+
+
+
