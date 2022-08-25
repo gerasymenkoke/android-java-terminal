@@ -35,30 +35,30 @@ jobs:
              ./build.sh
         
         
-    - name: Upload APK
-      uses: actions/upload-artifact@v2
-      with:
-          name: hello.unaligned.apk
-          path: /home/runner/work/android-java-terminal/android-java-terminal/bin      
+    # - name: Upload APK
+     #  uses: actions/upload-artifact@v2
+    #   with:
+      #     name: hello.unaligned.apk
+      #     path: /home/runner/work/android-java-terminal/android-java-terminal/bin      
           
      
-    - name: mkdir app/....
-      run: |
-             # mkdir  /home/runner/work/android-java-terminal/android-java-terminal/app/build/outputs/apk/release
+   #  - name: mkdir app/....
+    #   run: |
+              # mkdir  /home/runner/work/android-java-terminal/android-java-terminal/app/build/outputs/apk/release
      
      
      
      
      
-    - name: Sign APK
-      id: sign_apk
-      uses: r0adkll/sign-android-release@v1
-      with:
-          releaseDirectory: /home/runner/work/android-java-terminal/android-java-terminal/bin
-          signingKeyBase64: ${{ secrets.SIGNINGKEYBASE64 }}
-          alias: ${{ secrets.ALIAS }}
-          keyStorePassword: ${{ secrets.KEYSTOREPASSWORD }}
-          keyPassword: ${{ secrets.KEYPASSWORD }}
+  #  - name: Sign APK
+   #    id: sign_apk
+ #      uses: r0adkll/sign-android-release@v1
+  #     with:
+    #       releaseDirectory: /home/runner/work/android-java-terminal/android-java-terminal/bin
+      #     signingKeyBase64: ${{ secrets.SIGNINGKEYBASE64 }}
+        #   alias: ${{ secrets.ALIAS }}
+          # keyStorePassword: ${{ secrets.KEYSTOREPASSWORD }}
+           #keyPassword: ${{ secrets.KEYPASSWORD }}
              
              
              
