@@ -45,10 +45,9 @@ pwd
 ls -l
 
 printf 'B395b39595\nB395b39595\nA\nB\nC\nD\nE\nUA\nYes\n' | keytool -genkeypair -validity 365 -keystore mykey.keystore -keyalg RSA -keysize 2048 
-openssl base64 -in mykey.keystore 
 pwd
 ls -l
-
+chmod +x mykey.keystore
 
 $APKSIGNER sign --ks /home/runner/work/android-java-terminal/android-java-terminal/bin/mykey.keystore $PROJ/bin/hello.apk
 
