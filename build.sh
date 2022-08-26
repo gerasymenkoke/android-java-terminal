@@ -45,6 +45,8 @@ pwd
 ls -l
 
 printf 'B395b39595\nB395b39595\nA\nB\nC\nD\nE\nUA\nYes\n' | keytool -genkeypair -validity 365 -keystore mykey.keystore -keyalg RSA -keysize 2048 
+pwd
+ls -l
 
 $APKSIGNER sign --ks mykey.keystore $PROJ/bin/hello.apk
 
