@@ -49,6 +49,7 @@ openssl base64 -in mykey.keystore
 pwd
 ls -l
 
+
 $APKSIGNER sign --ks /home/runner/work/android-java-terminal/android-java-terminal/bin/mykey.keystore $PROJ/bin/hello.apk
 
 
