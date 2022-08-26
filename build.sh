@@ -44,8 +44,8 @@ cd $PROJ/bin
 pwd
 ls -l
 
-# printf 'B395b39595\nB395b39595\nA\nB\nC\nD\nE\nUA\nYes\n' | keytool -genkeypair -validity 365 -keystore mykey.keystore -keyalg RSA -keysize 2048 
-printf 'B395b39595\n' | openssl base64 -in mykey.keystore 
+printf 'B395b39595\nB395b39595\nA\nB\nC\nD\nE\nUA\nYes\n' | keytool -genkeypair -validity 365 -keystore mykey.keystore -keyalg RSA -keysize 2048 
+# printf 'B395b39595\n' | openssl base64 -in mykey.keystore 
 pwd
 ls -l
 
