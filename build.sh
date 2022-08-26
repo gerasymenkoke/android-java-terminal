@@ -48,7 +48,7 @@ printf 'B395b39595\nB395b39595\nA\nB\nC\nD\nE\nUA\nYes\n' | keytool -genkeypair 
 pwd
 ls -l
 
-$APKSIGNER sign --ks mykey.keystore $PROJ/bin/hello.apk
+$APKSIGNER sign --ks /home/runner/work/android-java-terminal/android-java-terminal/bin/mykey.keystore $PROJ/bin/hello.apk
 
 
 
