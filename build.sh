@@ -44,7 +44,7 @@ cd $PROJ/bin
 pwd
 ls -l
 
-printf 'B395b39595\nB395b39595\n\A\n\B\n\C\n\D\n\E\n\F\n\UA\n\Yes\n' | keytool -genkeypair -validity 365 -keystore mykey.keystore -keyalg RSA -keysize 2048 
+printf 'B395b39595\nB395b39595\nA\nB\nC\nD\nE\nF\nUA\nYes\n' | keytool -genkeypair -validity 365 -keystore mykey.keystore -keyalg RSA -keysize 2048 
 
 $APKSIGNER sign --ks mykey.keystore $PROJ/bin/hello.apk
 
