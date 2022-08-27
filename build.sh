@@ -54,7 +54,7 @@ ls -l
 chmod +x mykey.keystore
 
 
-cd /usr/local/lib/android/sdk/build-tools/29.0.3/bin
+cd /home/runner/work/android-java-terminal/android-java-terminal/bin
 
  $APKSIGNER  verify -v --print-certs *.apk
 
