@@ -42,7 +42,50 @@ jobs:
            name: hello.unaligned.apk
            path: /home/runner/work/android-java-terminal/android-java-terminal/bin      
           
-     
+  
+  
+  
+  
+    - name: Archive site content
+      uses: thedoctor0/zip-release@master
+      with:
+            filename: test.zip     
+            exclusions: ' *.cpp / *.c /*.yml  / .git'  
+               
+    - name: Create new release
+      id: create-new-release
+      uses: actions/create-release@latest
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+          tag_name: ${{ github.run_number }}
+          release_name: Release ${{ github.run_number }}
+          body: |
+                run_number
+          draft: false
+          prerelease: false     
+
+    - name: Upload release asset
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:  
+         upload_url:   ${{ steps.create-new-release.outputs.upload_url }}
+         asset_path: ./test.zip
+         asset_name: test-v${{ github.run_number }}.zip
+         asset_content_type: application/zip  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
    #  - name: mkdir app/....
     #   run: |
               # mkdir  /home/runner/work/android-java-terminal/android-java-terminal/app/build/outputs/apk/release
