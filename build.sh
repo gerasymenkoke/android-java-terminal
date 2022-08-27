@@ -53,6 +53,9 @@ pwd
 ls -l
 chmod +x mykey.keystore
 
+
+cd /usr/local/lib/android/sdk/build-tools/29.0.3/bin
+
  $APKSIGNER  verify -v --print-certs *.apk
 
 $APKSIGNER sign --ks ./mykey.keystore $PROJ/bin/hello.apk
