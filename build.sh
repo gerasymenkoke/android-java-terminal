@@ -54,17 +54,17 @@ ls -l
 #chmod +x mykey.keystore
 
 
-cd /opt/hostedtoolcache/Java_Adopt_jdk/18.0.2-9/x64
+#cd /opt/hostedtoolcache/Java_Adopt_jdk/18.0.2-9/x64
 
 
-printf 'B395b39595\nB395b39595\nA\nB\nC\nD\nE\nUA\nYes\n' |  keytool -genkey -alias tomcat -keyalg RSA -keystore keystore.jks  
+#printf 'B395b39595\nB395b39595\nA\nB\nC\nD\nE\nUA\nYes\n' |  keytool -genkey -alias tomcat -keyalg RSA -keystore keystore.jks  
 
-pwd
-ls -l
+#pwd
+#ls -l
 
 
-$APKSIGNER sign --ks file:///opt/hostedtoolcache/Java_Adopt_jdk/18.0.2-9/x64keystore.jks $PROJ/bin/hello.apk
-$APKSIGNER  verify -v --print-certs *.apk
+#$APKSIGNER sign --ks file:///opt/hostedtoolcache/Java_Adopt_jdk/18.0.2-9/x64keystore.jks $PROJ/bin/hello.apk
+#$APKSIGNER  verify -v --print-certs *.apk
 
 
 #$APKSIGNER sign --ks /home/runner/work/android-java-terminal/android-java-terminal/bin/mykey.keystore $PROJ/bin/hello.apk
