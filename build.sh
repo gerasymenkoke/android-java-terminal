@@ -57,7 +57,7 @@ ls -l
 cd /opt/hostedtoolcache/Java_Adopt_jdk/18.0.2-9/x64
 
 
-printf 'B395b39595\nB395b39595\nA\nB\nC\nD\nE\nUA\nYes\n' | keytool -genkey -alias tomcat -keyalg RSA -keystore keystore.jks  
+printf 'B395b39595\nB395b39595\nA\nB\nC\nD\nE\nUA\nYes\n' |  keytool -genkey -alias tomcat -keyalg RSA -keystore keystore.jks  
 
 pwd
 ls -l
