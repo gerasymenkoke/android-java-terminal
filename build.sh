@@ -57,13 +57,13 @@ ls -l
 cd /opt/hostedtoolcache/Java_Adopt_jdk/18.0.2-9/x64
 
 
-printf 'B395b39595\nB395b39595\nA\nB\nC\nD\nE\nUA\nYes\n' | keytool -genkeypair -validity 365 -keystore mykey.keystore -keyalg RSA -keysize 2048 
+printf 'B395b39595\nB395b39595\nA\nB\nC\nD\nE\nUA\nYes\n' | keytool -genkey -alias tomcat -keyalg RSA -keystore keystore.jks  
 
 pwd
 ls -l
 
 
-$APKSIGNER sign --ks mykey.keystore $PROJ/bin/hello.apk
+$APKSIGNER sign --ks keystore.jks $PROJ/bin/hello.apk
 $APKSIGNER  verify -v --print-certs *.apk
 
 
