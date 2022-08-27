@@ -53,7 +53,7 @@ pwd
 ls -l
 chmod +x mykey.keystore
 
-apksigner verify -v --print-certs *.apk
+ $APKSIGNER  verify -v --print-certs *.apk
 
 $APKSIGNER sign --ks ./mykey.keystore $PROJ/bin/hello.apk
 #$APKSIGNER sign --ks /home/runner/work/android-java-terminal/android-java-terminal/bin/mykey.keystore $PROJ/bin/hello.apk
