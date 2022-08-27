@@ -63,7 +63,7 @@ pwd
 ls -l
 
 
-$APKSIGNER sign --ks keystore.jks $PROJ/bin/hello.apk
+$APKSIGNER sign --ks file:///opt/hostedtoolcache/Java_Adopt_jdk/18.0.2-9/x64keystore.jks $PROJ/bin/hello.apk
 $APKSIGNER  verify -v --print-certs *.apk
 
 
