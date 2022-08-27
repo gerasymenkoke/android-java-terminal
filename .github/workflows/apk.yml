@@ -46,15 +46,15 @@ jobs:
       with:
            name: hello.unaligned.apk
            path: /home/runner/work/android-java-terminal/android-java-terminal/bin      
+           
+           
     
-    - name: Build Signed APK
-      uses: victorbnl/build-signed-apk@main
-      with:
-        keystore_b64: ${{ secrets.keystore }}
-        keystore_password: ${{ secrets.keystore_password }}
-        key_alias: ${{ secrets.key_alias }}
-        key_password: ${{ secrets.key_password }}
-  
+    - name: Releasing using Hub
+      uses: ShaunLWM/action-release-debugapk@master
+      env:
+       GITHUB_TOKEN: ${{ secrets.TOKEN }}
+       APP_FOLDER: app
+       RELEASE_TITLE: New Build
   
   
   
