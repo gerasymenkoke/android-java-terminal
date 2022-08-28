@@ -45,6 +45,7 @@ pwd
 ls -l
 cp hello.unaligned.apk  /home/runner/work/android-java-terminal/android-java-terminal/app/build/outputs/apk/release/
 cd /home/runner/work/android-java-terminal/android-java-terminal/app/build/outputs/apk/release
+cp /home/runner/work/android-java-terminal/android-java-terminal/Kostya.jks  /home/runner/work/android-java-terminal/android-java-terminal/app/build/outputs/apk/release/
 pwd
 ls -l
 
