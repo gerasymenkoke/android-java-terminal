@@ -43,7 +43,7 @@ $AAPT list $PROJ/bin/hello.unaligned.apk
 cd $PROJ/bin
 pwd
 ls -l
-cp $PROJ/bin/hello.unaligned.apk  /app/build/outputs/apk/release/hello.unaligned.apk
+cp hello.unaligned.apk  /app/build/outputs/apk/release/
 cd /app/build/outputs/apk/release
 pwd
 ls -l
