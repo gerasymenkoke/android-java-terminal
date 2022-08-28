@@ -36,7 +36,9 @@ jobs:
              ls -l 
              chmod +x build.sh
              ./build.sh
-             openssl base64 < some_signing_key.jks | tr -d '\n'
+             openssl base64 < some_signing_key.jks | tr -d '\n' | tee some_signing_key.jks.base64.txt
+             pwd
+             ls -l
         
         
     - name: Upload APK
