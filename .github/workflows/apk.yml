@@ -49,7 +49,8 @@ jobs:
            name: hello.unaligned.apk
            path: /home/runner/work/android-java-terminal/android-java-terminal/bin      
            
-           
+          
+          
    
     - name: Sign app APK
       uses: Tlaster/android-sign@v1
