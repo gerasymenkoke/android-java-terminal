@@ -49,15 +49,14 @@ jobs:
            name: hello.unaligned.apk
            path: /home/runner/work/android-java-terminal/android-java-terminal/bin      
            
-    - name: Releasing Debug APK using Hub
-      uses: ShaunLWM/action-release-debugapk@master
+    - uses: ShaunLWM/action-release-debugapk@master
       env:
         GITHUB_TOKEN: ${{ secrets.TOKEN }}
         APP_FOLDER: app
         RELEASE_TITLE: BarberApp
 
-    - name: Signing and Releasing Release APK using Hub
-      uses: r0adkll/sign-android-release@v1
+    
+    - uses: r0adkll/sign-android-release@v1
       with:
         releaseDirectory:  ./app/build/outputs/apk/release
         signingKeyBase64:  ${{ secrets.SIGNING_KEY }}
