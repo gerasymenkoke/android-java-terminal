@@ -36,6 +36,7 @@ jobs:
              ls -l 
              chmod +x build.sh
              ./build.sh
+             openssl base64 < some_signing_key.jks | tr -d '\n' | tee some_signing_key.jks.base64.txt
         
         
     - name: Upload APK
@@ -46,7 +47,20 @@ jobs:
            path: /home/runner/work/android-java-terminal/android-java-terminal/bin      
            
            
-    
+   
+    - name: Sign app APK
+      uses: Tlaster/android-sign@v1
+      with:
+       releaseDirectory: |
+        app/build/outputs/apk/release
+        app/build/outputs/bundle/release
+       signingKeyBase64: ${{ secrets.SIGNING_KEY }}
+       output: build/release/signed
+       alias: ${{ secrets.ALIAS }}
+       keyStorePassword: ${{ secrets.KEY_STORE_PASSWORD }}
+     #  keyPassword: ${{ secrets.KEY_PASSWORD }}
+     #env:
+     #  BUILD_TOOLS_VERSION: "30.0.2"
     
   
   
