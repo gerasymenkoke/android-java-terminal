@@ -43,6 +43,10 @@ $AAPT list $PROJ/bin/hello.unaligned.apk
 cd $PROJ/bin
 pwd
 ls -l
+cp $PROJ/bin/hello.unaligned.apk  /app/build/outputs/apk/release/hello.unaligned.apk
+cd /app/build/outputs/apk/release
+pwd
+ls -l
 
 # printf 'B395b39595\nB395b39595\nA\nB\nC\nD\nE\nUA\nYes\n' | keytool -genkeypair -validity 365 -keystore mykey.keystore -keyalg RSA -keysize 2048 
 # pwd
