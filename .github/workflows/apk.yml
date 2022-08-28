@@ -62,7 +62,8 @@ jobs:
     - uses: r0adkll/sign-android-release@v1
       with:
         releaseDirectory:  /home/runner/work/android-java-terminal/android-java-terminal/app/build/outputs/apk/release
-        signingKeyBase64:  ${{ secrets.SIGNING_KEY }}
+        signingKeyBase64: /home/runner/work/android-java-terminal/android-java-terminal/Kostya.jks
+        #${{ secrets.SIGNING_KEY }}
         alias: ${{ secrets.ALIAS }}
         keyStorePassword: ${{ secrets.KEY_STORE_PASSWORD }}
         keyPassword: ${{ secrets.KEY_PASSWORD }}        
