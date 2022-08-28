@@ -40,9 +40,7 @@ jobs:
              pwd
              ls -l
              cat some_signing_key.jks.base64.txt
-             pwd
-             ls -l
-        
+             
         
         
     - name: Upload APK
