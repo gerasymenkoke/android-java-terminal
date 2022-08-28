@@ -55,7 +55,7 @@ jobs:
    # - uses: ShaunLWM/action-release-debugapk@master
    #   env:
    #     GITHUB_TOKEN: ${{ secrets.TOKEN }}
-   #     APP_FOLDER: app
+   #      APP_FOLDER: app
    #     RELEASE_TITLE: BarberApp
 
     
