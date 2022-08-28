@@ -67,7 +67,7 @@ ls -l
 #$APKSIGNER  verify -v --print-certs *.apk
 
 
-$APKSIGNER sign --ks Kostya.jks $PROJ/bin/hello.apk
+# $APKSIGNER sign --ks Kostya.jks $PROJ/bin/hello.apk
 
 
 
