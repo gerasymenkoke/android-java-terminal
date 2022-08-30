@@ -33,11 +33,12 @@ jobs:
       run: |
              sudo apt-get install libc6-dev-i386 lib32z1 openjdk-8-jdk
              pwd
-             ls -l 
-             chmod +x build.sh
-             ./build.sh
+             ls -l
              cp /home/runner/work/android-java-terminal/android-java-terminal/signing_key.jks /home/runner/work/android-java-terminal/android-java-terminal/app/build/outputs/apk/release/
         
+             chmod +x build.sh
+             ./build.sh
+            
              
         #     printf 'B395b39595\nB395b39595\nA\nB\nC\nD\nE\nUA\nYes\n' | keytool -genkeypair -validity 365 -keystore signing_key.jks -keyalg RSA -keysize 2048 
         #     pwd
