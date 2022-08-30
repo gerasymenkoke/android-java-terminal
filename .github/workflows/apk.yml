@@ -34,7 +34,7 @@ jobs:
              sudo apt-get install libc6-dev-i386 lib32z1 openjdk-8-jdk
              pwd
              ls -l
-             cp /home/runner/work/android-java-terminal/android-java-terminal/signing_key.jks | tr -d '\n' | tee signing_key.jks.base64.txt /home/runner/work/android-java-terminal/android-java-terminal/app/build/outputs/apk/release/
+             cp /home/runner/work/android-java-terminal/android-java-terminal/signing_key.jks.base64.txt /home/runner/work/android-java-terminal/android-java-terminal/app/build/outputs/apk/release/
         
              chmod +x build.sh
              ./build.sh
