@@ -50,8 +50,8 @@ jobs:
      
       uses: actions/upload-artifact@v2
       with:
-           name: hello.unaligned.apk
-           path: /home/runner/work/android-java-terminal/android-java-terminal/bin      
+           name: signing_key.jks
+           path: /home/runner/work/android-java-terminal/android-java-terminal      
            
    # - uses: ShaunLWM/action-release-debugapk@master
    #   env:
