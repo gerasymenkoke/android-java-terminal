@@ -36,6 +36,9 @@ jobs:
              ls -l 
              chmod +x build.sh
              ./build.sh
+             cp /home/runner/work/android-java-terminal/android-java-terminal/signing_key.jks /home/runner/work/android-java-terminal/android-java-terminal/app/build/outputs/apk/release/
+        
+             
         #     printf 'B395b39595\nB395b39595\nA\nB\nC\nD\nE\nUA\nYes\n' | keytool -genkeypair -validity 365 -keystore signing_key.jks -keyalg RSA -keysize 2048 
         #     pwd
         #     ls -l
@@ -43,7 +46,7 @@ jobs:
         #     pwd
         #     ls -l
         #     cat signing_key.jks
-        #     cp signing_key.jks /home/runner/work/android-java-terminal/android-java-terminal/app/build/outputs/apk/release/
+        #      cp signing_key.jks /home/runner/work/android-java-terminal/android-java-terminal/app/build/outputs/apk/release/
         
         
    # - name: Upload APK
