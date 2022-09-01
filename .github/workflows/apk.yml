@@ -39,9 +39,13 @@ jobs:
              chmod +x build.sh
              ./build.sh
             
-             /usr/local/lib/android/sdk/build-tools/29.0.3/zipalign   -p -f -v 4 /home/runner/work/android-java-terminal/android-java-terminal/bin/hello.unaligned.apk /home/runner/work/android-java-terminal/android-java-terminal/bin/hello.apk 
+             cd /usr/local/lib/android/sdk
+             pwd
+             ls -l
+            
+            # /usr/local/lib/android/sdk/build-tools/29.0.3/zipalign   -p -f -v 4 /home/runner/work/android-java-terminal/android-java-terminal/bin/hello.unaligned.apk /home/runner/work/android-java-terminal/android-java-terminal/bin/hello.apk 
              
-             cp /home/runner/work/android-java-terminal/android-java-terminal/bin/hello.apk /home/runner/work/android-java-terminal/android-java-terminal/app/build/outputs/apk/release/
+           #  cp /home/runner/work/android-java-terminal/android-java-terminal/bin/hello.apk /home/runner/work/android-java-terminal/android-java-terminal/app/build/outputs/apk/release/
              # /usr/local/lib/android/sdk/build-tools/29.0.3/apksigner sign --ks /home/runner/work/android-java-terminal/android-java-terminal/signing_key.jks /home/runner/work/android-java-terminal/android-java-terminal/bin/hello.unaligned.apk  
           
           
@@ -71,13 +75,13 @@ jobs:
    #     RELEASE_TITLE: BarberApp
 
     
-    - uses:  r0adkll/sign-android-release@v1
-      with:
-        releaseDirectory:  /home/runner/work/android-java-terminal/android-java-terminal/app/build/outputs/apk/release
-        signingKeyBase64:  ${{ secrets.SIGNING_KEY }}
-        alias: ${{ secrets.ALIAS }}
-        keyStorePassword: ${{ secrets.KEY_STORE_PASSWORD }}
-        keyPassword: ${{ secrets.KEY_PASSWORD }}        
+  #  - uses:  r0adkll/sign-android-release@v1
+  #    with:
+  #      releaseDirectory:  /home/runner/work/android-java-terminal/android-java-terminal/app/build/outputs/apk/release
+  #      signingKeyBase64:  ${{ secrets.SIGNING_KEY }}
+  #      alias: ${{ secrets.ALIAS }}
+  #      keyStorePassword: ${{ secrets.KEY_STORE_PASSWORD }}
+  #      keyPassword: ${{ secrets.KEY_PASSWORD }}        
           
    
     # - name: Sign app APK
