@@ -39,7 +39,7 @@ jobs:
              chmod +x build.sh
              ./build.sh
             
-             cd /usr/local/lib/android/sdk
+             cd /opt/hostedtoolcache/Java_Adopt_jdk/18.0.2-9/x64
              pwd
              ls -l
             
