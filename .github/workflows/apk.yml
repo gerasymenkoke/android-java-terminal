@@ -39,13 +39,20 @@ jobs:
              chmod +x build.sh
              ./build.sh
             
-             cd /opt/hostedtoolcache/Java_Adopt_jdk/18.0.2-9/x64/bin
-             pwd
-             ls -l
+           
             
-            # /usr/local/lib/android/sdk/build-tools/29.0.3/zipalign   -p -f -v 4 /home/runner/work/android-java-terminal/android-java-terminal/bin/hello.unaligned.apk /home/runner/work/android-java-terminal/android-java-terminal/bin/hello.apk 
-             
-           #  cp /home/runner/work/android-java-terminal/android-java-terminal/bin/hello.apk /home/runner/work/android-java-terminal/android-java-terminal/app/build/outputs/apk/release/
+           #  cd /opt/hostedtoolcache/Java_Adopt_jdk/18.0.2-9/x64/bin
+            
+            
+            /usr/local/lib/android/sdk/build-tools/29.0.3/zipalign   -p -f -v 4 /home/runner/work/android-java-terminal/android-java-terminal/bin/hello.unaligned.apk /home/runner/work/android-java-terminal/android-java-terminal/bin/hello.apk 
+            cp /home/runner/work/android-java-terminal/android-java-terminal/bin/hello.apk /home/runner/work/android-java-terminal/android-java-terminal/app/build/outputs/apk/release/ 
+             cd /home/runner/work/android-java-terminal/android-java-terminal/app/build/outputs/apk/release/
+            /opt/hostedtoolcache/Java_Adopt_jdk/18.0.2-9/x64/bin/jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore kostya.keystore hello.apk kostya 
+            pwd
+            ls -l
+         
+         
+         #  cp /home/runner/work/android-java-terminal/android-java-terminal/bin/hello.apk /home/runner/work/android-java-terminal/android-java-terminal/app/build/outputs/apk/release/
              # /usr/local/lib/android/sdk/build-tools/29.0.3/apksigner sign --ks /home/runner/work/android-java-terminal/android-java-terminal/signing_key.jks /home/runner/work/android-java-terminal/android-java-terminal/bin/hello.unaligned.apk  
           
           
