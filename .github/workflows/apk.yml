@@ -41,7 +41,7 @@ jobs:
              cd /home/runner/work/android-java-terminal/android-java-terminal/app/build/outputs/apk/release/
              pwd
              ls -l            
-             /usr/local/lib/android/sdk/build-tools/29.0.3/apksinger sing --ks signing_key.jks hello.apk           
+             /usr/local/lib/android/sdk/build-tools/29.0.3/apksinger sign --ks signing_key.jks hello.apk           
            
              #printf 'B395b39595\n' | 
             # /opt/hostedtoolcache/Java_Adopt_jdk/18.0.2-9/x64/bin/jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore signing_key.jks hello.apk kostya 
