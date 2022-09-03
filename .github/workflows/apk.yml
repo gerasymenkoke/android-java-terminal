@@ -35,6 +35,7 @@ jobs:
              cd /usr/local/lib/android/sdk/build-tools/
              pwd
              ls -l
+             cd /home/runner/work/android-java-terminal/android-java-terminal/
              chmod +x build.sh
              ./build.sh
              /usr/local/lib/android/sdk/build-tools/30.0.0/zipalign   -p -f -v 4 /home/runner/work/android-java-terminal/android-java-terminal/bin/hello.unaligned.apk /home/runner/work/android-java-terminal/android-java-terminal/bin/hello.apk 
