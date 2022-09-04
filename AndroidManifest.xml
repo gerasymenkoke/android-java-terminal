@@ -8,6 +8,9 @@
       <application android:allowBackup="true" android:label="@string/app_name"></application>
          <staticText>
  
+</staticText>
+      -->
+
         <application a:label='A Hello Android'>
           <activity a:name='com.example.helloandroid.MainActivity'>
              <intent-filter>
