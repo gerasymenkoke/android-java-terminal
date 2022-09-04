@@ -5,12 +5,12 @@
 	<uses-permission android:name="android.permission.INTERNET" />
 	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 	<application android:allowBackup="true" android:label="@string/app_name"></application>
-    <application a:label='A Hello Android'>
-        <activity a:name='com.example.helloandroid.MainActivity'>
+        <application a:label='A Hello Android'>
+          <activity a:name='com.example.helloandroid.MainActivity'>
              <intent-filter>
                 <category a:name='android.intent.category.LAUNCHER'/>
                 <action a:name='android.intent.action.MAIN'/>
              </intent-filter>
-        </activity>
-    </application>
+          </activity>
+        </application>
 </manifest>
