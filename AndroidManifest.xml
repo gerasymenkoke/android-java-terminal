@@ -1,12 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:a="http://schemas.android.com/apk/res/android" a:versionCode="0" a:versionName="0" package='com.example.helloandroid'>
-        <uses-sdk a:minSdkVersion="14" a:targetSdkVersion="30" />
-	<uses-permission a:name="android.permission.ACCESS_WIFI_STATE" />
-	<uses-permission a:name="android.permission.INTERNET" />
-	<uses-permission a:name="android.permission.ACCESS_NETWORK_STATE" />
-	<application a:allowBackup="true" a:label="@string/app_name"></application>
-        
-        
+           
         
 
         <application a:label='A Hello Android'>
