@@ -2,11 +2,11 @@
 
 set -e
 PROJ="/home/runner/work/android-java-terminal/android-java-terminal"
-AAPT="/usr/local/lib/android/sdk/build-tools/33.0.0/aapt"
+AAPT="/usr/local/lib/android/sdk/build-tools/30.0.0/aapt"
 DX="/usr/local/lib/android/sdk/build-tools/30.0.0/dx"
-ZIPALIGN="/usr/local/lib/android/sdk/build-tools/33.0.0/zipalign"
-APKSIGNER="/usr/local/lib/android/sdk/build-tools/33.0.0/apksigner" 
-PLATFORM="/usr/local/lib/android/sdk/platforms/android-33/android.jar"
+ZIPALIGN="/usr/local/lib/android/sdk/build-tools/30.0.0/zipalign"
+APKSIGNER="/usr/local/lib/android/sdk/build-tools/30.0.0/apksigner" 
+PLATFORM="/usr/local/lib/android/sdk/platforms/android-30/android.jar"
 
 
 echo "Cleaning..."
