@@ -43,7 +43,7 @@ jobs:
              cd /home/runner/work/android-java-terminal/android-java-terminal/app/build/outputs/apk/release/
              pwd
              ls -l            
-             printf 'B395b39595\n' | /usr/local/lib/android/sdk/build-tools/30.0.0/apksigner sign --ks   /home/runner/work/android-java-terminal/android-java-terminal/app/build/outputs/apk/release/Kostya.jks    /home/runner/work/android-java-terminal/android-java-terminal/app/build/outputs/apk/release/hello.apk           
+             printf 'B395b39595\n' | /usr/local/lib/android/sdk/build-tools/30.0.0/apksigner sign --ks   /home/runner/work/android-java-terminal/android-java-terminal/app/build/outputs/apk/release/Kostya.jks  --ks-key-Kostya  /home/runner/work/android-java-terminal/android-java-terminal/app/build/outputs/apk/release/hello.apk           
              /usr/local/lib/android/sdk/build-tools/30.0.0/apksigner verify -v  -v4-signature-file /home/runner/work/android-java-terminal/android-java-terminal/app/build/outputs/apk/release/hello.apk.idsig /home/runner/work/android-java-terminal/android-java-terminal/app/build/outputs/apk/release/hello.apk 
              
              
