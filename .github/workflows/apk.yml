@@ -89,13 +89,18 @@ jobs:
    #     RELEASE_TITLE: BarberApp
 
     
-  #  - uses:  r0adkll/sign-android-release@v1
-  #    with:
-  #      releaseDirectory:  /home/runner/work/android-java-terminal/android-java-terminal/app/build/outputs/apk/release
-  #      signingKeyBase64:  ${{ secrets.SIGNING_KEY }}
-  #      alias: ${{ secrets.ALIAS }}
-  #      keyStorePassword: ${{ secrets.KEY_STORE_PASSWORD }}
-  #      keyPassword: ${{ secrets.KEY_PASSWORD }}        
+    - name: Upload to Google Play 
+      uses: r0adkll/upload-google-play@v1
+      with:
+      serviceAccountJsonPlainText: ${{ SERVICE_ACCOUNT_JSON }}
+      packageName: com.example.MyApp
+      releaseFiles: /home/runner/work/android-java-terminal/android-java-terminal/app/build/outputs/apk/release/hello.apk
+      track: production
+      status: inProgress
+      inAppUpdatePriority: 2
+      userFraction: 0.33
+      whatsNewDirectory: distribution/whatsnew
+      mappingFile: app/build/outputs/mapping/release/mapping.txt     
           
    
     # - name: Sign app APK
