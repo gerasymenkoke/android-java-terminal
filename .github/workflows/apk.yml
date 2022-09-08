@@ -82,13 +82,7 @@ jobs:
           name: apk file with signing
           path: /home/runner/work/android-java-terminal/android-java-terminal/app/build/outputs/apk/release/hello.apk   
            
-   # - uses: ShaunLWM/action-release-debugapk@master
-   #   env:
-   #     GITHUB_TOKEN: ${{ secrets.TOKEN }}
-   #      APP_FOLDER: app
-   #     RELEASE_TITLE: BarberApp
-
-    
+     
     - name: Upload to Google Play 
       uses: r0adkll/upload-google-play@v1
       with:
