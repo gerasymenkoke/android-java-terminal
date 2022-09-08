@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:a="http://schemas.android.com/apk/res/android" a:versionCode="0" a:versionName="0" package='com.example.helloandroid'>
            AddManifestText(
-<uses-sdk android:minSdkVersion="14" />
-<uses-sdk android:targetSdkVersion="30" />
-<supports-screens android:largeScreens="true"
-    android:normalScreens="true"
-    android:smallScreens="true"
-    android:anyDensity="true"/>)
+<uses-sdk a:minSdkVersion="14" />
+<uses-sdk a:targetSdkVersion="30" />
+<supports-screens a:largeScreens="true"
+    a:normalScreens="true"
+    a:smallScreens="true"
+    a:anyDensity="true"/>)
         
 
         <application a:label='A Hello Android'>
