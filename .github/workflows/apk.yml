@@ -45,8 +45,11 @@ jobs:
              cd /home/runner/work/android-java-terminal/android-java-terminal/app/build/outputs/apk/release/
              pwd
              ls -l 
+
+
+             cd /home/runner/work/android-java-terminal/android-java-terminal/password..txt
              chmod +x password..txt
-             base64 /home/runner/work/android-java-terminal/android-java-terminal/password..txt > password.b64
+             base64 password..txt > password.b64
                        
              
             # /usr/local/lib/android/sdk/build-tools/30.0.0/apksigner sign --ks-pass   /home/runner/work/android-java-terminal/android-java-terminal/app/build/outputs/apk/release/Kostya.jks  --ks-key-alias Kostya  /home/runner/work/android-java-terminal/android-java-terminal/app/build/outputs/apk/release/hello.apk           
