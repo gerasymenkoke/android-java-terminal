@@ -30,8 +30,8 @@ jobs:
           distribution: 'adopt'
 
     - name: Android JDK install and apk build 
-      env:
-        PASSWORD: ${{ secrets.secrets.SIGNING_KEY }}
+      
+        
       run: |
              sudo apt-get install libc6-dev-i386 lib32z1 openjdk-11-jdk
              cd /usr/local/lib/android/sdk/build-tools/
@@ -46,10 +46,10 @@ jobs:
              pwd
              ls -l 
              
-             
+             base64 "B395b39595" > password.64
                        
              
-             /usr/local/lib/android/sdk/build-tools/30.0.0/apksigner sign --ks-pass   /home/runner/work/android-java-terminal/android-java-terminal/app/build/outputs/apk/release/Kostya.jks  --ks-key-alias Kostya  /home/runner/work/android-java-terminal/android-java-terminal/app/build/outputs/apk/release/hello.apk           
+            # /usr/local/lib/android/sdk/build-tools/30.0.0/apksigner sign --ks-pass   /home/runner/work/android-java-terminal/android-java-terminal/app/build/outputs/apk/release/Kostya.jks  --ks-key-alias Kostya  /home/runner/work/android-java-terminal/android-java-terminal/app/build/outputs/apk/release/hello.apk           
              #/usr/local/lib/android/sdk/build-tools/30.0.0/apksigner verify -v  -v4-signature-file /home/runner/work/android-java-terminal/android-java-terminal/app/build/outputs/apk/release/hello.apk.idsig /home/runner/work/android-java-terminal/android-java-terminal/app/build/outputs/apk/release/hello.apk 
              
              
