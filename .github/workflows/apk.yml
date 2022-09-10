@@ -57,10 +57,8 @@ jobs:
              chmod +x password.txt 
              cat password.txt
              
-             
-             
-             
-            # /usr/local/lib/android/sdk/build-tools/30.0.0/apksigner sign --ks-pass   /home/runner/work/android-java-terminal/android-java-terminal/app/build/outputs/apk/release/Kostya.jks  --ks-key-alias Kostya  /home/runner/work/android-java-terminal/android-java-terminal/app/build/outputs/apk/release/hello.apk           
+               
+             echo $PASSWORDB64 | /usr/local/lib/android/sdk/build-tools/30.0.0/apksigner sign --ks-pass   /home/runner/work/android-java-terminal/android-java-terminal/app/build/outputs/apk/release/Kostya.jks  --ks-key-alias Kostya  /home/runner/work/android-java-terminal/android-java-terminal/app/build/outputs/apk/release/hello.apk           
              #/usr/local/lib/android/sdk/build-tools/30.0.0/apksigner verify -v  -v4-signature-file /home/runner/work/android-java-terminal/android-java-terminal/app/build/outputs/apk/release/hello.apk.idsig /home/runner/work/android-java-terminal/android-java-terminal/app/build/outputs/apk/release/hello.apk 
              
              
