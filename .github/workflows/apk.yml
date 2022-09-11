@@ -59,38 +59,7 @@ jobs:
              /usr/local/lib/android/sdk/build-tools/30.0.0/apksigner sign --ks   /home/runner/work/android-java-terminal/android-java-terminal/app/build/outputs/apk/release/Kostya.jks  --ks-key-alias Kostya  /home/runner/work/android-java-terminal/android-java-terminal/app/build/outputs/apk/release/hello.apk  <  password.txt          
              /usr/local/lib/android/sdk/build-tools/30.0.0/apksigner verify -v  -v4-signature-file /home/runner/work/android-java-terminal/android-java-terminal/app/build/outputs/apk/release/hello.apk.idsig /home/runner/work/android-java-terminal/android-java-terminal/app/build/outputs/apk/release/hello.apk 
                            
-            # 
-            # /usr/local/lib/android/sdk/build-tools/30.0.0/apksigner verify -v  -v4-signature-file /home/runner/work/android-java-terminal/android-java-terminal/app/build/outputs/apk/release/hello.apk.idsig /home/runner/work/android-java-terminal/android-java-terminal/app/build/outputs/apk/release/hello.apk 
-             
-             
-             
-             
-             #printf 'B395b39595\n' | 
-            # /opt/hostedtoolcache/Java_Adopt_jdk/18.0.2-9/x64/bin/jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore signing_key.jks hello.apk kostya 
-            
-           #  cd /opt/hostedtoolcache/Java_Adopt_jdk/18.0.2-9/x64/bin
-            
-            
-             
            
-         
-         
-         #  cp /home/runner/work/android-java-terminal/android-java-terminal/bin/hello.apk /home/runner/work/android-java-terminal/android-java-terminal/app/build/outputs/apk/release/
-             # /usr/local/lib/android/sdk/build-tools/29.0.3/apksigner sign --ks /home/runner/work/android-java-terminal/android-java-terminal/signing_key.jks /home/runner/work/android-java-terminal/android-java-terminal/bin/hello.unaligned.apk  
-          
-          
-          
-          
-        #     printf 'B395b39595\nB395b39595\nA\nB\nC\nD\nE\nUA\nYes\n' | keytool -genkeypair -validity 365 -keystore signing_key.jks -keyalg RSA -keysize 2048 
-        #     pwd
-        #     ls -l
-       #      openssl base64 < /home/runner/work/android-java-terminal/android-java-terminal/signing_key.jks | tr -d '\n' | tee signing_key.jks.base64.txt
-        #     pwd
-        #     ls -l
-        #     cat signing_key.jks
-        #      cp signing_key.jks /home/runner/work/android-java-terminal/android-java-terminal/app/build/outputs/apk/release/
-        
-        
     - name: Upload APK
      
       uses: actions/upload-artifact@v2
@@ -102,21 +71,6 @@ jobs:
   
           
    
-    # - name: Sign app APK
-     # uses: Tlaster/android-sign@v1
-     # with:
-     #  releaseDirectory: |
-     #   app/build/outputs/apk/release
-     #   app/build/outputs/bundle/release
-     #  signingKeyBase64: ${{ secrets.SIGNING_KEY }}
-     #  output: build/release/signed
-     #  alias: ${{ secrets.ALIAS }}
-    # keyStorePassword: ${{ secrets.KEY_STORE_PASSWORD }}
-     #  keyPassword: ${{ secrets.KEY_PASSWORD }}
-     #env:
-     #  BUILD_TOOLS_VERSION: "30.0.2"
-    
-  
   
   
   
