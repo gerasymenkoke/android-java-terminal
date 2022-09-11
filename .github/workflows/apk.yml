@@ -11,7 +11,7 @@ on:
 jobs:
  
   build-with-upload-artifact:
-    runs-on:  ubuntu-latest
+    runs-on:   ubuntu-latest
     
   
     steps:
