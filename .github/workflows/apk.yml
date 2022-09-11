@@ -29,7 +29,7 @@ jobs:
           java-version: 11.0.16
           distribution: 'adopt'
 
-    - name: Android JDK install and apk build 
+    - name: Android JDK install and aab build 
       env:
         PASSWORDB64: ${{ secrets.PASSWORDB64 }}
         KEYSTORE_JKS: ${{ secrets.KEYSTORE_JKS }}
@@ -42,8 +42,8 @@ jobs:
              cd /home/runner/work/android-java-terminal/android-java-terminal/
              chmod +x build.sh
              ./build.sh
-             /usr/local/lib/android/sdk/build-tools/30.0.0/zipalign   -p -f -v 4 /home/runner/work/android-java-terminal/android-java-terminal/bin/hello.unaligned.apk /home/runner/work/android-java-terminal/android-java-terminal/bin/hello.apk 
-             cp /home/runner/work/android-java-terminal/android-java-terminal/bin/hello.apk /home/runner/work/android-java-terminal/android-java-terminal/app/build/outputs/apk/release/ 
+             /usr/local/lib/android/sdk/build-tools/30.0.0/zipalign   -p -f -v 4 /home/runner/work/android-java-terminal/android-java-terminal/bin/hello.unaligned.apk /home/runner/work/android-java-terminal/android-java-terminal/bin/hello.aab 
+             cp /home/runner/work/android-java-terminal/android-java-terminal/bin/hello.aab /home/runner/work/android-java-terminal/android-java-terminal/app/build/outputs/apk/release/ 
              cd /home/runner/work/android-java-terminal/android-java-terminal/app/build/outputs/apk/release/
              pwd
              ls -l 
@@ -59,24 +59,24 @@ jobs:
              ls -l
              chmod +x password.txt 
              # cat password.txt
-             /usr/local/lib/android/sdk/build-tools/30.0.0/apksigner sign --ks   /home/runner/work/android-java-terminal/android-java-terminal/keystore.jks   /home/runner/work/android-java-terminal/android-java-terminal/app/build/outputs/apk/release/hello.apk  <  password.txt          
-             /usr/local/lib/android/sdk/build-tools/30.0.0/apksigner verify -v  -v4-signature-file /home/runner/work/android-java-terminal/android-java-terminal/app/build/outputs/apk/release/hello.apk.idsig /home/runner/work/android-java-terminal/android-java-terminal/app/build/outputs/apk/release/hello.apk 
+             /usr/local/lib/android/sdk/build-tools/30.0.0/apksigner sign --ks   /home/runner/work/android-java-terminal/android-java-terminal/keystore.jks   /home/runner/work/android-java-terminal/android-java-terminal/app/build/outputs/apk/release/hello.aab  <  password.txt          
+             /usr/local/lib/android/sdk/build-tools/30.0.0/apksigner verify -v  -v4-signature-file /home/runner/work/android-java-terminal/android-java-terminal/app/build/outputs/apk/release/hello.apk.idsig /home/runner/work/android-java-terminal/android-java-terminal/app/build/outputs/apk/release/hello.aab 
                            
            
-    - name: Upload APK
+    - name: Upload AAB
      
       uses: actions/upload-artifact@v2
       with:
           name: apk file with signing
-          path: /home/runner/work/android-java-terminal/android-java-terminal/app/build/outputs/apk/release/hello.apk   
+          path: /home/runner/work/android-java-terminal/android-java-terminal/app/build/outputs/apk/release/hello.aab   
            
      
-    - name: Upload APK to GOOGLE  STORE
+    - name: Upload AAB to GOOGLE  STORE
       uses: r0adkll/upload-google-play@v1
       with:
         serviceAccountJsonPlainText: ${{ secrets.SERVICEACCOUNTJSONPLAINTEXT }}
         packageName: com.example.helloandroid
-        releaseFiles:  /home/runner/work/android-java-terminal/android-java-terminal/app/build/outputs/apk/release/hello.apk
+        releaseFiles:  /home/runner/work/android-java-terminal/android-java-terminal/app/build/outputs/apk/release/hello.aab
         track: production
         status: inProgress
         inAppUpdatePriority: 2
