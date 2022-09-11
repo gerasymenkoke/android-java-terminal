@@ -73,12 +73,12 @@ jobs:
       with:
         serviceAccountJsonPlainText: ${{ secrets.SERVICEACCOUNTJSONPLAINTEXT }}
         packageName: com.example.helloandroid
-        releaseFiles: /home/runner/work/android-java-terminal/android-java-terminal/app/build/outputs/apk/release/hello.apk   
+        releaseFiles:  hello.apk
         track: production
         status: inProgress
         inAppUpdatePriority: 2
         userFraction: 0.33
-        whatsNewDirectory: distribution/whatsnew
+        whatsNewDirectory: /home/runner/work/android-java-terminal/android-java-terminal/app/build/outputs/apk/release/
         mappingFile: app/build/outputs/mapping/release/mapping.txt
           
    
