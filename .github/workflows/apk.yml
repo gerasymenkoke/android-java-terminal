@@ -71,7 +71,7 @@ jobs:
     - name: Upload APK to GOOGLE STORE
       uses: r0adkll/upload-google-play@v1
       with:
-        serviceAccountJsonPlainText: ${{ SERVICEACCOUNTJSONPLAINTEXT }}
+        serviceAccountJsonPlainText: ${{ secrets.SERVICEACCOUNTJSONPLAINTEXT }}
         packageName: com.example.helloandroid
         releaseFiles: /home/runner/work/android-java-terminal/android-java-terminal/app/build/outputs/apk/release/hello.apk   
         track: production
