@@ -33,17 +33,17 @@ echo "Making APK..."
 
 
 
-$AAPT package -f -m -F $PROJ/bin/hello.unaligned.apk -M $PROJ/AndroidManifest.xml -S $PROJ/res -I $PLATFORM
-$AAPT add $PROJ/bin/hello.unaligned.apk classes.dex
+$AAPT package -f -m -F $PROJ/bin/hello.unaligned.aab -M $PROJ/AndroidManifest.xml -S $PROJ/res -I $PLATFORM
+$AAPT add $PROJ/bin/hello.unaligned.aab classes.dex
 
 
 
 
-$AAPT list $PROJ/bin/hello.unaligned.apk
+$AAPT list $PROJ/bin/hello.unaligned.aab
 cd $PROJ/bin
 pwd
 ls -l
-cp hello.unaligned.apk  /home/runner/work/android-java-terminal/android-java-terminal/app/build/outputs/apk/release/
+cp hello.unaligned.aab  /home/runner/work/android-java-terminal/android-java-terminal/app/build/outputs/apk/release/
 cd /home/runner/work/android-java-terminal/android-java-terminal/app/build/outputs/apk/release
 # cp /home/runner/work/android-java-terminal/android-java-terminal/Kostya.jks  /home/runner/work/android-java-terminal/android-java-terminal/app/build/outputs/apk/release/signingKey.jks
 # cd /home/runner/work/android-java-terminal/android-java-terminal/app/build/outputs/apk/release
