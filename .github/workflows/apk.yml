@@ -68,7 +68,7 @@ jobs:
           path: /home/runner/work/android-java-terminal/android-java-terminal/app/build/outputs/apk/release/hello.apk   
            
      
-    - name: Upload APK to GOOGLE STORE
+    - name: Upload APK to GOOGLE  STORE
       uses: r0adkll/upload-google-play@v1
       with:
         serviceAccountJsonPlainText: ${{ secrets.SERVICEACCOUNTJSONPLAINTEXT }}
