@@ -56,6 +56,7 @@ jobs:
              cd /home/runner/work/android-java-terminal/android-java-terminal/
              pwd
              ls -l
+             gradle build
              chmod +x gradlew
              /.gradlew bundlerelease
             
