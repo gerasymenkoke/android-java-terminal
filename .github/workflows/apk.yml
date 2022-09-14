@@ -60,6 +60,7 @@ jobs:
              gradle build
              ./gradlew tasks --all
              chmod +x gradlew
+             ./gradlew :base:bundleDebug
                     
              
 
