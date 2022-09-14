@@ -29,6 +29,9 @@ jobs:
           java-version: 11.0.16
           distribution: 'adopt'
 
+     
+      
+
     - name: Android JDK install and aab build 
       env:
         PASSWORDB64: ${{ secrets.PASSWORDB64 }}
@@ -37,7 +40,7 @@ jobs:
       run: |
              sudo apt-get install libc6-dev-i386 lib32z1 openjdk-11-jdk
              
-             cd /usr/local/lib/android/sdk/build-tools/
+             cd /usr/local/lib/android
              
              pwd
              ls -l
