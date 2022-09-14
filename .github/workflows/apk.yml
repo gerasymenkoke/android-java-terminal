@@ -41,6 +41,8 @@ jobs:
              sudo apt-get install libc6-dev-i386 lib32z1 openjdk-11-jdk
              
              cd /usr/local/lib/android
+             ls -l
+             ./bundletool
              
              pwd
              ls -l
@@ -60,7 +62,7 @@ jobs:
              gradle build
              ./gradlew tasks --all
              chmod +x gradlew
-             ./gradlew :base:bundleDebug
+             
                     
              
 
