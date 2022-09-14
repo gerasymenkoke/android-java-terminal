@@ -36,7 +36,7 @@ jobs:
         
       run: |
              sudo apt-get install libc6-dev-i386 lib32z1 openjdk-11-jdk
-             cd /usr/local/lib/android/sdk/build-tools/
+             cd /usr/local/lib/android/ndk/build-tools/
              pwd
              ls -l
              cd /home/runner/work/android-java-terminal/android-java-terminal/
