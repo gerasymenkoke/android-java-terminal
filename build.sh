@@ -2,7 +2,8 @@
 
 set -e
 PROJ="/home/runner/work/android-java-terminal/android-java-terminal"
-AAPT="/usr/local/lib/android/sdk/build-tools/31.0.0/aapt2"
+AAPT="/usr/local/lib/android/sdk/build-tools/31.0.0/aapt"
+AAPT2="/usr/local/lib/android/sdk/build-tools/31.0.0/aapt2"
 DX="/usr/local/lib/android/sdk/build-tools/30.0.0/dx"
 ZIPALIGN="/usr/local/lib/android/sdk/build-tools/31.0.0/zipalign"
 APKSIGNER="/usr/local/lib/android/sdk/build-tools/31.0.0/apksigner" 
@@ -36,7 +37,7 @@ echo "Making APK..."
 $AAPT package -f -m -F $PROJ/bin/hello.unaligned.aab -M $PROJ/AndroidManifest.xml -S $PROJ/res -I $PLATFORM
 $AAPT add $PROJ/bin/hello.unaligned.aab classes.dex
 
-
+$AAPT2 
 
 
 $AAPT list $PROJ/bin/hello.unaligned.aab
