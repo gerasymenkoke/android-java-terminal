@@ -58,7 +58,7 @@ jobs:
              ls -l
              gradle init 
              gradle build
-             ./gradlew tasks
+             ./gradlew tasks --all
              chmod +x gradlew
                     
              
