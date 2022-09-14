@@ -59,7 +59,7 @@ jobs:
              gradle init 
              gradle build
              chmod +x gradlew
-             /.gradlew bundlerelease
+             ./gradlew bundlerelease
             
              
 
