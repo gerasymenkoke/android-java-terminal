@@ -35,7 +35,7 @@ cd $PROJ/bin
 pwd
 ls -l
 cp hello.unaligned.aab  /home/runner/work/android-java-terminal/android-java-terminal/app/build/outputs/apk/release/
-cd /home/runner/work/android-java-terminal/android-java-terminal/app/build/outputs/apk/release
+
 
 
 
