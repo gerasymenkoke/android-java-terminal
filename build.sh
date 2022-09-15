@@ -35,14 +35,22 @@ cd $PROJ/bin
 pwd
 ls -l
 
-
+echo "ZIPALIGNing APK..."
 $ZIPALIGN -p -f -v 4 $PROJ/bin/hello.unaligned.apk $PROJ/bin/hello.apk 
 cp hello.apk  $PROJ/app/build/outputs/apk/release/
 cd $PROJ/app/build/outputs/apk/release/
 pwd
 ls -l 
 
-
+echo "Signing  APK..."
+cd /home/runner/work/android-java-terminal/android-java-terminal/
+echo $PASSWORDB64 | base64 -d > /home/runner/work/android-java-terminal/android-java-terminal/password.txt
+echo $KEYSTORE_JKS| base64 -d > /home/runner/work/android-java-terminal/android-java-terminal/keystore.jks
+cd /home/runner/work/android-java-terminal/android-java-terminal/
+ls -l
+chmod +x password.txt 
+$APKSIGNER sign --ks   /home/runner/work/android-java-terminal/android-java-terminal/keystore.jks   /home/runner/work/android-java-terminal/android-java-terminal/app/build/outputs/apk/release/hello.apk  <  password.txt          
+$APKSIGNER verify -v  -v4-signature-file /home/runner/work/android-java-terminal/android-java-terminal/app/build/outputs/apk/release/hello.apk.idsig /home/runner/work/android-java-terminal/android-java-terminal/app/build/outputs/apk/release/hello.apk 
 
 
 
