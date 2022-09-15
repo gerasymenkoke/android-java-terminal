@@ -34,9 +34,13 @@ $AAPT list $PROJ/bin/hello.unaligned.apk
 cd $PROJ/bin
 pwd
 ls -l
-cp hello.unaligned.aab  /home/runner/work/android-java-terminal/android-java-terminal/app/build/outputs/apk/release/
 
 
+$ZIPALIGN -p -f -v 4 $PROJ/bin/hello.unaligned.apk $PROJ/bin/hello.apk 
+cp hello.apk  $PROJ/app/build/outputs/apk/release/
+cd $PROJ/app/build/outputs/apk/release/
+pwd
+ls -l 
 
 
 
