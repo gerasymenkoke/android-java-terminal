@@ -46,8 +46,7 @@ cp AndroidManifest.xml $PROJ/bin/staging/manifest/
 mkdir $PROJ/bin/staging/dex/
 pwd
 ls -l
-cd $PROJ/bin/staging/dex/
-$DX --dex --output=classes.dex classes/
+$DX --dex --output=staging/dex/classes.dex classes/
 $PROJ/bin/staging/
 zip -r ../base.zip *
 bundletool build-bundle --modules=base.zip --output=hello.aab
