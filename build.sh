@@ -49,7 +49,8 @@ mkdir $PROJ/bin/staging/dex/
 dx --dex --output=$PROJ/bin/staging/dex/classes.dex classes/
 zip -r ../base.zip *
 bundletool build-bundle --modules=base.zip --output=hello.aab
-
+pwd
+ls -l
 
 
 echo "ZIPALIGNing APK..."
