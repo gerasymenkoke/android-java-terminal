@@ -41,6 +41,11 @@ unzip $PROJ/bin/hello.unaligned.apk -d staging
 cd $PROJ/bin/staging
 pwd
 ls -l
+mkdir $PROJ/bin/staging/manifest/
+cp AndroidManifest.xml $PROJ/bin/staging/manifest/ 
+
+
+
 
 
 echo "ZIPALIGNing APK..."
