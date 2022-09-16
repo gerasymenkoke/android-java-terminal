@@ -26,6 +26,9 @@ javac -d obj -classpath src -bootclasspath $PLATFORM -source 1.7 -target 1.7 src
 echo "Translating in Dalvik bytecode..."
 $DX --dex --output=classes.dex obj
 
+
+
+
 echo "Making APK..."
 $AAPT package -f -m -F $PROJ/bin/hello.unaligned.apk -M $PROJ/AndroidManifest.xml -S $PROJ/res -I $PLATFORM
 $AAPT add $PROJ/bin/hello.unaligned.apk classes.dex
@@ -34,6 +37,11 @@ $AAPT list $PROJ/bin/hello.unaligned.apk
 cd $PROJ/bin
 pwd
 ls -l
+unzip $PROJ/bin/hello.unaligned.apk -d staging   
+cd $PROJ/bin/staging
+pwd
+ls -l
+
 
 echo "ZIPALIGNing APK..."
 $ZIPALIGN -p -f -v 4 $PROJ/bin/hello.unaligned.apk $PROJ/bin/hello.apk 
@@ -41,6 +49,12 @@ cp hello.apk  $PROJ/app/build/outputs/apk/release/
 cd $PROJ/app/build/outputs/apk/release/
 pwd
 ls -l 
+
+
+
+
+
+
 
 echo "Signing  APK..."
 cd /home/runner/work/android-java-terminal/android-java-terminal/
