@@ -44,6 +44,7 @@ ls -l
 
 
 echo "ZIPALIGNing APK..."
+cd $PROJ/bin
 $ZIPALIGN -p -f -v 4 $PROJ/bin/hello.unaligned.apk $PROJ/bin/hello.apk 
 cp hello.apk  $PROJ/app/build/outputs/apk/release/
 cd $PROJ/app/build/outputs/apk/release/
