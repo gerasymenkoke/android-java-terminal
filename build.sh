@@ -63,6 +63,9 @@ cd $PROJ/bin/staging/
 pwd
 ls -l
 zip -r base.zip  $PROJ/bin/staging
+unzip base.zip
+pwd
+ls -l
 
 
 wget https://github.com/google/bundletool/releases/download/1.11.2/bundletool-all-1.11.2.jar
