@@ -46,13 +46,13 @@ ls -l
 mkdir $PROJ/bin/staging/manifest/
 cp AndroidManifest.xml $PROJ/bin/staging/manifest/ 
 
-#mkdir $PROJ/bin/staging/dex/
-#cd $PROJ/bin/staging/dex/
+mkdir $PROJ/bin/staging/dex/
+cp $PROJ/obj cd $PROJ/bin/staging/dex/ 
+cd $PROJ/bin/staging/dex/
+pwd
+ls -l
 
-#pwd
-#ls -l
 
-$DX --dex --output=classes.dex obj
 
 cd $PROJ/bin/staging/
 zip -r ../base.zip *
