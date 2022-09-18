@@ -63,6 +63,7 @@ cd $PROJ/bin/staging/
 pwd
 ls -l
 zip -r base.zip  $PROJ/bin/staging
+zip -r base.zip  $PROJ/bin/staging/manifest
 
 
 
