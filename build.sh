@@ -71,9 +71,8 @@ cd $PROJ/base
 pwd
 ls -l
 
-
 cd $PROJ
-zip -r base.zip  /base
+zip -r base.zip  $PROJ/base
 
 
 
