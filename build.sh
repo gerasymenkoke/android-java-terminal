@@ -47,6 +47,8 @@ pwd
 ls -l
 mkdir $PROJ/bin/staging/manifest/
 cp AndroidManifest.xml $PROJ/bin/staging/manifest/ 
+pwd
+ls -l
 
 mkdir $PROJ/bin/staging/dex/
 cp $PROJ/classes.dex  $PROJ/bin/staging/dex/ 
