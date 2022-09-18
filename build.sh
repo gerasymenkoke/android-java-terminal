@@ -44,10 +44,10 @@ ls -l
 mkdir $PROJ/bin/staging/manifest/
 cp AndroidManifest.xml $PROJ/bin/staging/manifest/ 
 mkdir $PROJ/bin/staging/dex/
+cd $PROJ/bin/staging/dex/
 pwd
 ls -l
 
-cd $PROJ/bin/staging/dex/
 $DX --dex --output=classes.dex obj
 
 cd $PROJ/bin/staging/
