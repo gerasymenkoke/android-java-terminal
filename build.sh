@@ -68,7 +68,7 @@ zip -r base.zip  $PROJ/bin/staging
 
 
 
-java -jar bundletool-all-1.11.2.jar build-bundle --modules=base.zip --output=hello.aab
+bundletool-all-1.11.2 build-bundle --modules=base.zip --output=hello.aab
 pwd
 ls -l
 
