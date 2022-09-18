@@ -73,6 +73,7 @@ ls -l
 
 cd $PROJ
 zip -r $PROJ/base.zip  $PROJ/base
+zip -r $PROJ/base.zip  $PROJ/base/manifest/
 
 
 
