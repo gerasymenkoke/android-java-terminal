@@ -56,7 +56,9 @@ ls -l
 
 cd $PROJ/bin/staging/
 zip -r base.zip  $PROJ/bin/staging
-bundletool build-bundle --modules=base.zip --output=hello.aab
+
+wget https://github.com/google/bundletool/releases/download/1.11.2/bundletool-all-1.11.2.jar 
+java -jar bundletool-all-1.11.2.jar build-bundle --modules=base.zip --output=hello.aab
 pwd
 ls -l
 
