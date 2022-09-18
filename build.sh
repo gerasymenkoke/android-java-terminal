@@ -47,7 +47,7 @@ mkdir $PROJ/bin/staging/manifest/
 cp AndroidManifest.xml $PROJ/bin/staging/manifest/ 
 
 mkdir $PROJ/bin/staging/dex/
-cp $PROJ/obj  $PROJ/bin/staging/dex/ 
+cp $PROJ/classes.dex  $PROJ/bin/staging/dex/ 
 cd $PROJ/bin/staging/dex/
 pwd
 ls -l
@@ -55,7 +55,7 @@ ls -l
 
 
 cd $PROJ/bin/staging/
-zip -r ../base.zip *
+zip -r base.zip  $PROJ/bin/staging
 bundletool build-bundle --modules=base.zip --output=hello.aab
 pwd
 ls -l
