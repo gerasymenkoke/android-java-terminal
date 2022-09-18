@@ -47,7 +47,7 @@ mkdir $PROJ/bin/staging/manifest/
 cp AndroidManifest.xml $PROJ/bin/staging/manifest/ 
 
 mkdir $PROJ/bin/staging/dex/
-cp $PROJ/obj cd $PROJ/bin/staging/dex/ 
+cp $PROJ/obj  $PROJ/bin/staging/dex/ 
 cd $PROJ/bin/staging/dex/
 pwd
 ls -l
