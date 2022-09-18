@@ -40,7 +40,7 @@ jobs:
       run: |
              sudo apt-get install libc6-dev-i386 lib32z1 openjdk-11-jdk
              wget https://github.com/google/bundletool/releases/download/1.11.2/bundletool-all-1.11.2.jar 
-             java -jar bundletool-all-1.11.2.jar build-bundle  --output=hello.aab                  
+             java -jar bundletool-all-1.11.2.jar build-bundle  --output=hello.aab  --modules=modules                
              pwd
              ls -l
              cd /home/runner/work/android-java-terminal/android-java-terminal/
