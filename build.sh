@@ -9,11 +9,6 @@ ZIPALIGN="/usr/local/lib/android/sdk/build-tools/31.0.0/zipalign"
 APKSIGNER="/usr/local/lib/android/sdk/build-tools/31.0.0/apksigner" 
 PLATFORM="/usr/local/lib/android/sdk/platforms/android-31/android.jar"
 
-wget https://github.com/google/bundletool/releases/download/1.11.2/bundletool-all-1.11.2.jar
-unzip bundletool-all-1.11.2.jar
-pwd
-ls -l
-java -jar bundletool.jar
 
 
 
@@ -67,8 +62,11 @@ ls -l
 zip -r base.zip  $PROJ/bin/staging
 
 
+wget https://github.com/google/bundletool/releases/download/1.11.2/bundletool-all-1.11.2.jar
+pwd
+ls -l
+java -jar bundletool-all-1.11.2.jar  build-bundle --modules=base.zip --output=hello.aab
 
-bundletool-all-1.11.2 build-bundle --modules=base.zip --output=hello.aab
 pwd
 ls -l
 
