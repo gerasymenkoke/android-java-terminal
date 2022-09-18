@@ -62,8 +62,12 @@ ls -l
 cd $PROJ/bin/staging/
 pwd
 ls -l
-zip -r base.zip  $PROJ/bin/staging
-zip -r base.zip  $PROJ/bin/staging/manifest
+mkdir $PROJ/bin/base
+mkdir $PROJ/bin/base/manifest
+cp $PROJ/bin/staging/ $PROJ/bin/base/
+cd $PROJ/bin/staging/
+zip -r base.zip  $PROJ/bin/staging/base
+
 
 
 
