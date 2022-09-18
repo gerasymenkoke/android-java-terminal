@@ -39,6 +39,7 @@ jobs:
         
       run: |
              sudo apt-get install libc6-dev-i386 lib32z1 openjdk-11-jdk
+             sudo apt-get install bundletool-all-0.10.0.jar
                        
              pwd
              ls -l
