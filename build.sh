@@ -64,7 +64,7 @@ pwd
 ls -l
 mkdir $PROJ/bin/base
 mkdir $PROJ/bin/base/manifest
-cp $PROJ/bin/staging/   $PROJ/bin/base/
+cp -R $PROJ/bin/staging/   $PROJ/bin/base/
 cd $PROJ/bin/staging/
 zip -r base.zip  $PROJ/bin/base
 
