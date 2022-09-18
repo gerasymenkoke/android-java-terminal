@@ -16,6 +16,7 @@ rm -rf src/com/example/helloandroid/R.java
 mkdir bin
 
 
+
 echo "Generating R.java file..."
 $AAPT package -f -m -J src -M AndroidManifest.xml -S res -I $PLATFORM
 
@@ -25,7 +26,8 @@ javac -d obj -classpath src -bootclasspath $PLATFORM -source 1.7 -target 1.7 src
 
 echo "Translating in Dalvik bytecode..."
 $DX --dex --output=classes.dex obj
-
+pwd
+ls -l
 
 
 
