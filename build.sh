@@ -63,15 +63,19 @@ cd $PROJ/bin/staging/
 pwd
 ls -l
 zip -r base.zip  $PROJ/bin/staging
-echo "unzip base.zip..."
-unzip base.zip
-pwd
-ls -l
+
 
 
 wget https://github.com/google/bundletool/releases/download/1.11.2/bundletool-all-1.11.2.jar
 pwd
 ls -l
+
+echo "unzip base.zip before java jar..."
+unzip base.zip
+pwd
+ls -l
+
+
 java -jar bundletool-all-1.11.2.jar  build-bundle --modules=base.zip --output=hello.aab
 
 pwd
