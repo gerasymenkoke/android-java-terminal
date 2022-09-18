@@ -62,10 +62,9 @@ ls -l
 cd $PROJ/bin/staging/
 pwd
 ls -l
-mkdir $PROJ/bin/base
 mkdir $PROJ/bin/base/manifest
-cp -R $PROJ/bin/staging/   $PROJ/bin/base/
-cp $PROJ/bin/staging/manifest/AndroidManifest.xml  $PROJ/bin/base/manifest
+cp -R $PROJ/bin/staging/*   $PROJ/bin/base/
+#cp $PROJ/bin/staging/manifest/AndroidManifest.xml  $PROJ/bin/base/manifest
 echo "base dir....."
 cd $PROJ/bin/base
 pwd
