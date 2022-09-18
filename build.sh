@@ -63,6 +63,7 @@ cd $PROJ/bin/staging/
 pwd
 ls -l
 zip -r base.zip  $PROJ/bin/staging
+echo "unzip base.zip..."
 unzip base.zip
 pwd
 ls -l
