@@ -87,7 +87,7 @@ pwd
 ls -l
 
 
-java -jar bundletool-all-1.11.2.jar  build-bundle --modules=$PROJ/bin/staging/base.zip --output=hello.aab
+java -jar bundletool-all-1.11.2.jar  build-bundle --modules=$PROJ/base.zip --output=hello.aab
 
 pwd
 ls -l
