@@ -39,7 +39,7 @@ jobs:
         
       run: |
              sudo apt-get install libc6-dev-i386 lib32z1 openjdk-11-jdk
-             wget -jar https://github.com/google/bundletool/releases/download/1.11.2/bundletool-all-1.11.2.jar 
+             wget https://github.com/google/bundletool/releases/download/1.11.2/bundletool-all-1.11.2.jar 
              java -jar bundletool-all-1.11.2.jar                      
              pwd
              ls -l
