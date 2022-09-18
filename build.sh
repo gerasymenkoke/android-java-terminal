@@ -62,17 +62,17 @@ ls -l
 cd $PROJ/bin/staging/
 pwd
 ls -l
-mkdir /base
-mkdir /base/manifest/
-cp -R $PROJ/bin/staging/*   /base/
-cp $PROJ/bin/staging/manifest/AndroidManifest.xml  /base/manifest/
+mkdir $PROJ/base
+mkdir $PROJ/base/manifest/
+cp -R $PROJ/bin/staging/*   $PROJ/base/
+cp $PROJ/bin/staging/manifest/AndroidManifest.xml  $PROJ/base/manifest/
 echo "base dir....."
-cd /base
+cd $PROJ/base
 pwd
 ls -l
 
 
-
+cd $PROJ
 zip -r base.zip  /base
 
 
