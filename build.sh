@@ -75,7 +75,7 @@ cd $PROJ
 #zip -r $PROJ/base.zip  $PROJ/base
 zip -r base.zip base/
 
-cd $PROJ/base
+
 wget https://github.com/google/bundletool/releases/download/1.11.2/bundletool-all-1.11.2.jar
 pwd
 ls -l
