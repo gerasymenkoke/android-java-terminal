@@ -82,12 +82,8 @@ wget https://github.com/google/bundletool/releases/download/1.11.2/bundletool-al
 pwd
 ls -l
 
-echo "unzip base.zip before java jar..."
-unzip base.zip
-pwd
-ls -l
+echo "before java jar..."
 
-#cd $PROJ/base
 
 java -jar bundletool-all-1.11.2.jar  build-bundle --modules=base.zip --output=hello.aab
 
