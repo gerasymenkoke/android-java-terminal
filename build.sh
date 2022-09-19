@@ -77,6 +77,7 @@ zip -r base.zip base/
 cd $PROJ/base
 zip -r manifest.zip manifest/
 cp $PROJ/base.zip base.zip
+zip -r base.zip *.zip
 
 wget https://github.com/google/bundletool/releases/download/1.11.2/bundletool-all-1.11.2.jar
 pwd
@@ -85,7 +86,7 @@ ls -l
 echo "before java jar..."
 
 
-java -jar bundletool-all-1.11.2.jar  build-bundle --modules=base.zip,manifest.zip  --output=hello.aab
+java -jar bundletool-all-1.11.2.jar  build-bundle --modules=base.zip  --output=hello.aab
 
 pwd
 ls -l
