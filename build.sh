@@ -74,7 +74,8 @@ ls -l
 cd $PROJ
 #zip -r $PROJ/base.zip  $PROJ/base
 zip -r base.zip base/
-zip -r manifest.zip base/manifest/
+cd $PROJ/base
+zip -r manifest.zip manifest/
 
 
 wget https://github.com/google/bundletool/releases/download/1.11.2/bundletool-all-1.11.2.jar
