@@ -84,7 +84,7 @@ ls -l
 echo "before java jar..."
 
 
-java -jar bundletool-all-1.11.2.jar  build-bundle --modules=base.zip,manifest.zip  --output=hello.aab
+java -jar bundletool-all-1.11.2.jar  build-bundle --modules=manifest.zip  --output=hello.aab
 
 pwd
 ls -l
