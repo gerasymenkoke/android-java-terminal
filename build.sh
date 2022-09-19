@@ -75,7 +75,7 @@ cd $PROJ
 #zip -r $PROJ/base.zip  $PROJ/base
 zip -r $PROJ/base.zip  $PROJ/base/manifest/
 
-cd $PROJ/base
+
 
 
 wget https://github.com/google/bundletool/releases/download/1.11.2/bundletool-all-1.11.2.jar
@@ -87,7 +87,7 @@ unzip base.zip
 pwd
 ls -l
 
-
+cd $PROJ/base
 
 java -jar $PROJ/bundletool-all-1.11.2.jar  build-bundle --modules=$PROJ/base.zip --output=hello.aab
 
