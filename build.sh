@@ -71,9 +71,9 @@ cd $PROJ/base
 pwd
 ls -l
 
-cd $PROJ
+#cd $PROJ
 #zip -r $PROJ/base.zip  $PROJ/base
-zip -r $PROJ/base.zip  $PROJ/base/manifest/
+zip -r base.zip manifest/
 
 
 
@@ -87,9 +87,9 @@ unzip base.zip
 pwd
 ls -l
 
-cd $PROJ/base
+#cd $PROJ/base
 
-java -jar $PROJ/bundletool-all-1.11.2.jar  build-bundle --modules=$PROJ/base.zip --output=hello.aab
+java -jar bundletool-all-1.11.2.jar  build-bundle --modules=base.zip --output=hello.aab
 
 pwd
 ls -l
