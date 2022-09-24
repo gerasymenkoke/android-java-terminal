@@ -19,8 +19,8 @@ mkdir bin
 
 
 
-echo "Generating R.java file..."
-$AAPT package -f -m -J src -M AndroidManifest.xml -S res -I $PLATFORM
+#echo "Generating R.java file..."
+# $AAPT package -f -m -J src -M AndroidManifest.xml -S res -I $PLATFORM
 
 echo "Compiling..."
 javac -d obj -classpath src -bootclasspath $PLATFORM -source 1.7 -target 1.7 src/com/example/helloandroid/MainActivity.java
@@ -41,55 +41,20 @@ $AAPT list $PROJ/bin/hello.unaligned.apk
 cd $PROJ/bin
 pwd
 ls -l
-unzip $PROJ/bin/hello.unaligned.apk -d staging   
-cd $PROJ/bin/staging
-pwd
-ls -l
-mkdir $PROJ/bin/staging/manifest/
-cp AndroidManifest.xml $PROJ/bin/staging/manifest/ 
-cd $PROJ/bin/staging/manifest/
-pwd
-ls -l
-
-mkdir $PROJ/bin/staging/dex/
-cp $PROJ/classes.dex  $PROJ/bin/staging/dex/ 
-cd $PROJ/bin/staging/dex/
-pwd
-ls -l
 
 
 
-cd $PROJ/bin/staging/
-pwd
-ls -l
-mkdir $PROJ/base
-mkdir $PROJ/base/manifest/
-cp -R $PROJ/bin/staging/*   $PROJ/base/
-cp $PROJ/bin/staging/manifest/AndroidManifest.xml  $PROJ/base/manifest/
-echo "base dir....."
-cd $PROJ/base
-pwd
-ls -l
-
-cd $PROJ
-#zip -r $PROJ/base.zip  $PROJ/base
-zip -r base.zip base/
-cd $PROJ/base
-zip -r manifest.zip manifest/
-cp $PROJ/base.zip base.zip
-zip -r base.zip *.zip
-
-wget https://github.com/google/bundletool/releases/download/1.11.2/bundletool-all-1.11.2.jar
-pwd
-ls -l
-
-echo "before java jar..."
 
 
-java -jar bundletool-all-1.11.2.jar  build-bundle --modules=base.zip  --output=hello.aab
 
-pwd
-ls -l
+
+
+
+
+
+
+
+
 
 
 echo "ZIPALIGNing APK..."
@@ -111,6 +76,7 @@ cd /home/runner/work/android-java-terminal/android-java-terminal/
 echo $PASSWORDB64 | base64 -d > /home/runner/work/android-java-terminal/android-java-terminal/password.txt
 echo $KEYSTORE_JKS| base64 -d > /home/runner/work/android-java-terminal/android-java-terminal/keystore.jks
 cd /home/runner/work/android-java-terminal/android-java-terminal/
+pwd
 ls -l
 chmod +x password.txt 
 $APKSIGNER sign --ks   /home/runner/work/android-java-terminal/android-java-terminal/keystore.jks   /home/runner/work/android-java-terminal/android-java-terminal/app/build/outputs/apk/release/hello.apk  <  password.txt          
