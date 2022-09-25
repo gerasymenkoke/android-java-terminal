@@ -92,7 +92,7 @@ echo "Compile the Java sources to bytecode"
 #javac -d obj -classpath src -bootclasspath $PLATFORM $PROJ/src/com/example/helloandroid/*.java
 javac -d obj -classpath src -bootclasspath $PLATFORM -source 1.7 -target 1.7 src/com/example/helloandroid/MainActivity.java
 echo "Convert the bytecode to Dex format (Dalvik Android virtual machine)"
-$DX --dex --output=bin\classes.dex obj
+$DX --dex --output=bin/classes.dex obj
 
 echo "Combine the resources and the bytecode into a single bundle"
 cd $JAVA_HOME/bin
