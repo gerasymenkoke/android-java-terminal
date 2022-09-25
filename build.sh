@@ -113,7 +113,7 @@ pwd
 ls -l
 echo "Java -jar bundletool"
 
-$JAVA_HOME/bin/java -jar bundletool-all-1.11.2.jar build-bundle --modules=base.zip --output=..\bin\hello.aab
+$JAVA_HOME/bin/java -jar bundletool-all-1.11.2.jar build-bundle --modules=base.zip --output=../bin/hello.aab
 
 
 
