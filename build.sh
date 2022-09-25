@@ -100,7 +100,7 @@ pwd
 ls -l
 
 cd $PROJ/obj
-$JAVA_HOME/jar  xf $PROJ/obj/linked.zip resources.pb AndroidManifest.xml res
+$JAVA_HOME/bin/jar  xf $PROJ/obj/linked.zip resources.pb AndroidManifest.xml res
 mkdir manifest dex 2>nul
 move AndroidManifest.xml manifest
 copy /Y /B ..\bin\classes*.dex dex\ 2>nul
