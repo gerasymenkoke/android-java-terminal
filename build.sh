@@ -87,10 +87,10 @@ echo "Link resourses..."
 $AAPT2 link --proto-format -o $PROJ/obj/linked.zip -I $PLATFORM --manifest $PROJ/AndroidManifest.xml --java src $PROJ/obj/res.zip --auto-add-overlay
 
 echo "Compile the Java sources to bytecode"
-javac" -d obj -classpath src -bootclasspath "%ANDROID_JAR%" src\com\celer\hello\*.java
+javac -d obj -classpath src -bootclasspath $PLATFORM $PROJ/src/com/example/helloandroid/*.java
 
 echo "Convert the bytecode to Dex format (Dalvik Android virtual machine)"
-dx" --dex --output=bin\classes.dex obj
+$DX --dex --output=bin\classes.dex obj
 
 echo "Combine the resources and the bytecode into a single bundle"
 cd obj
