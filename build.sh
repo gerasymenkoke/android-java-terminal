@@ -102,9 +102,9 @@ ls -l
 cd $PROJ/obj
 $JAVA_HOME/bin/jar  xf $PROJ/obj/linked.zip resources.pb AndroidManifest.xml res
 mkdir manifest dex 2>nul
-move AndroidManifest.xml manifest
+mv AndroidManifest.xml manifest
 copy /Y /B ..\bin\classes*.dex dex\ 2>nul
-"%JAVA_HOME%\bin\jar" cMf base.zip manifest dex res resources.pb
+$JAVA_HOME/bin/jar cMf base.zip manifest dex res resources.pb
 
 echo "Build the AAB"
 java" -jar "%BUNDLETOOL%" build-bundle --modules=base.zip --output=..\bin\hello.aab
