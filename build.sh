@@ -107,7 +107,7 @@ cp ../bin/classes*.dex dex/
 echo "jar cmf"
 $JAVA_HOME/bin/jar cMf base.zip manifest dex res resources.pb
 
-echo "Build the AAB"
+echo "Build the AAB"#
 wget https://github.com/google/bundletool/releases/download/1.11.2/bundletool-all-1.11.2.jar 
 pwd
 ls -l
@@ -122,7 +122,7 @@ ls -l
 
 
 echo "Sign AAB"
-$JAVA_HOME/bin/jarsigner -keystore $KEYSTORE_JKS -storepass $KEY_PASSWORD  ..\bin\hello.aab $ALIAS       
+$JAVA_HOME/bin/jarsigner -keystore $KEYSTORE_JKS -storepass $KEY_PASSWORD  $PROJ\bin\hello.aab $ALIAS       
 
 
 
