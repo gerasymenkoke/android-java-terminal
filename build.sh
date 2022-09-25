@@ -120,7 +120,7 @@ $JAVA_HOME/bin/java -jar bundletool-all-1.11.2.jar build-bundle --modules=base.z
 
 
 echo "Sign AAB"
-$JAVA_HOME/bin/jarsigner -keystore $PROJ/keystore.jks -storepass $PROJ/password.txt  ..\bin\hello.aab alias       
+$JAVA_HOME/bin/jarsigner -keystore $KEYSTORE_JKS -storepass $KEY_PASSWORD  ..\bin\hello.aab $ALIAS       
 
 
 
