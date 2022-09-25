@@ -93,8 +93,8 @@ echo "Convert the bytecode to Dex format (Dalvik Android virtual machine)"
 $DX --dex --output=bin\classes.dex obj
 
 echo "Combine the resources and the bytecode into a single bundle"
-cd obj
-"%JAVA_HOME%\bin\jar" xf linked.zip resources.pb AndroidManifest.xml res
+cd $PROJ/obj
+"%JAVA_HOME%\bin\jar" xf $PROJ/obj/linked.zip resources.pb AndroidManifest.xml res
 mkdir manifest dex 2>nul
 move AndroidManifest.xml manifest
 copy /Y /B ..\bin\classes*.dex dex\ 2>nul
