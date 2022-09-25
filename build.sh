@@ -108,7 +108,16 @@ echo "jar cmf"
 $JAVA_HOME/bin/jar cMf base.zip manifest dex res resources.pb
 
 echo "Build the AAB"
-$JAVA_HOME/bin/java -jar "%BUNDLETOOL%" build-bundle --modules=base.zip --output=..\bin\hello.aab
+wget https://github.com/google/bundletool/releases/download/1.11.2/bundletool-all-1.11.2.jar 
+pwd
+ls -l
+echo "Java -jar bundletool"
+
+$JAVA_HOME/bin/java -jar bundletool-all-1.11.2.jar build-bundle --modules=base.zip --output=..\bin\hello.aab
+
+
+
+
 
 echo "Sign AAB"
 
