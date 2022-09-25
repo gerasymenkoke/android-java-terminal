@@ -104,6 +104,7 @@ $JAVA_HOME/bin/jar  xf $PROJ/obj/linked.zip resources.pb AndroidManifest.xml res
 mkdir manifest dex 2>nul
 mv AndroidManifest.xml manifest
 cp ../bin/classes*.dex dex/ 2>nul
+echo "jar cmf"
 $JAVA_HOME/bin/jar cMf base.zip manifest dex res resources.pb
 
 echo "Build the AAB"
