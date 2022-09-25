@@ -23,13 +23,18 @@ jobs:
     
    
 
-    - name: Set up JDK 1.8
+    - name: Set up JDK 
       uses: actions/setup-java@v3
       with:
           java-version: 11.0.16
           distribution: 'adopt'
 
-     
+
+    - name: Backup JAVA_HOME
+      id: java-home
+      run: echo "::set-output name=path::$JAVA_HOME"
+    
+    
       
 
     - name: Android JDK install and aab build 
