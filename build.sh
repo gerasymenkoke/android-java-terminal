@@ -84,7 +84,7 @@ echo "Compile resourses..."
 $AAPT2 compile --dir $PROJ/res/ -o $PROJ/obj/res.zip
 
 echo "Link resourses..."
-$AAPT2 link --proto-format -o obj\linked.zip -I "%ANDROID_JAR%" --manifest src\AndroidManifest.xml --java src obj\res.zip --auto-add-overlay
+$AAPT2 link --proto-format -o $PROJ/obj/linked.zip -I "%ANDROID_JAR%" --manifest $PROJ/AndroidManifest.xml --java src $PROJ/obj/res.zip --auto-add-overlay
 
 echo "Compile the Java sources to bytecode"
 javac" -d obj -classpath src -bootclasspath "%ANDROID_JAR%" src\com\celer\hello\*.java
