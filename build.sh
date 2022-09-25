@@ -81,7 +81,7 @@ $APKSIGNER verify -v  -v4-signature-file /home/runner/work/android-java-terminal
 echo "Making AAB..."
 
 echo "Compile resourses..."
-$AAPT2 compile --dir $PROJ\res\ -o $PROJ\obj\res.zip
+$AAPT2 compile --dir $PROJ/res/ -o $PROJ/obj/res.zip
 
 echo "Link resourses..."
 $AAPT2 link --proto-format -o obj\linked.zip -I "%ANDROID_JAR%" --manifest src\AndroidManifest.xml --java src obj\res.zip --auto-add-overlay
