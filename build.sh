@@ -8,6 +8,7 @@ DX="/usr/local/lib/android/sdk/build-tools/30.0.0/dx"
 ZIPALIGN="/usr/local/lib/android/sdk/build-tools/31.0.0/zipalign"
 APKSIGNER="/usr/local/lib/android/sdk/build-tools/31.0.0/apksigner" 
 PLATFORM="/usr/local/lib/android/sdk/platforms/android-31/android.jar"
+JAR="/usr/local/lib/android/sdk/platforms/android-31/jar"
 
 
 
@@ -94,7 +95,7 @@ $DX --dex --output=bin\classes.dex obj
 
 echo "Combine the resources and the bytecode into a single bundle"
 cd $PROJ/obj
-"%JAVA_HOME%\bin\jar" xf $PROJ/obj/linked.zip resources.pb AndroidManifest.xml res
+$JAR xf $PROJ/obj/linked.zip resources.pb AndroidManifest.xml res
 mkdir manifest dex 2>nul
 move AndroidManifest.xml manifest
 copy /Y /B ..\bin\classes*.dex dex\ 2>nul
