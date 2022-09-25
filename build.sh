@@ -95,7 +95,7 @@ echo "Convert the bytecode to Dex format (Dalvik Android virtual machine)"
 $DX --dex --output=bin\classes.dex obj
 
 echo "Combine the resources and the bytecode into a single bundle"
-cd $JAVA_HOME
+cd $JAVA_HOME/bin
 pwd
 ls -l
 
