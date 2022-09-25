@@ -48,10 +48,7 @@ jobs:
              pwd
              ls -l
                           
-             wget https://github.com/google/bundletool/releases/download/1.11.2/bundletool-all-1.11.2.jar 
-             java -jar bundletool-all-1.11.2.jar build-bundle                      
-             pwd
-             ls -l
+             
              
              
              cd /home/runner/work/android-java-terminal/android-java-terminal/
