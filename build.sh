@@ -120,6 +120,8 @@ $JAVA_HOME/bin/java -jar bundletool-all-1.11.2.jar build-bundle --modules=base.z
 
 
 echo "Sign AAB"
+$APKSIGNER sign --ks   /home/runner/work/android-java-terminal/android-java-terminal/keystore.jks   /home/runner/work/android-java-terminal/android-java-terminal/app/build/outputs/apk/release/hello.apk  <  password.txt          
+$JAVA_HOME/bin/jarsigner -keystore $PROJ/keystore.jks ..\bin\hello.aab <  password.txt       
 
 
 
