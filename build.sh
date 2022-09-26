@@ -122,7 +122,7 @@ ls -l
 
 
 echo "Sign AAB"
-$JAVA_HOME/bin/jarsigner -keystore $KEYSTORE_JKS -storepass $KEY_PASSWORD  $PROJ\bin\hello.aab $ALIAS       
+$JAVA_HOME/bin/jarsigner -keystore $KEYSTORE_JKS -storepass $KEY_PASSWORD  hello_signed.aab $PROJ\bin\hello.aab $ALIAS       
 
 
 
