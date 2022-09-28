@@ -125,7 +125,7 @@ echo "Sign AAB"
 $JAVA_HOME/bin/jarsigner --help
 cd $PROJ/bin
 echo "jarsigner....."
-jarsigner -verbose -sigalg SHA256withRSA -digestalg SHA-256 -storepass $KEY_PASSWORD  -keystore $KEYSTORE_JKS hello.aab alias
+$JAVA_HOME/bin/jarsigner  -keystore $KEYSTORE_JKS -storepass $KEY_PASSWORD   hello.aab alias
 #$JAVA_HOME/bin/jarsigner -keystore $KEYSTORE_JKS -storepass $KEY_PASSWORD  hello.aab  $ALIAS       
 
 
