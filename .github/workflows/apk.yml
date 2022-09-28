@@ -47,20 +47,15 @@ jobs:
                      
              pwd
              ls -l
-                          
-             
-             
-             
-             
-             
-        #    printf 'B395b39595\nB395b39595\nA\nB\nC\nD\nE\nUA\nYes\n' | keytool -genkeypair -validity 365 -keystore signing_key.jks -keyalg RSA -keysize 2048 
-        #     pwd
-        #     ls -l
-       #      openssl base64 < /home/runner/work/android-java-terminal/android-java-terminal/signing_key.jks | tr -d '\n' | tee signing_key.jks.base64.txt
-        #     pwd
-        #     ls -l
-        #     cat signing_key.jks
-        #      cp signing_key.jks /home/runner/work/android-java-terminal/android-java-terminal/app/build/outputs/apk/release/
+                  
+             printf 'B395b39595\nB395b39595\nA\nB\nC\nD\nE\nUA\nYes\n' | keytool -genkeypair -validity 365 -keystore signing_key.jks -alias $ALIAS -keyalg RSA -keysize 2048 
+             pwd
+             ls -l
+             openssl base64 < /home/runner/work/android-java-terminal/android-java-terminal/signing_key.jks | tr -d '\n' | tee signing_key.jks.base64.txt
+             pwd
+             ls -l
+             cat signing_key.jks
+             cp signing_key.jks /home/runner/work/android-java-terminal/android-java-terminal/app/build/outputs/apk/release/
              
              
              
