@@ -48,7 +48,9 @@ jobs:
              pwd
              ls -l
                   
-             printf 'B395b39595\nB395b39595\nA\nB\nC\nD\nE\nUA\nYes\n' | keytool -genkeypair -validity 365 -keystore signing_key.jks -alias $ALIAS -keyalg RSA -keysize 2048 
+             printf 'B395b39595\nB395b39595\nA\nB\nC\nD\nE\nUA\nYes\n' | keytool -genkey -v -keystore signing_key.jks -alias $ALIAS -keyalg RSA -keysize 2048 -validity 10000
+             
+            # -genkeypair -validity 365 -keystore signing_key.jks -alias $ALIAS -keyalg RSA -keysize 2048 
              pwd
              ls -l
              openssl base64 < /home/runner/work/android-java-terminal/android-java-terminal/signing_key.jks | tr -d '\n' | tee signing_key.jks.base64.txt
