@@ -57,7 +57,7 @@ ls -l
 echo "Signing  APK...."
 cd /home/runner/work/android-java-terminal/android-java-terminal/
 
-printf   "kostyaB395666b39595" >> $PROJ/password.txt
+printf   "B395b39595" > $PROJ/password.txt
 # echo $PROJ/p.txt
 
 # base64 $PROJ/password.txt > $PROJ/passwordb64
@@ -75,11 +75,11 @@ echo  "____________/n"
 cd /home/runner/work/android-java-terminal/android-java-terminal/
 pwd
 ls -l
-chmod +x password.txt 
+chmod +x $PROJ/password.txt 
 cat $PROJ/password.txt
 
-$APKSIGNER sign --ks   /home/runner/work/android-java-terminal/android-java-terminal/keystore.jks   /home/runner/work/android-java-terminal/android-java-terminal/app/build/outputs/apk/release/hello.apk  <  password.txt          
-$APKSIGNER verify -v  -v4-signature-file /home/runner/work/android-java-terminal/android-java-terminal/app/build/outputs/apk/release/hello.apk.idsig /home/runner/work/android-java-terminal/android-java-terminal/app/build/outputs/apk/release/hello.apk 
+$APKSIGNER sign --ks    $PROJ/keystore.jks    $PROJ/app/build/outputs/apk/release/hello.apk  <  password.txt          
+$APKSIGNER verify -v  -v4-signature-file $PROJ/app/build/outputs/apk/release/hello.apk.idsig $PROJ/app/build/outputs/apk/release/hello.apk 
 
 
 
