@@ -57,17 +57,17 @@ ls -l
 echo "Signing  APK...."
 cd /home/runner/work/android-java-terminal/android-java-terminal/
 
-printf   "B395b39595" > $PROJ/password.txt
+printf   "B395666b39595" > $PROJ/password.txt
 # echo $PROJ/p.txt
 
-# base64 $PROJ/password.txt > $PROJ/passwordb64
-# echo  $PROJ/passwordb64
-# base64 -d passwordb64 > $PROJ/password.txt
-# cat $PROJ/password.txt
+base64 $PROJ/password.txt > $PROJ/passwordb64
+cat  $PROJ/passwordb64
+base64 -d passwordb64 > $PROJ/password.txt
+cat $PROJ/password.txt
 
 #echo $PROJ/passwordb64.txt | base64 -d > $PROJ/password.txt
 
-echo "$KEYSTORE_JKS" | base64 -d > $PROJ/keystore.jks
+#echo KEYSTORE_JKS | base64 -d > $PROJ/keystore.jks
 #cat $PASSWORDB64
 echo "_____________/n"
 # cat $PROJ/keystore.jks
