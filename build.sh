@@ -56,8 +56,9 @@ ls -l
 
 echo "Signing  APK...."
 cd /home/runner/work/android-java-terminal/android-java-terminal/
-base64 --help
-base64 "B395b39595" > $PROJ/passwordb64.txt
+
+"B395b39595" > password.txt
+base64 password.txt > $PROJ/passwordb64.txt
 cat $PROJ/passwordb64.txt
 
 
