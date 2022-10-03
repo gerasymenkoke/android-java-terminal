@@ -68,7 +68,9 @@ cat $PROJ/password.txt
 #echo $PROJ/passwordb64.txt | base64 -d > $PROJ/password.txt
 
 
-echo $KEYSTORE_JKS | base64 -d > $PROJ/keystore.jks
+# echo $KEYSTORE_JKS | base64 -d > $PROJ/keystore.jks
+$KEYSTORE_JKS > $PROJ/keystore.jks
+
 
 
 #cat $PASSWORDB64
