@@ -60,8 +60,8 @@ cd /home/runner/work/android-java-terminal/android-java-terminal/
 printf   "B395b39595" > $PROJ/password.txt
 # echo $PROJ/p.txt
 
-#base64 $PROJ/password.txt > $PROJ/passwordb64
-#cat  $PROJ/passwordb64
+base64 $PROJ/password.txt > $PROJ/passwordb64
+cat  $PROJ/passwordb64
 
 
 #base64 -d $PROJ/passwordb64 > $PROJ/password.txt
@@ -205,7 +205,7 @@ ls -l
 chmod +x $PROJ/password.txt 
 cat $PROJ/password.txt
 
-$APKSIGNER sign --ks    $PROJ/keystore.jks    $PROJ/app/build/outputs/apk/release/hello.apk  <  $PROJ/password.txt          
+$APKSIGNER sign --ks    $PROJ/keystore.jks    $PROJ/app/build/outputs/apk/release/hello.apk  <  $PROJ/passwordb64          
 $APKSIGNER verify -v  -v4-signature-file $PROJ/app/build/outputs/apk/release/hello.apk.idsig $PROJ/app/build/outputs/apk/release/hello.apk 
 
 
