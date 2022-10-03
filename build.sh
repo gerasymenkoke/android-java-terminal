@@ -80,8 +80,8 @@ echo "signing_key.jks________\n"
 
 #echo "keystore64___________\n"
 
-echo $PASSWORDB64  | base64 -d > $PROJ/password.txt
-echo $KEYSTORE_JKS | base64 -d > $PROJ/keystore.jks
+echo "$PASSWORDB64"  | base64 -d > $PROJ/password.txt
+echo "$KEYSTORE_JKS" | base64 -d > $PROJ/keystore.jks
 
 
 #cat  $PROJ/keystore64
