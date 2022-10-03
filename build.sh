@@ -66,9 +66,10 @@ base64 -d $PROJ/passwordb64 > $PROJ/password.txt
 cat $PROJ/password.txt
 
 
-
+echo "keystore64___________\n"
 echo $KEYSTORE_JKS | base64 > $PROJ/keystore64
 cat  $PROJ/keystore64
+echo "keystore.jks___________\n"
 base64 -d $PROJ/keystore64 > $PROJ/keystore.jks
 cat $PROJ/keystore.jks
 
