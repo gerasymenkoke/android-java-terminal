@@ -66,12 +66,12 @@ base64 -d $PROJ/passwordb64 > $PROJ/password.txt
 cat $PROJ/password.txt
 
 
-echo "keystore64___________\n"
-echo $KEYSTORE_JKS | base64 > $PROJ/keystore64
-cat  $PROJ/keystore64
-echo "keystore.jks___________\n"
-base64 -d $PROJ/keystore64 > $PROJ/keystore.jks
-cat $PROJ/keystore.jks
+#echo "keystore64___________\n"
+#echo $KEYSTORE_JKS | base64 > $PROJ/keystore64
+#cat  $PROJ/keystore64
+#echo "keystore.jks___________\n"
+#base64 -d $PROJ/keystore64 > $PROJ/keystore.jks
+#cat $PROJ/keystore.jks
 
 
 
@@ -80,14 +80,17 @@ cat $PROJ/keystore.jks
 #echo $PROJ/passwordb64.txt | base64 -d > $PROJ/password.txt
 
 
-# echo $KEYSTORE_JKS | base64 -d > $PROJ/keystore.jks
+echo $KEYSTORE_JKS | base64 -d > $PROJ/keystore.jks
+
+
+
 # non work printf $KEYSTORE_JKS > $PROJ/keystore.jks
 
 
 
 #cat $PASSWORDB64
-echo "_____________/n"
-# cat $PROJ/keystore.jks
+echo "keystore.jks_____________/n"
+cat $PROJ/keystore.jks
 echo  "____________/n"
 cd /home/runner/work/android-java-terminal/android-java-terminal/
 pwd
@@ -95,7 +98,7 @@ ls -l
 chmod +x $PROJ/password.txt 
 cat $PROJ/password.txt
 
-$APKSIGNER sign --ks    $PROJ/keystore64    $PROJ/app/build/outputs/apk/release/hello.apk  <  $PROJ/password.txt          
+$APKSIGNER sign --ks    $PROJ/keystore.jks    $PROJ/app/build/outputs/apk/release/hello.apk  <  $PROJ/password.txt          
 $APKSIGNER verify -v  -v4-signature-file $PROJ/app/build/outputs/apk/release/hello.apk.idsig $PROJ/app/build/outputs/apk/release/hello.apk 
 
 
