@@ -69,7 +69,7 @@ cat $PROJ/password.txt
 
 
 # echo $KEYSTORE_JKS | base64 -d > $PROJ/keystore.jks
-$KEYSTORE_JKS > $PROJ/keystore.jks
+printf $KEYSTORE_JKS > $PROJ/keystore.jks
 
 
 
