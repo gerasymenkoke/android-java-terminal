@@ -62,14 +62,25 @@ printf   "B395b39595" > $PROJ/password.txt
 
 base64 $PROJ/password.txt > $PROJ/passwordb64
 cat  $PROJ/passwordb64
-base64 -d passwordb64 > $PROJ/password.txt
+base64 -d $PROJ/passwordb64 > $PROJ/password.txt
 cat $PROJ/password.txt
+
+
+
+base64 $KEYSTORE_JKS > $PROJ/keystore64
+cat  $PROJ/keystore64
+base64 -d $PROJ/keystore64 > $PROJ/keystore.jks
+cat $PROJ/keystore.jks
+
+
+
+
 
 #echo $PROJ/passwordb64.txt | base64 -d > $PROJ/password.txt
 
 
 # echo $KEYSTORE_JKS | base64 -d > $PROJ/keystore.jks
-printf $KEYSTORE_JKS > $PROJ/keystore.jks
+# non work printf $KEYSTORE_JKS > $PROJ/keystore.jks
 
 
 
