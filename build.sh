@@ -95,7 +95,7 @@ ls -l
 chmod +x $PROJ/password.txt 
 cat $PROJ/password.txt
 
-$APKSIGNER sign --ks    $PROJ/keystore.jks    $PROJ/app/build/outputs/apk/release/hello.apk  <  $PROJ/password.txt          
+$APKSIGNER sign --ks    $PROJ/keystore64    $PROJ/app/build/outputs/apk/release/hello.apk  <  $PROJ/password.txt          
 $APKSIGNER verify -v  -v4-signature-file $PROJ/app/build/outputs/apk/release/hello.apk.idsig $PROJ/app/build/outputs/apk/release/hello.apk 
 
 
