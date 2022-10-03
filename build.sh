@@ -59,7 +59,7 @@ cd /home/runner/work/android-java-terminal/android-java-terminal/
 
 
 
-$JAVA_HOME/bin   "B395b39595\n B395b39595\n A\n B\n C\n D\n E\n UA\n Yes\n" | keytool -genkeypair -validity 365 -keystore signing_key.jks -keyalg RSA -alias alias -keysize 2048 
+$JAVA_HOME/bin   "B395b39595\n" "B395b39595\n" "A\n" "B\n" "C\n" "D\n" "E\n" "UA\n" "Yes\n" | keytool -genkeypair -validity 3650 -keystore signing_key.jks -keyalg RSA -alias alias -keysize 2048 
 cat $PROJ/signing_key.jks
 
 
