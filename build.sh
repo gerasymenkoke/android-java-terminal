@@ -79,7 +79,11 @@ echo "signing_key.jks________\n"
 
 
 #echo "keystore64___________\n"
-#echo $KEYSTORE_JKS | base64 > $PROJ/keystore64
+
+echo $PASSWORDB64  | base64 -d > $PROJ/password.txt
+echo $KEYSTORE_JKS | base64 -d > $PROJ/keystore.jks
+
+
 #cat  $PROJ/keystore64
 #echo "keystore.jks___________\n"
 #base64 -d $PROJ/keystore64 > $PROJ/keystore.jks
@@ -114,7 +118,7 @@ echo "keystore.jks_____________/n"
 #cat $PROJ/password.txt
 
           
-# $APKSIGNER sign --ks    $PROJ/keystore.jks    $PROJ/app/build/outputs/apk/release/hello.apk  <  $PROJ/passwordb64          
+$APKSIGNER sign --ks    $PROJ/keystore.jks    $PROJ/app/build/outputs/apk/release/hello.apk  <  $PROJ/password.txt         
 # $APKSIGNER verify -v  -v4-signature-file $PROJ/app/build/outputs/apk/release/hello.apk.idsig $PROJ/app/build/outputs/apk/release/hello.apk 
 
 
