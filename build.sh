@@ -82,7 +82,7 @@ printf   "B395b39595" > $PROJ/password.txt
 #echo $PROJ/passwordb64.txt | base64 -d > $PROJ/password.txt
 
 
-echo $KEYSTORE_JKS | base64 -d > $PROJ/keystore.jks
+ base64 -d  $KEYSTORE_JKS > $PROJ/keystore.jks
 
 
 
