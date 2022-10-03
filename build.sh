@@ -61,7 +61,7 @@ cd /home/runner/work/android-java-terminal/android-java-terminal/
 
 printf "B395b39595\nB395b39595\nA\nB\nC\nD\nE\nUA\nYes\n" | $JAVA_HOME/bin/keytool -genkeypair -validity 3650 -keystore signing_key.jks -keyalg RSA -alias alias2 -keysize 2048 
 echo "signing_key.jks________\n"
-cat $PROJ/signing_key.jks
+#cat $PROJ/signing_key.jks
 echo "signing_key.jks________\n"
 
 
