@@ -182,8 +182,8 @@ $JAVA_HOME/bin/jarsigner --help
 cd $PROJ/bin
 echo "jarsigner....."
 cat $PROJ/password.txt
-cat $PROJ/keystore.jks
-$JAVA_HOME/bin/jarsigner  -keystore $PROJ/keystore.jks      $PROJ/bin/hello.aab alias1  < $PROJ/password.txt
+cat $PROJ/signing_key.jks
+$JAVA_HOME/bin/jarsigner  -keystore $PROJ/signing_key.jks      $PROJ/bin/hello.aab alias2  < $PROJ/password.txt
 
 
 
