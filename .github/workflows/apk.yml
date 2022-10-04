@@ -72,12 +72,18 @@ jobs:
             
                            
            
-    - name: Upload APK
+    - name: Upload APK 
      
       uses: actions/upload-artifact@v2
       with:
           name: apk file with signing
           path: /home/runner/work/android-java-terminal/android-java-terminal/app/build/outputs/apk/release/hello.apk   
            
+    - name: Upload AAB
      
+      uses: actions/upload-artifact@v2
+      with:
+          name:  aab  file with signing
+          path: /home/runner/work/android-java-terminal/android-java-terminal/bin/hello.aab   
+           
    
