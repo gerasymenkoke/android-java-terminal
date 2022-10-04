@@ -61,13 +61,13 @@ cd /home/runner/work/android-java-terminal/android-java-terminal/
 
 printf "B395b39595\nB395b39595\nA\nB\nC\nD\nE\nUA\nYes\n" | $JAVA_HOME/bin/keytool -genkeypair -validity 3650 -keystore signing_key.jks -keyalg RSA -alias alias2 -keysize 2048 
 echo "signing_key.jks________\n"
-#cat $PROJ/signing_key.jks
+cat $PROJ/signing_key.jks
 echo "signing_key.jks________\n"
 
 
 
 
-#printf   "B395b39595" > $PROJ/password.txt
+printf   "B395b39595" > $PROJ/password.txt
 # echo $PROJ/p.txt
 
 #base64 $PROJ/password.txt > $PROJ/passwordb64
@@ -80,8 +80,8 @@ echo "signing_key.jks________\n"
 
 #echo "keystore64___________\n"
 
-echo "$PASSWORDB64"  | base64 -D > $PROJ/password.txt
-echo "$KEYSTORE_JKS" | base64 -D > $PROJ/keystore.jks
+# echo "$PASSWORDB64"  | base64 -D > $PROJ/password.txt
+#echo "$KEYSTORE_JKS" | base64 -D > $PROJ/keystore.jks
 
 
 #cat  $PROJ/keystore64
@@ -118,7 +118,7 @@ echo "keystore.jks_____________/n"
 #cat $PROJ/password.txt
 
           
-$APKSIGNER sign --ks    $PROJ/keystore.jks    $PROJ/app/build/outputs/apk/release/hello.apk  <  $PROJ/password.txt         
+$APKSIGNER sign --ks    $PROJ/signing_key.jks    $PROJ/app/build/outputs/apk/release/hello.apk  <  $PROJ/password.txt         
 # $APKSIGNER verify -v  -v4-signature-file $PROJ/app/build/outputs/apk/release/hello.apk.idsig $PROJ/app/build/outputs/apk/release/hello.apk 
 
 
