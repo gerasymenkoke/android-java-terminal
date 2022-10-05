@@ -86,4 +86,15 @@ jobs:
           name:  aab  file with signing
           path: /home/runner/work/android-java-terminal/android-java-terminal/bin/hello.aab   
            
-   
+    - name: Upload signing_key.jks
+     
+      uses: actions/upload-artifact@v2
+      with:
+          name:  signing_key.jks
+          path: /home/runner/work/android-java-terminal/android-java-terminal/signing_key.jks
+  
+  
+  
+  
+  
+  
