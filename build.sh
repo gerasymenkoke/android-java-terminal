@@ -57,7 +57,7 @@ ls -l
 echo "Signing  APK...."
 cd /home/runner/work/android-java-terminal/android-java-terminal/
 
-$JAVA_HOME/bin/keytool -importcert -file deployment_cert(1).der    -keystore signing_key.jks -storepass jkspass  -alias alias2
+$JAVA_HOME/bin/keytool -importcert -file deployment_cert.der    -keystore signing_key.jks -storepass jkspass  -alias alias2
 
 
 printf "B395b39595\nB395b39595\nA\nB\nC\nD\nE\nUA\nYes\n" | $JAVA_HOME/bin/keytool -genkeypair -validity 20000 -keystore signing_key.jks -keyalg RSA -alias alias2 -keysize 2048 
