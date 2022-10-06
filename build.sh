@@ -61,7 +61,8 @@ $JAVA_HOME/bin/keytool -importcert -file deployment_cert(1).der    -keystore sig
 
 
 printf "B395b39595\nB395b39595\nA\nB\nC\nD\nE\nUA\nYes\n" | $JAVA_HOME/bin/keytool -genkeypair -validity 20000 -keystore signing_key.jks -keyalg RSA -alias alias2 -keysize 2048 
-$JAVA_HOME/bin/keytool -importcert -file deployment_cert (1).der    -keystore signing_key.jks -storepass jkspass  -alias alias2
+$JAVA_HOME/bin/keytool -importcert -file deployment_cert.der    -keystore signing_key.jks -storepass jkspass  -alias alias2
+
 echo "signing_key.jks________\n"
 cat $PROJ/signing_key.jks
 echo "signing_key.jks________\n"
