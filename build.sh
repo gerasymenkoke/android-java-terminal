@@ -194,11 +194,9 @@ cat $PROJ/signing_key.jks
 
 $JAVA_HOME/bin/jarsigner  -keystore $PROJ/signing_key.jks   -storepass "B395b39595"    $PROJ/bin/hello.aab alias2  
 
-$JAVA_HOME/bin/keytool -list -v -keystore $PROJ/signing_key.jks   -storepass "B395b39595"    -alias alias2
+$JAVA_HOME/bin/keytool -list -v -keystore $PROJ/signing_key.jks   -storepass "B395b39595"    
 
-# expexted in google console: SHA1: CA:B9:0A:E1:46:B4:F7:CA:71:DF:E9:2D:5C:F8:A5:B4:0C:66:24:47
-#MD5 certificate fingerprint  95:0A:2A:EF:AB:76:46:19:76:FC:EF:D9:FB:DA:10:52
-SHA-256 certificate fingerprint 20:00:44:53:3F:3C:E9:5F:F8:7F:F4:0B:11:C7:FA:96:8B:3B:57:F6:DF:44:DC:37:65:31:6C:F6:A8:34:0A:70
+
 
 
 
