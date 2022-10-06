@@ -187,7 +187,7 @@ cat $PROJ/signing_key.jks
 
 $JAVA_HOME/bin/jarsigner  -keystore $PROJ/signing_key.jks   -storepass "B395b39595"    $PROJ/bin/hello.aab alias2  
 
-keytool -list -v -keystore $PROJ/signing_key.jks   -storepass "B395b39595"    $PROJ/bin/hello.aab alias2
+$JAVA_HOME/bin/keytool -list -v -keystore $PROJ/signing_key.jks   -storepass "B395b39595"    alias2
 
 
 
