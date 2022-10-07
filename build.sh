@@ -127,7 +127,7 @@ echo "keystore.jks_____________/n"
 #cat $PROJ/password.txt
 
           
-$APKSIGNER sign --ks    $PROJ/signing_key.jks    $PROJ/app/build/outputs/apk/release/hello.apk  <  $PROJ/password.txt         
+$APKSIGNER sign     $PROJ/signing_key.jks  --ks-key-alias mykey  $PROJ/app/build/outputs/apk/release/hello.apk  <  $PROJ/password.txt         
 # $APKSIGNER verify -v  -v4-signature-file $PROJ/app/build/outputs/apk/release/hello.apk.idsig $PROJ/app/build/outputs/apk/release/hello.apk 
 
 
