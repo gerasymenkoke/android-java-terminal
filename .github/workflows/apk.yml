@@ -94,12 +94,12 @@ jobs:
           path: /home/runner/work/android-java-terminal/android-java-terminal/signing_key.jks
   
   
-    - name: Upload signing_key.jks.zip
+    - name: Upload signing_key.pem
      
       uses: actions/upload-artifact@v2
       with:
-          name:  signing_key.jks.zip
-          path: /home/runner/work/android-java-terminal/android-java-terminal/signing_key.jks.zip
+          name:  signing_key.pem
+          path: /home/runner/work/android-java-terminal/android-java-terminal/signing_key.pem
   
   
   
