@@ -134,7 +134,7 @@ printf   "B395b39595" > $PROJ/password.txt
 
 
 #cat $PASSWORDB64
-echo "keystore.jks_____________/n"
+# echo "keystore.jks_____________/n"
 #cat $PROJ/keystore.jks
 #echo  "____________/n"
 #cd /home/runner/work/android-java-terminal/android-java-terminal/
@@ -144,7 +144,7 @@ echo "keystore.jks_____________/n"
 #cat $PROJ/password.txt
 
           
-$APKSIGNER sign     $PROJ/signing_key.jks   $PROJ/app/build/outputs/apk/release/hello.apk  <  $PROJ/password.txt         
+$APKSIGNER sign  --ks-key-alias alias   $PROJ/signing_key.jks   $PROJ/app/build/outputs/apk/release/hello.apk   <  $PROJ/password.txt         
 # $APKSIGNER verify -v  -v4-signature-file $PROJ/app/build/outputs/apk/release/hello.apk.idsig $PROJ/app/build/outputs/apk/release/hello.apk 
 
 
