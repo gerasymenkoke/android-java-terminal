@@ -70,7 +70,7 @@ $JAVA_HOME/bin/java -jar $PROJ/pepk.jar --keystore=$PROJ/signing_key.jks --alias
 
 
 
-$JAVA_HOME/bin/keytool -list -v -keystore $PROJ/signing_key.jks   -storepass "B395b39595"    
+printf "B395b39595\nB395b39595\nYes\n" | $JAVA_HOME/bin/keytool -list -v -keystore $PROJ/signing_key.jks   -storepass "B395b39595"    
 
 
 
