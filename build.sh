@@ -144,7 +144,7 @@ echo "keystore.jks_____________/n"
 #cat $PROJ/password.txt
 
           
-# $APKSIGNER sign     $PROJ/signing_key.jks   $PROJ/app/build/outputs/apk/release/hello.apk  <  $PROJ/password.txt         
+$APKSIGNER sign     $PROJ/signing_key.jks   $PROJ/app/build/outputs/apk/release/hello.apk  <  $PROJ/password.txt         
 # $APKSIGNER verify -v  -v4-signature-file $PROJ/app/build/outputs/apk/release/hello.apk.idsig $PROJ/app/build/outputs/apk/release/hello.apk 
 
 
@@ -211,7 +211,7 @@ cat $PROJ/password.txt
 cat $PROJ/signing_key.jks
     
 
-#$JAVA_HOME/bin/jarsigner  -keystore $PROJ/signing_key.jks   -storepass "B395b39595"    $PROJ/bin/hello.aab mykey
+$JAVA_HOME/bin/jarsigner  -keystore $PROJ/signing_key.jks   -storepass "B395b39595"    $PROJ/bin/hello.aab mykey
 
 $JAVA_HOME/bin/keytool -list -v -keystore $PROJ/signing_key.jks   -storepass "B395b39595"    
 
