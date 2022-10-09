@@ -61,6 +61,10 @@ cd /home/runner/work/android-java-terminal/android-java-terminal/
 
 printf "B395b39595\nB395b39595\nA\nB\nC\nD\nE\nUA\nYes\n" | $JAVA_HOME/bin/keytool -genkeypair -validity 20000 -keystore signing_key.jks -keyalg RSA -keysize 2048 -alias alias
 
+printf "B395b39595\nB395b39595\nB395b39595\n" | $JAVA_HOME/bin/keytool -keypasswd -keystore signing_key.jks -alias alias
+# $keytool -keypasswd -keystore keystorename -alias aliasname
+
+
 #printf "Yes\n" | $JAVA_HOME/bin/keytool -importcert -file upload_cert.der    -keystore signing_key.jks -storepass "B395b39595"  
 #printf "B395b39595\nB395b39595\nYes\n" | $JAVA_HOME/bin/keytool -importcert -file upload_cert.der -validity 20000 -keystore signing_key.jks -keyalg RSA -keysize 2048 
 
