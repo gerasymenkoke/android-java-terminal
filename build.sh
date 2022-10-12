@@ -59,7 +59,7 @@ cd /home/runner/work/android-java-terminal/android-java-terminal/
 
 
 
-printf "B395b39595\nB395b39595\nA\nB\nC\nD\nE\nUA\nYes\n" | $JAVA_HOME/bin/keytool -genkeypair -validity 20000 -keystore signing_key.jks -keyalg RSA -keysize 2048 -alias alias
+# printf "B395b39595\nB395b39595\nA\nB\nC\nD\nE\nUA\nYes\n" | $JAVA_HOME/bin/keytool -genkeypair -validity 20000 -keystore signing_key.jks -keyalg RSA -keysize 2048 -alias alias
 
 # printf "B395b39595\nB395b39595\nB395b39595\n" | $JAVA_HOME/bin/keytool -keypasswd -keystore signing_key.jks -alias alias
 # $keytool -keypasswd -keystore keystorename -alias aliasname
@@ -78,7 +78,7 @@ ls -l
 
 # printf "B395b39595\n"  | $JAVA_HOME/bin/keytool -export -rfc -keystore $PROJ/signing_key.jks -alias alias -file $PROJ/signing_key.pem
 
-$JAVA_HOME/bin/java -jar $PROJ/pepk.jar --keystore=signing_key.jks --keystore-pass="B395b39595" --alias=alias --output=$PROJ/signing_key.zip  --encryptionkey=eb10fe8f7c7c9df715022017b00c6471f8ba8170b13049a11e6c09ffe3056a104a3bbe4ac5a955f4ba4fe93fc8cef27558a3eb9d2a529a2092761fb833b656cd48b9de6a     
+# $JAVA_HOME/bin/java -jar $PROJ/pepk.jar --keystore=signing_key.jks --keystore-pass="B395b39595" --alias=alias --output=$PROJ/signing_key.zip  --encryptionkey=eb10fe8f7c7c9df715022017b00c6471f8ba8170b13049a11e6c09ffe3056a104a3bbe4ac5a955f4ba4fe93fc8cef27558a3eb9d2a529a2092761fb833b656cd48b9de6a     
 
  
  
