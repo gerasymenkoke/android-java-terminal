@@ -150,7 +150,7 @@ $APKSIGNER sign  --ks $PROJ/signing_key.jks   $PROJ/app/build/outputs/apk/releas
 
 # --ks my.keystore my-app.apk --ks-key-alias alias_name
 
-# $APKSIGNER verify -v  -v4-signature-file $PROJ/app/build/outputs/apk/release/hello.apk.idsig $PROJ/app/build/outputs/apk/release/hello.apk 
+$APKSIGNER verify -v  -v4-signature-file $PROJ/app/build/outputs/apk/release/hello.apk.idsig $PROJ/app/build/outputs/apk/release/hello.apk 
 
 
 
@@ -194,7 +194,7 @@ cp ../bin/classes*.dex dex/
 echo "jar cmf"
 $JAVA_HOME/bin/jar cMf base.zip manifest dex res resources.pb
 
-echo "Build the AAB"#
+echo "Build the AAB"
 wget https://github.com/google/bundletool/releases/download/1.11.2/bundletool-all-1.11.2.jar 
 pwd
 ls -l
