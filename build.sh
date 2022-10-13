@@ -65,12 +65,16 @@ cd /home/runner/work/android-java-terminal/android-java-terminal/
 # $keytool -keypasswd -keystore keystorename -alias aliasname
 
 
-printf "Yes\n" | $JAVA_HOME/bin/keytool -importcert -file upload_cert.der    -keystore signing_key.jks -storepass "B395b39595"
+# printf "Yes\n" | $JAVA_HOME/bin/keytool -importcert -file upload_cert.der    -keystore signing_key.jks -storepass "B395b39595"
 
-#printf "B395b39595\nB395b39595\nYes\n" | $JAVA_HOME/bin/keytool -importcert -file upload_cert.der -validity 20000 -keystore signing_key.jks -keyalg RSA -keysize 2048 
+# printf "B395b39595\nB395b39595\nYes\n" | $JAVA_HOME/bin/keytool -importcert -file upload_cert.der -validity 20000 -keystore signing_key.jks -keyalg RSA -keysize 2048 
+
+
+base64 -d $PROJ/keystore64.txt > $PROJ/keystore.jks
 
 
 
+echo 
  $JAVA_HOME/bin/keytool -list -v -keystore $PROJ/signing_key.jks   -storepass "B395b39595"    
 pwd
 ls -l
