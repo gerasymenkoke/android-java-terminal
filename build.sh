@@ -4,7 +4,7 @@ set -e
 PROJ="/home/runner/work/android-java-terminal/android-java-terminal"
 AAPT="/usr/local/lib/android/sdk/build-tools/32.0.0/aapt"
 AAPT2="/usr/local/lib/android/sdk/build-tools/32.0.0/aapt2"
-DX="/usr/local/lib/android/sdk/build-tools/32.0.0/dx"
+DX="/usr/local/lib/android/sdk/build-tools/30.0.0/dx"
 ZIPALIGN="/usr/local/lib/android/sdk/build-tools/32.0.0/zipalign"
 APKSIGNER="/usr/local/lib/android/sdk/build-tools/32.0.0/apksigner" 
 PLATFORM="/usr/local/lib/android/sdk/platforms/android-32/android.jar"
