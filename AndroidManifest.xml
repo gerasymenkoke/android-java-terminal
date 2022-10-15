@@ -11,13 +11,13 @@ AddManifestText(
         <application a:label='A Hello Android'>
           <activity 
              a:name='com.example.helloandroid.MainActivity'
-             android:exported="false" >
+             a:exported="false" >
               
              <intent-filter>
                 <category a:name='android.intent.category.LAUNCHER'/>
                 <action a:name='android.intent.action.MAIN'/>
              </intent-filter>
           </activity>
-            android:exported="false"/>
+            a:exported="false"/>
         </application>
 </manifest>
