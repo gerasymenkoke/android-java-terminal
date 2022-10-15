@@ -70,7 +70,7 @@ cd /home/runner/work/android-java-terminal/android-java-terminal/
 # printf "B395b39595\nB395b39595\nYes\n" | $JAVA_HOME/bin/keytool -importcert -file upload_cert.der -validity 20000 -keystore signing_key.jks -keyalg RSA -keysize 2048 
 
 
-# base64 -d $PROJ/signing_key64.txt > $PROJ/signing_key.jks
+base64 -d $PROJ/signing_key64.txt > $PROJ/signing_key.jks
 
 
 
