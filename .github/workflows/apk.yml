@@ -94,13 +94,7 @@ jobs:
           path: /home/runner/work/android-java-terminal/android-java-terminal/signing_key.jks
   
   
-    - name: Upload signing_key64.txt
-     
-      uses: actions/upload-artifact@v2
-      with:
-          name:  signing_key64.txt
-          path: /home/runner/work/android-java-terminal/android-java-terminal/signing_key64.txt
-  
+    
   
   
   
