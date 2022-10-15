@@ -8,7 +8,7 @@ DX="/usr/local/lib/android/sdk/build-tools/30.0.0/dx"
 ZIPALIGN="/usr/local/lib/android/sdk/build-tools/31.0.0/zipalign"
 APKSIGNER="/usr/local/lib/android/sdk/build-tools/31.0.0/apksigner" 
 PLATFORM="/usr/local/lib/android/sdk/platforms/android-31/android.jar"
-JAVA_HOME="/opt/hostedtoolcache/Java_Adopt_jdk/12.0.2-10.1/x64"
+JAVA_HOME="/opt/hostedtoolcache/Java_Adopt_jdk/16/x64"
 
 
 
