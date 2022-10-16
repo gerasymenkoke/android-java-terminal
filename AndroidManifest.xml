@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:a="http://schemas.android.com/apk/res/android" a:versionCode="0" a:versionName="0" package='com.example.helloandroid'>
 AddManifestText(
-<uses-sdk a:minSdkVersion="14"  a:targetSdkVersion="31"/>
+<uses-sdk a:minSdkVersion="14"  a:targetSdkVersion="32"/>
 <supports-screens a:largeScreens="true"
     a:normalScreens="true"
     a:smallScreens="true"
@@ -13,8 +13,9 @@ AddManifestText(
              a:name='com.example.helloandroid.MainActivity' a:exported="true" >
               
              <intent-filter>
-                <category a:name='android.intent.category.LAUNCHER'/>
-                <action a:name='android.intent.action.MAIN'/>
+                 <action a:name='android.intent.action.MAIN'/>
+                 <category a:name='android.intent.category.LAUNCHER'/>
+                
              </intent-filter>
           </activity>
           
