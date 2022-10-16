@@ -10,7 +10,7 @@ AddManifestText(
 
         <application a:label='A Hello Android'>
           <activity 
-             a:name='com.example.helloandroid.MainActivity'  a:exported="true" >
+             a:name='com.example.helloandroid.MainActivity'  a:exported='true' >
               
              <intent-filter>
                  <action a:name='android.intent.action.MAIN'/>
