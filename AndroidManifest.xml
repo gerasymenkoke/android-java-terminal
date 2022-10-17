@@ -13,12 +13,12 @@ AddManifestText(
             
             
           <activity 
-             a:name='com.example.helloandroid.MainActivity'  a:exported='true' >
+             a:name='com.example.helloandroid.MainActivity'  a:exported="true" >
               
              <intent-filter>
                  <action a:name='android.intent.action.MAIN'/>
                  <category a:name='android.intent.category.LAUNCHER'/>
-                
+                 
              </intent-filter>
           </activity>
           
