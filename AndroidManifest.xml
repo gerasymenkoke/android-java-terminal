@@ -13,7 +13,7 @@ AddManifestText(
             
             
           <activity 
-             a:name='com.example.helloandroid.MainActivity'  a:exported="true" >
+             a:name='com.example.helloandroid.MainActivity'  a:exported="true"  tools:node="merge"  >
               
              <intent-filter>
                  <action a:name='android.intent.action.MAIN'/>
