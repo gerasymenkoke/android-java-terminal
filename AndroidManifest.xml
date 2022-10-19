@@ -26,8 +26,8 @@ AddManifestText(
         
             
            <activity
-            android:name="com.yalantis.ucrop.UCropActivity"
-            android:exported="false"
+            a:name="com.yalantis.ucrop.UCropActivity"
+            a:exported="false"
             tools:node="merge"
             tools:overrideLibrary="com.reactnative.ivpusic.imagepicker"
            />
