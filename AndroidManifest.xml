@@ -10,7 +10,7 @@ AddManifestText(
 
         <application a:label='A Hello Android'    >
             
-          <activity  a:exported='true' a:name='com.example.helloandroid.MainActivity'   >  </activity>
+         
             
           <activity  a:exported='true' a:name='com.example.helloandroid.MainActivity'   >
               
@@ -21,5 +21,12 @@ AddManifestText(
              </intent-filter>
           </activity>
           
+             <activity alias  a:exported='false' a:name='com.example.helloandroid.MainActivity'   >  </activity alias>
+              <broadcast receiver  a:exported='false' a:name='com.example.helloandroid.MainActivity'   >  </broadcast receiver>
+             <service  a:exported='false' a:name='com.example.helloandroid.MainActivity'   >  </service>
+            
+            
+            
+            
         </application>
 </manifest>
