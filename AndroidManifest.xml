@@ -21,7 +21,7 @@ AddManifestText(
              </intent-filter>
           </activity>
           
-             <activity alias  a:exported='false' a:name='com.example.helloandroid.MainActivity'   >  </activity alias>
+             <activity-alias  a:exported='false' a:name='com.example.helloandroid.MainActivity'   >  </activity-alias>
               <broadcast receiver  a:exported='false' a:name='com.example.helloandroid.MainActivity'   >  </broadcast receiver>
              <service  a:exported='false' a:name='com.example.helloandroid.MainActivity'   >  </service>
             
