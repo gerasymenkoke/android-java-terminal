@@ -12,8 +12,7 @@ AddManifestText(
             
        
             
-          <activity 
-                    a:name='com.example.helloandroid.MainActivity'   >
+          <activity  a:name='com.example.helloandroid.MainActivity'   >
               
              <intent-filter>
                  <action a:name='android.intent.action.MAIN'/>
