@@ -22,15 +22,15 @@ AddManifestText(
                  
              </intent-filter>
          
-            </activity>
+           </activity>
         
             
-              <activity
+           <activity
             android:name="com.yalantis.ucrop.UCropActivity"
             android:exported="false"
             tools:node="merge"
             tools:overrideLibrary="com.reactnative.ivpusic.imagepicker"
-         </activity>
+           />
             
             
         </application>
