@@ -22,7 +22,7 @@ AddManifestText(
           </activity>
           
              <activity-alias  a:exported='false' a:name='com.example.helloandroid.MainActivity'   >  </activity-alias>
-              <broadcastreceiver  a:exported='false' a:name='com.example.helloandroid.MainActivity'   >  </broadcastreceiver>
+              <receiver  a:exported='false' a:name='com.example.helloandroid.MainActivity'   >  </receiver>
              <service  a:exported='false' a:name='com.example.helloandroid.MainActivity'   >  </service>
             
             
