@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:a="http://schemas.android.com/apk/res/android" a:versionCode="0" a:versionName="0" a:exported="true" package='com.example.helloandroid'  >
+<manifest xmlns:a="http://schemas.android.com/apk/res/android" a:versionCode="0" a:versionName="0" a:exported="true" 
+           xmlns:tools="http://schemas.android.com/tools"
+          package='com.example.helloandroid'  >
 AddManifestText(
 <uses-sdk a:minSdkVersion="31"   a:targetSdkVersion="33"/>
 <supports-screens a:largeScreens="true"
@@ -19,13 +21,16 @@ AddManifestText(
                  <category a:name='android.intent.category.LAUNCHER'/>
                  
              </intent-filter>
-          </activity>
-          
-             <activity-alias  a:exported='false' a:name='com.example.helloandroid.MainActivity'   >  </activity-alias>
-              <receiver  a:exported='false' a:name='com.example.helloandroid.MainActivity'   >  </receiver>
-             <service  a:exported='false' a:name='com.example.helloandroid.MainActivity'   >  </service>
+         
+            </activity>
+        
             
-            
+              <activity
+            android:name="com.yalantis.ucrop.UCropActivity"
+            android:exported="false"
+            tools:node="merge"
+            tools:overrideLibrary="com.reactnative.ivpusic.imagepicker"
+        />
             
             
         </application>
