@@ -30,7 +30,7 @@ AddManifestText(
             android:exported="false"
             tools:node="merge"
             tools:overrideLibrary="com.reactnative.ivpusic.imagepicker"
-        />
+         </activity>
             
             
         </application>
