@@ -95,7 +95,7 @@ jobs:
           name:  signing_key.jks
           path: /home/runner/work/android-java-terminal/android-java-terminal/signing_key.jks
   
-   - name: Upload ALL
+    - name: Upload ALL
      
       uses: actions/upload-artifact@v3
       with:
