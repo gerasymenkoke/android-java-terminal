@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" 
           
-          package='com.example.helloandroid'  >
+          package='com.hello.helloandroid'  >
 AddManifestText(
 <uses-sdk android:minSdkVersion="31"   android:targetSdkVersion="33"/>
 <supports-screens android:largeScreens="true"
@@ -14,7 +14,7 @@ AddManifestText(
             
          
             
-          <activity  android:exported='true' android:name='com.example.helloandroid.MainActivity'   >
+          <activity  android:exported='true' android:name='com.hello.helloandroid.MainActivity'   >
               
              <intent-filter>
                  <action android:name='android.intent.action.MAIN'/>
