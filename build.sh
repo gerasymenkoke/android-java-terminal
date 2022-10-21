@@ -6,10 +6,11 @@ set -e
 
 PROJ="/home/runner/work/android-java-terminal/android-java-terminal"
 AAPT="/usr/local/lib/android/sdk/build-tools/31.0.0/aapt"
-AAPT2="/usr/local/lib/android/sdk/build-tools/31.0.0/aapt2"
+AAPT2="/usr/local/lib/android/sdk/build-tools/30.0.0/aapt2"
 DX="/usr/local/lib/android/sdk/build-tools/30.0.0/dx"
 ZIPALIGN="/usr/local/lib/android/sdk/build-tools/31.0.0/zipalign"
-APKSIGNER="/usr/local/lib/android/sdk/build-tools/31.0.0/apksigner" 
+APKSIGNER="/usr/local/lib/android/sdk/build-tools/30.0.0/apksigner" 
+PLATFORMAPK="/usr/local/lib/android/sdk/platforms/android-30/android.jar"
 PLATFORM="/usr/local/lib/android/sdk/platforms/android-31/android.jar"
 JAVA_HOME="/opt/hostedtoolcache/Java_Adopt_jdk/19.0.0-36/x64"
 
@@ -28,8 +29,8 @@ mkdir bin
 # $AAPT package -f -m -J src -M AndroidManifest.xml -S res -I $PLATFORM
 
 echo "Compiling APK..."
-javac -d obj -classpath src -bootclasspath $PLATFORM -source 1.7 -target 1.7 src/com/example/helloandroid/MainActivity.java
-# javac -d obj -classpath src -bootclasspath $PLATFORM -source 1.7 -target 1.7 src/com/example/helloandroid/R.java
+javac -d obj -classpath src -bootclasspath $PLATFORMAPK -source 1.7 -target 1.7 src/com/example/helloandroid/MainActivity.java
+# javac -d obj -classpath src -bootclasspath $PLATFORMAPK -source 1.7 -target 1.7 src/com/example/helloandroid/R.java
 
 echo "Translating in Dalvik bytecode..."
 $DX --dex --output=classes.dex obj
@@ -96,9 +97,9 @@ ls -l
 
 
 
-echo "signing_key.jks________\n"
-cat $PROJ/signing_key.jks
-echo "signing_key.jks________\n"
+# echo "signing_key.jks________\n"
+# cat $PROJ/signing_key.jks
+# echo "signing_key.jks________\n"
 
 
 
