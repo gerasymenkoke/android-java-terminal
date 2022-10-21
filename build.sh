@@ -5,13 +5,13 @@ set -e
 
 
 PROJ="/home/runner/work/android-java-terminal/android-java-terminal"
-AAPT="/usr/local/lib/android/sdk/build-tools/31.0.0/aapt"
-AAPT2="/usr/local/lib/android/sdk/build-tools/31.0.0/aapt2"
+AAPT="/usr/local/lib/android/sdk/build-tools/30.0.0/aapt"
+AAPT2="/usr/local/lib/android/sdk/build-tools/30.0.0/aapt2"
 DX="/usr/local/lib/android/sdk/build-tools/30.0.0/dx"
-ZIPALIGN="/usr/local/lib/android/sdk/build-tools/31.0.0/zipalign"
-APKSIGNER="/usr/local/lib/android/sdk/build-tools/31.0.0/apksigner" 
-PLATFORM="/usr/local/lib/android/sdk/platforms/android-31/android.jar"
-JAVA_HOME="/opt/hostedtoolcache/Java_Adopt_jdk/12.0.2-10.1/x64"
+ZIPALIGN="/usr/local/lib/android/sdk/build-tools/30.0.0/zipalign"
+APKSIGNER="/usr/local/lib/android/sdk/build-tools/30.0.0/apksigner" 
+PLATFORM="/usr/local/lib/android/sdk/platforms/android-30/android.jar"
+JAVA_HOME="/opt/hostedtoolcache/Java_Adopt_jdk/16.0.1-9/x64"
 
 cd $PROJ
 
