@@ -43,8 +43,8 @@ jobs:
         KEYSTORE_JKS: ${{ secrets.KEYSTORE_JKS }}
         
       run: |
-            # sudo apt-get install libc6-dev-i386 lib32z1 openjdk-11-jdk
-             sdkmanager --install "platforms;android-31" "build-tools;31.0.0"
+             sudo apt-get install libc6-dev-i386 lib32z1 openjdk-11-jdk
+            
 
              
              pwd
