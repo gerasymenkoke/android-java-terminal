@@ -1,18 +1,16 @@
 #!/bin/bash
 
 set -e
-cd /usr/local/lib/android/sdk/build-tools/30.0.0/
-pwd
-ls -l
+
 
 
 PROJ="/home/runner/work/android-java-terminal/android-java-terminal"
-AAPT="/usr/local/lib/android/sdk/build-tools/33.0.0/aapt"
-AAPT2="/usr/local/lib/android/sdk/build-tools/33.0.0/aapt2"
+AAPT="/usr/local/lib/android/sdk/build-tools/31.0.0/aapt"
+AAPT2="/usr/local/lib/android/sdk/build-tools/31.0.0/aapt2"
 DX="/usr/local/lib/android/sdk/build-tools/30.0.0/dx"
-ZIPALIGN="/usr/local/lib/android/sdk/build-tools/33.0.0/zipalign"
-APKSIGNER="/usr/local/lib/android/sdk/build-tools/33.0.0/apksigner" 
-PLATFORM="/usr/local/lib/android/sdk/platforms/android-33/android.jar"
+ZIPALIGN="/usr/local/lib/android/sdk/build-tools/31.0.0/zipalign"
+APKSIGNER="/usr/local/lib/android/sdk/build-tools/31.0.0/apksigner" 
+PLATFORM="/usr/local/lib/android/sdk/platforms/android-31/android.jar"
 JAVA_HOME="/opt/hostedtoolcache/Java_Adopt_jdk/19.0.0-36/x64"
 
 cd $PROJ
