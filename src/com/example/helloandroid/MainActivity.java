@@ -1,4 +1,4 @@
-package com.example.helloandroid;
+package com.hellokostya.helloandroid;
 
 import android.app.Activity;
 import android.os.Bundle;
