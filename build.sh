@@ -32,6 +32,8 @@ javac -d obj -classpath src -bootclasspath $PLATFORM -source 1.7 -target 1.7 src
 # javac -d obj -classpath src -bootclasspath $PLATFORM -source 1.7 -target 1.7 src/com/example/helloandroid/R.java
 
 cd obj/com/hellokostya/helloandroid
+pwd
+ls -l
 java MainActivity
 
 pwd
