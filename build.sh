@@ -32,9 +32,12 @@ javac -d obj -classpath src -bootclasspath $PLATFORM -source 1.7 -target 1.7 src
 # javac -d obj -classpath src -bootclasspath $PLATFORM -source 1.7 -target 1.7 src/com/example/helloandroid/R.java
 
 cd obj/com/hellokostya/helloandroid
+javac src/com/example/helloandroid/MainActivity.java
 pwd
 ls -l
 cd $PROJ
+
+
 
 
 echo "Translating in Dalvik bytecode..."
