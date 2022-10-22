@@ -1,10 +1,13 @@
 <?xml version='1.0'?>
-<manifest xmlns:a='http://schemas.android.com/apk/res/android' package='com.example.helloandroid' a:versionCode='0' a:versionName='0'>
-    <application a:label='A Hello Android'>
-        <activity a:name='com.example.helloandroid.MainActivity'>
+<manifest xmlns:android='http://schemas.android.com/apk/res/android' package='com.hellokostya.helloandroid' android:versionCode='4' android:versionName='4.0'>
+    
+    
+    <application android:label='A Hello Android'>
+        <activity android:name='com.hellokostya.helloandroid.MainActivity'
+                  android:exported="true">
              <intent-filter>
-                <category a:name='android.intent.category.LAUNCHER'/>
-                <action a:name='android.intent.action.MAIN'/>
+                <category android:name='android.intent.category.LAUNCHER'/>
+                <action android:name='android.intent.action.MAIN'/>
              </intent-filter>
         </activity>
     </application>
