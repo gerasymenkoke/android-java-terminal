@@ -31,6 +31,10 @@ echo "Compiling APK..."
 javac -d obj -classpath src -bootclasspath $PLATFORM -source 1.7 -target 1.7 src/com/example/helloandroid/MainActivity.java
 # javac -d obj -classpath src -bootclasspath $PLATFORM -source 1.7 -target 1.7 src/com/example/helloandroid/R.java
 
+pwd
+ls -l
+
+
 echo "Translating in Dalvik bytecode..."
 $DX --dex --output=classes.dex obj
 pwd
