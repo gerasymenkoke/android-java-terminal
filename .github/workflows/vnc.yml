@@ -26,7 +26,7 @@ jobs:
                 
                 sudo apt-get install xorg openbox
                 cd /etc/X11/
-                cp /home/runner/work/android-java-terminal/android-java-terminal/Xwrapper.config /etc/x11/
+                cp /home/runner/work/android-java-terminal/android-java-terminal/Xwrapper.config /etc/x11/Xwrapper.config
                 cat Xwrapper.config
                 
                 
