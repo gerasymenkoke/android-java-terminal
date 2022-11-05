@@ -23,7 +23,7 @@ jobs:
         working-directory: build
         run: |
                 make tarball
-                cd /usr/bin
+                cd /usr/bin/
                 pwd
                 ls -l
                 startx
