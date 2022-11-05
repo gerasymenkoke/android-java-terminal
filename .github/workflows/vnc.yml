@@ -23,9 +23,11 @@ jobs:
         working-directory: build
         run: |
                 make tarball
-                cd /usr/bin/
+                
                 sudo apt-get install xorg openbox
-                startx
+                cd /etc/X11/
+                cp /home/runner/android-java-terminal/android-java-terminal/Xwrapper.config /etc/x11/
+                cat Xwrapper.config
                 
                 
                 
