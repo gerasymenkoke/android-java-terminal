@@ -24,8 +24,6 @@ jobs:
         run: |
                 make tarball
                 cd /usr/bin/
-                pwd
-                ls -l
                 startx
                 
                 
