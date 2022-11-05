@@ -21,7 +21,12 @@ jobs:
         run: make
       - name: Install
         working-directory: build
-        run: make tarball
+        run: |
+                make tarball
+                startx
+                
+                
+                
       - uses: actions/upload-artifact@v3
         with:
           name: Linux (Ubuntu)
