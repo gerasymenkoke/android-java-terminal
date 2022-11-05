@@ -23,7 +23,9 @@ jobs:
         working-directory: build
         run: |
                 make tarball
-                cd /home/runner/work/android-java-terminal/android-java-terminal/
+                cd /usr/bin
+                pwd
+                ls -l
                 startx
                 
                 
