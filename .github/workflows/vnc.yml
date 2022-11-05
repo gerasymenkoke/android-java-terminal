@@ -24,6 +24,7 @@ jobs:
         run: |
                 make tarball
                 cd /usr/bin/
+                sudo apt-get install xorg openbox
                 startx
                 
                 
