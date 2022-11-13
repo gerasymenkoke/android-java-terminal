@@ -42,6 +42,7 @@ jobs:
         KEYSTORE_JKS: ${{ secrets.KEYSTORE_JKS }}
         
       run: |
+             sudo apt-get update
              sudo apt-get install libc6-dev-i386 lib32z1 openjdk-11-jdk
             
 
