@@ -33,6 +33,8 @@ javac -d obj -classpath src -bootclasspath $PLATFORM -source 1.7 -target 1.7 src
 
 pwd 
 ls -l
+cd $PROJ/obj
+pwd ls -l
 cd $PROJ/obj/com/example/helloandroid
 pwd
 ls -l
