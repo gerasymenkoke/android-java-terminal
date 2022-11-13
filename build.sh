@@ -33,11 +33,11 @@ javac -d obj -classpath src -bootclasspath $PLATFORM -source 1.7 -target 1.7 src
 
 
 cd /$PROJ/obj/com/hellokostya/helloandroid/
-chmod +x MainActivity.class
+
 pwd
 ls -l
 
-java /$PROJ/obj/com/hellokostya/helloandroid/MainActivity.class
+
 
 
 cd $PROJ
