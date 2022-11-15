@@ -33,7 +33,7 @@ javac -d obj -classpath src -bootclasspath $PLATFORM -source 1.7 -target 1.7 src
 
 
 cd /$PROJ/obj/
-java com.hellokostya.helloandroid.MainActivity
+java $PROJ/obj/com/hellokostya/helloandroid/MainActivity
 pwd
 ls -l
 
