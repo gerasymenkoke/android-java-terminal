@@ -32,7 +32,7 @@ javac -d obj  -classpath src -bootclasspath $PLATFORM -source 1.7 -target 1.7 sr
 # javac -d obj -classpath src -bootclasspath $PLATFORM -source 1.7 -target 1.7 src/com/example/helloandroid/R.java
 
 echo "Java..."
-java --classpath . MainActivity
+java -classpath . MainActivity
 
 # cd /$PROJ/com/hellokostya/helloandroid/
 #java com/hellokostya/helloandroid/MainActivity
