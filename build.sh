@@ -24,20 +24,18 @@ mkdir bin
 
 
 
-#echo "Generating R.java file..."
-# $AAPT package -f -m -J src -M AndroidManifest.xml -S res -I $PLATFORM
+echo "Generating R.java file..."
+$AAPT package -f -m -J src -M AndroidManifest.xml -S res -I $PLATFORM
+pwd
+ls -l
+
+
 
 echo "Compiling APK..."
 javac -d obj  -classpath src -bootclasspath $PLATFORM -source 1.7 -target 1.7 src/com/example/helloandroid/MainActivity.java
 # javac -d obj -classpath src -bootclasspath $PLATFORM -source 1.7 -target 1.7 src/com/example/helloandroid/R.java
 
-echo "Java1..."
-javac -d ./ -classpath src -bootclasspath $PLATFORM -source 1.7 -target 1.7 src/com/example/helloandroid/MainActivity.java
-pwd
-ls -l
 
-echo "Java2..."
-java -cp . src/com/example/helloandroid/MainActivity 
 
 # cd /$PROJ/com/hellokostya/helloandroid/
 #java com/hellokostya/helloandroid/MainActivity
