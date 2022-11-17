@@ -31,8 +31,13 @@ echo "Compiling APK..."
 javac -d obj  -classpath src -bootclasspath $PLATFORM -source 1.7 -target 1.7 src/com/example/helloandroid/MainActivity.java
 # javac -d obj -classpath src -bootclasspath $PLATFORM -source 1.7 -target 1.7 src/com/example/helloandroid/R.java
 
-echo "Java..."
-java -classpath . MainActivity
+echo "Java1..."
+javac /  -classpath src -bootclasspath $PLATFORM -source 1.7 -target 1.7 src/com/example/helloandroid/MainActivity.java
+pwd
+ls -l
+
+echo "Java2..."
+java -cp  src/com/example/helloandroid/MainActivity 
 
 # cd /$PROJ/com/hellokostya/helloandroid/
 #java com/hellokostya/helloandroid/MainActivity
