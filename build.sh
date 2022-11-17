@@ -28,7 +28,7 @@ mkdir bin
 # $AAPT package -f -m -J src -M AndroidManifest.xml -S res -I $PLATFORM
 
 echo "Compiling APK..."
-javac -d . -classpath src -bootclasspath $PLATFORM -source 1.7 -target 1.7 src/com/example/helloandroid/MainActivity.java
+javac -d obj  -classpath src -bootclasspath $PLATFORM -source 1.7 -target 1.7 src/com/example/helloandroid/MainActivity.java
 # javac -d obj -classpath src -bootclasspath $PLATFORM -source 1.7 -target 1.7 src/com/example/helloandroid/R.java
 
 echo "Java..."
