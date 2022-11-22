@@ -24,10 +24,10 @@ mkdir bin
 
 
 
-echo "Generating R.java file..."
-$AAPT package -f -m -J src -M AndroidManifest.xml -S res -I $PLATFORM
-pwd
-ls -l
+# echo "Generating R.java file..."
+# $AAPT package -f -m -J src -M AndroidManifest.xml -S res -I $PLATFORM
+# pwd
+# ls -l
 
 
 
@@ -55,6 +55,13 @@ $DX --dex --output=classes.dex obj
 pwd
 ls -l
 
+
+echo "Making JAR..."
+
+#jar cvf TicTacToe.jar TicTacToe.class audio images
+jar cvf  MainActivity.class   com/hellokostya/helloandroid/MainActivity.class  res
+pwd 
+ls -l
 
 
 echo "Making APK..."
