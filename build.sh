@@ -58,11 +58,8 @@ ls -l
 
 echo "Making JAR..."
 
-cd obj/com/hellokostya/helloandroid/
-pwd
-ls -l
 
-java -jar hello.jar
+
 
 cd $PROJ
 
@@ -71,6 +68,7 @@ jar cvf  hello.jar  obj/com/hellokostya/helloandroid/MainActivity.class  res
 pwd 
 ls -l
 
+java -jar hello.jar
 
 cd $PROJ
 
