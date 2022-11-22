@@ -69,6 +69,9 @@ jar cvf  MainActivity.class   obj/com/hellokostya/helloandroid/MainActivity.clas
 pwd 
 ls -l
 
+cd $PROJ/bin
+pwd
+ls -l
 
 echo "Making APK..."
 $AAPT package -f -m -F $PROJ/bin/hello.unaligned.apk -M $PROJ/AndroidManifest.xml -S $PROJ/res -I $PLATFORM
