@@ -62,8 +62,10 @@ cd obj/com/hellokostya/helloandroid/
 pwd
 ls -l
 
+cd $PROJ
+
 #jar cvf TicTacToe.jar TicTacToe.class audio images
-jar cvf  MainActivity.class   com/hellokostya/helloandroid/MainActivity.class  res
+jar cvf  MainActivity.class   obj/com/hellokostya/helloandroid/MainActivity.class  res
 pwd 
 ls -l
 
