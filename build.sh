@@ -58,7 +58,7 @@ ls -l
 
 echo "Making JAR..."
 
-cd com/hellokostya/helloandroid/
+cd obj/com/hellokostya/helloandroid/
 pwd
 ls -l
 
