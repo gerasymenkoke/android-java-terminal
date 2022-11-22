@@ -65,7 +65,7 @@ cd $PROJ
 
 #jar cvf TicTacToe.jar TicTacToe.class audio images
 cd $PROJ/obj
-jar cvf  MainActivity.jar com/hellokostya/helloandroid/MainActivity.class #PROJ/src #PROJ/res
+jar cvf  MainActivity.jar com/hellokostya/helloandroid/MainActivity.class $PROJ/src $PROJ/res
 pwd 
 ls -l
 echo "Run Java..."
