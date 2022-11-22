@@ -58,6 +58,10 @@ ls -l
 
 echo "Making JAR..."
 
+cd com/hellokostya/helloandroid/
+pwd
+ls -l
+
 #jar cvf TicTacToe.jar TicTacToe.class audio images
 jar cvf  MainActivity.class   com/hellokostya/helloandroid/MainActivity.class  res
 pwd 
