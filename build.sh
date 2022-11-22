@@ -62,6 +62,8 @@ cd obj/com/hellokostya/helloandroid/
 pwd
 ls -l
 
+java -jar hello.jar
+
 cd $PROJ
 
 #jar cvf TicTacToe.jar TicTacToe.class audio images
