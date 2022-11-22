@@ -69,7 +69,7 @@ jar cfe  MainActivity.jar com.hellokostya.helloandroid.MainActivity $PROJ/obj $P
 pwd 
 ls -l
 echo "Run Java..."
-java -jar MainActivity.jar
+# java -jar MainActivity.jar
 
 cd $PROJ
 
