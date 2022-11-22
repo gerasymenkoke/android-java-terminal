@@ -65,7 +65,7 @@ cd $PROJ
 
 #jar cvf TicTacToe.jar TicTacToe.class audio images
 cd $PROJ/obj
-jar cfe  MainActivity.jar com.hellokostya.helloandroid.MainActivity obj src res
+jar cfe  MainActivity.jar com.hellokostya.helloandroid.MainActivity $PROJ/obj $PROJ/src $PROJ/res
 pwd 
 ls -l
 echo "Rub Java..."
