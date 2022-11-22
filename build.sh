@@ -64,7 +64,7 @@ echo "Making JAR..."
 cd $PROJ
 
 #jar cvf TicTacToe.jar TicTacToe.class audio images
-jar cvf  MainActivity.jar $PROJ/AndroidManifest.xml  obj/com/hellokostya/helloandroid/MainActivity.class  res
+jar cfe  hello.jar obj/com/hellokostya/helloandroid/MainActivity.class src/com/example/helloandroid/MainActivity.java res
 pwd 
 ls -l
 
