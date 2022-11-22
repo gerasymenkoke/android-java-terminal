@@ -64,7 +64,7 @@ echo "Making JAR..."
 cd $PROJ
 
 #jar cvf TicTacToe.jar TicTacToe.class audio images
-jar cfe  hello.jar com.hellokostya.helloandroid obj src res
+jar cfe  hello.jar MainActivity obj src res
 pwd 
 ls -l
 
