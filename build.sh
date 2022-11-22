@@ -68,7 +68,7 @@ jar cfe  hello.jar obj/com/hellokostya/helloandroid/MainActivity.class src/com/e
 pwd 
 ls -l
 
-java -jar MainActivity.jar
+java -jar hello.jar
 
 cd $PROJ
 
