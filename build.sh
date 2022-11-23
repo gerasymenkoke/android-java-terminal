@@ -65,11 +65,11 @@ cd $PROJ
 
 #jar cvf TicTacToe.jar TicTacToe.class audio images
 
-jar cmvf META-INF/MANIFEST.MF MainActivity.jar obj/com/hellokostya/helloandroid/MainActivity.class src res
-pwd 
-ls -l
+# jar cmvf META-INF/MANIFEST.MF MainActivity.jar obj/com/hellokostya/helloandroid/MainActivity.class src res
+# pwd 
+# ls -l
 echo "Run Java..."
-java -jar MainActivity.jar
+java -g -cp obj com.hellokostya.helloandroid.MainActivity
 
 
 
