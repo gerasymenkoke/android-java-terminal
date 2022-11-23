@@ -69,7 +69,7 @@ cd $PROJ
 # pwd 
 # ls -l
 echo "Run Java..."
-java -g -cp obj com.hellokostya.helloandroid.MainActivity
+java -cp obj com.hellokostya.helloandroid.MainActivity
 
 
 
