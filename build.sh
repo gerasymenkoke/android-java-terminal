@@ -69,7 +69,7 @@ jar cmvf META-INF/MANIFEST.MF MainActivity.jar obj/com/hellokostya/helloandroid/
 pwd 
 ls -l
 echo "Run Java..."
-# java -jar MainActivity.jar
+java -jar MainActivity.jar
 
 
 
