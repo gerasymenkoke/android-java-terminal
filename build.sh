@@ -64,8 +64,8 @@ echo "Making JAR..."
 cd $PROJ
 
 #jar cvf TicTacToe.jar TicTacToe.class audio images
-cd $PROJ/obj
-jar cvf  MainActivity.jar com/hellokostya/helloandroid/MainActivity.class $PROJ/src $PROJ/res
+
+jar cmvf META-INF/MANIFEST.MF MainActivity.jar obj/com/hellokostya/helloandroid/MainActivity.class src res
 pwd 
 ls -l
 echo "Run Java..."
