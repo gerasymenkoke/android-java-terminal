@@ -68,8 +68,8 @@ cd $PROJ
 # jar cmvf META-INF/MANIFEST.MF MainActivity.jar obj/com/hellokostya/helloandroid/MainActivity.class src res
 # pwd 
 # ls -l
-echo "Run Java..."
-java -cp obj com.hellokostya.helloandroid.MainActivity
+# echo "Run Java..."
+# java -cp obj com.hellokostya.helloandroid.MainActivity
 
 
 
