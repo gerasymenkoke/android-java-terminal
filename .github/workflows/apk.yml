@@ -104,7 +104,7 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
           name:  All
-          path: /home/runner/work/android-java-terminal/android-java-terminal/
+          path: /usr/local/lib/android/sdk/build-tools/30.0.0/
      
  
  
