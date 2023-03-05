@@ -103,8 +103,8 @@ jobs:
      
       uses: actions/upload-artifact@v3
       with:
-          name:  jdk-16.0.1-9
-          path: /opt/hostedtoolcache/Java_Adopt_jdk/16.0.1-9/x64
+          name:  android-31
+          path: /usr/local/lib/android/sdk/platforms/android-31/android.jar
      
  
  
