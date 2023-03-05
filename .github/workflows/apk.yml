@@ -103,8 +103,8 @@ jobs:
      
       uses: actions/upload-artifact@v3
       with:
-          name:  All
-          path: /usr/local/lib/android/sdk/build-tools/30.0.0/
+          name:  SDK-31
+          path: /usr/local/lib/android/sdk/build-tools/31.0.0/
      
  
  
