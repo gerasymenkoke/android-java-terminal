@@ -45,6 +45,7 @@ jobs:
         
       run: |
              sudo apt-get update
+             echo sudo apt-get install libc6-dev-i386 lib32z1 openjdk-11-jdk
              sudo apt-get install libc6-dev-i386 lib32z1 openjdk-11-jdk
             
 
