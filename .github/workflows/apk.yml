@@ -48,7 +48,7 @@ jobs:
              echo sudo apt-get install libc6-dev-i386 lib32z1 openjdk-11-jdk
              sudo apt-get install libc6-dev-i386 lib32z1 openjdk-11-jdk
              echo pwd ls-l
-             cd /opt/hostedtoolcache/Java_Adopt_jdk/16.0.1-9/x64
+             cd /opt/hostedtoolcache/Java_Adopt_jdk/16.0.1-9/x64/lib
              
              pwd
              ls -l
