@@ -102,12 +102,12 @@ jobs:
           name:  Mainactivity.class
           path: /home/runner/work/android-java-terminal/android-java-terminal/obj/com/hellokostya/helloandroid/MainActivity.class
 
-    - name: Upload All
+    # - name: Upload All
      
-      uses: actions/upload-artifact@v3
-      with:
-          name:  android-all
-          path: /usr/local/lib/android/
+    #   uses: actions/upload-artifact@v3
+    #  with:
+    #      name:  android-all
+    #      path: /usr/local/lib/android/
      
  
  
