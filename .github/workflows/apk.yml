@@ -44,9 +44,10 @@ jobs:
         KEYSTORE_JKS: ${{ secrets.KEYSTORE_JKS }}
         
       run: |
+             java -version
              sudo apt-get update
              echo sudo apt-get install libc6-dev-i386 lib32z1 openjdk-11-jdk
-             sudo apt-get install libc6-dev-i386 lib32z1 openjdk-11-jdk
+             sudo apt-get install libc6-dev-i386 lib32z1 
              echo pwd ls-l
              cd /opt/hostedtoolcache/Java_Adopt_jdk/16.0.1-9/x64/lib
              dpkg -L lib32z1
