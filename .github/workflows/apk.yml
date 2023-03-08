@@ -54,6 +54,10 @@ jobs:
              
              pwd
              ls -l
+             
+             cd usr/lib
+             pwd
+             ls -l
                   
             
              
