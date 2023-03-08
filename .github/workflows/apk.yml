@@ -50,21 +50,14 @@ jobs:
              sudo apt-get install libc6-dev-i386 lib32z1 
              echo pwd ls-l
              cd /opt/hostedtoolcache/Java_Adopt_jdk/16.0.1-9/x64/lib
+             dpkg -L libc6-dev-i386
              dpkg -L lib32z1
              
+             
              pwd
              ls -l
              
-             cd /usr/lib
-             pwd
-             ls -l
-             cd /usr/lib/jvm
-             pwd
-             ls -l
-                  
-             cd /usr/lib/jvm/temurin-11-jdk-amd64
-             pwd
-             ls -l
+             
              
              
              
