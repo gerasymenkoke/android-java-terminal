@@ -62,8 +62,9 @@ jobs:
              pwd
              ls -l
                   
-            
-             
+             cd /usr/lib/jvm/temurin-11-jdk-amd64
+             pwd
+             ls -l
              
              
              
