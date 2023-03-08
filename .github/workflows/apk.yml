@@ -58,6 +58,9 @@ jobs:
              cd /usr/lib
              pwd
              ls -l
+             cd /usr/lib/jvm
+             pwd
+             ls -l
                   
             
              
