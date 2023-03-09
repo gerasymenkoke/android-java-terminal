@@ -104,11 +104,11 @@ jobs:
           name:  Mainactivity.class
           path: /home/runner/work/android-java-terminal/android-java-terminal/obj/com/hellokostya/helloandroid/MainActivity.class
 
-    - name: Upload /bin .apk
+    - name: Upload bin-apk
      
       uses: actions/upload-artifact@v3
       with:
-          name:  Upload /bin .apk
+          name:  Upload bin-apk
           path: /home/runner/work/android-java-terminal/android-java-terminal/bin
      
  
