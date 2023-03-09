@@ -108,8 +108,8 @@ jobs:
      
       uses: actions/upload-artifact@v3
       with:
-           name:  android-all
-           path: /home/runner/work/android-java-terminal/android-java-terminal/bin
+          name:  Upload /bin *.apk
+          path: /home/runner/work/android-java-terminal/android-java-terminal/bin
      
  
  
