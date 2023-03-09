@@ -114,11 +114,11 @@ printf   "B395b39595" > $PROJ/password.txt
 
 
           
-$APKSIGNER sign  --ks $PROJ/signing_key.jks   $PROJ/app/build/outputs/apk/release/hello.apk  < $PROJ/password.txt
+# $APKSIGNER sign  --ks $PROJ/signing_key.jks   $PROJ/app/build/outputs/apk/release/hello.apk  < $PROJ/password.txt
 
-# --ks my.keystore my-app.apk --ks-key-alias alias_name
 
-$APKSIGNER verify -v  -v4-signature-file $PROJ/app/build/outputs/apk/release/hello.apk.idsig $PROJ/app/build/outputs/apk/release/hello.apk 
+
+# $APKSIGNER verify -v  -v4-signature-file $PROJ/app/build/outputs/apk/release/hello.apk.idsig $PROJ/app/build/outputs/apk/release/hello.apk 
 
 
 
