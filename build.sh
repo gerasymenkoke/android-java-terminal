@@ -215,61 +215,6 @@ $APKSIGNER verify -v  -v4-signature-file $PROJ/app/build/outputs/apk/release/hel
 
 
 
-echo "Making AAB..."
-
-echo "Compile resourses..."
-$AAPT2 compile --dir $PROJ/res/ -o $PROJ/obj/res.zip
-
-echo "Link resourses..."
-$AAPT2 link --proto-format -o $PROJ/obj/linked.zip -I $PLATFORM --manifest $PROJ/AndroidManifest.xml --java src $PROJ/obj/res.zip --auto-add-overlay
-
-echo "Compile the Java sources to bytecode"
-#javac -d obj -classpath src -bootclasspath $PLATFORM $PROJ/src/com/example/helloandroid/*.java
-javac -d obj -classpath src -bootclasspath $PLATFORM -source 1.7 -target 1.7 src/com/example/helloandroid/MainActivity.java
-echo "Convert the bytecode to Dex format (Dalvik Android virtual machine)"
-$DX --dex --output=bin/classes.dex obj
-
-echo "Combine the resources and the bytecode into a single bundle"
-cd $JAVA_HOME/bin
-pwd
-ls -l
-
-cd $PROJ/obj
-$JAVA_HOME/bin/jar  xf $PROJ/obj/linked.zip resources.pb AndroidManifest.xml res
-mkdir manifest dex 
-mv AndroidManifest.xml manifest
-cp ../bin/classes*.dex dex/ 
-echo "jar cmf"
-$JAVA_HOME/bin/jar cMf base.zip manifest dex res resources.pb
-
-echo "Build the AAB"
-wget https://github.com/google/bundletool/releases/download/1.11.2/bundletool-all-1.11.2.jar 
-pwd
-ls -l
-echo "Java -jar bundletool"
-
-$JAVA_HOME/bin/java -jar bundletool-all-1.11.2.jar build-bundle --modules=base.zip --output=../bin/hello.aab
-cd $PROJ/bin
-pwd
-ls -l
-
-
-
-
-echo "Sign AAB"
-$JAVA_HOME/bin/jarsigner --help
-cd $PROJ/bin
-echo "jarsigner....."
-cat $PROJ/password.txt
-cat $PROJ/signing_key.jks
-    
-
-$JAVA_HOME/bin/jarsigner  -keystore $PROJ/signing_key.jks   -storepass "B395b39595"    $PROJ/bin/hello.aab mykey
-
-$JAVA_HOME/bin/keytool -list -v -keystore $PROJ/signing_key.jks   -storepass "B395b39595"    
-
-
-
 
 
 
