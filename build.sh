@@ -59,23 +59,6 @@ ls -l
 echo "Making JAR..."
 
 
-
-
-cd $PROJ
-
-#jar cvf TicTacToe.jar TicTacToe.class audio images
-
-# jar cmvf META-INF/MANIFEST.MF MainActivity.jar obj/com/hellokostya/helloandroid/MainActivity.class src res
-# pwd 
-# ls -l
-# echo "Run Java..."
-# java -cp obj com.hellokostya.helloandroid.MainActivity
-
-
-
-
-
-
 cd $PROJ
 
 echo "Making APK..."
@@ -123,75 +106,12 @@ pwd
 ls -l
 
 
-# printf "B395b39595\n"  | $JAVA_HOME/bin/keytool -export -rfc -keystore $PROJ/signing_key.jks -alias alias -file $PROJ/signing_key.pem
-
-# $JAVA_HOME/bin/java -jar $PROJ/pepk.jar --keystore=signing_key.jks --keystore-pass="B395b39595" --alias=alias --output=$PROJ/signing_key.zip  --encryptionkey=eb10fe8f7c7c9df715022017b00c6471f8ba8170b13049a11e6c09ffe3056a104a3bbe4ac5a955f4ba4fe93fc8cef27558a3eb9d2a529a2092761fb833b656cd48b9de6a     
-
- 
- 
-
-
-
-
-
-
-
-# echo "signing_key.jks________\n"
-# cat $PROJ/signing_key.jks
-# echo "signing_key.jks________\n"
 
 
 
 
 printf   "B395b39595" > $PROJ/password.txt
-# echo $PROJ/p.txt
 
-#base64 $PROJ/password.txt > $PROJ/passwordb64
-#cat  $PROJ/passwordb64
-
-
-#base64 -d $PROJ/passwordb64 > $PROJ/password.txt
-#cat $PROJ/password.txt
-
-
-#echo "keystore64___________\n"
-
-# echo "$PASSWORDB64"  | base64 -D > $PROJ/password.txt
-#echo "$KEYSTORE_JKS" | base64 -D > $PROJ/keystore.jks
-
-
-#cat  $PROJ/keystore64
-#echo "keystore.jks___________\n"
-#base64 -d $PROJ/keystore64 > $PROJ/keystore.jks
-#cat $PROJ/keystore.jks
-
-
-
-
-
-#echo $PROJ/passwordb64.txt | base64 -d > $PROJ/password.txt
-
-
-
-
-
-# base64 -d  $KEYSTORE_JKS > $PROJ/keystore.jks
-
-
-
-# non work printf $KEYSTORE_JKS > $PROJ/keystore.jks
-
-
-
-#cat $PASSWORDB64
-# echo "keystore.jks_____________/n"
-#cat $PROJ/keystore.jks
-#echo  "____________/n"
-#cd /home/runner/work/android-java-terminal/android-java-terminal/
-#pwd
-#ls -l
-#chmod +x $PROJ/password.txt 
-#cat $PROJ/password.txt
 
           
 $APKSIGNER sign  --ks $PROJ/signing_key.jks   $PROJ/app/build/outputs/apk/release/hello.apk  < $PROJ/password.txt
