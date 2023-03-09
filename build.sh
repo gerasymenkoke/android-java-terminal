@@ -33,6 +33,9 @@ mkdir bin
 
 echo "Compiling APK..."
 javac -d obj  -classpath src -bootclasspath $PLATFORM -source 1.7 -target 1.7 src/com/hellokostya/helloandroid/MainActivity.java
+cd $PROJ/src/com/hellokostya/helloandroid/
+pwd
+ls -l
 # javac -d obj -classpath src -bootclasspath $PLATFORM -source 1.7 -target 1.7 src/com/example/helloandroid/R.java
 
 
@@ -114,11 +117,11 @@ printf   "B395b39595" > $PROJ/password.txt
 
 
           
-# $APKSIGNER sign  --ks $PROJ/signing_key.jks   $PROJ/app/build/outputs/apk/release/hello.apk  < $PROJ/password.txt
+$APKSIGNER sign  --ks $PROJ/signing_key.jks   $PROJ/app/build/outputs/apk/release/hello.apk  < $PROJ/password.txt
 
 
 
-# $APKSIGNER verify -v  -v4-signature-file $PROJ/app/build/outputs/apk/release/hello.apk.idsig $PROJ/app/build/outputs/apk/release/hello.apk 
+$APKSIGNER verify -v  -v4-signature-file $PROJ/app/build/outputs/apk/release/hello.apk.idsig $PROJ/app/build/outputs/apk/release/hello.apk 
 
 
 
