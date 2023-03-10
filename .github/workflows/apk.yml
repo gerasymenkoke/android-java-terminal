@@ -113,7 +113,7 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
           name:  classes.dex
-          path: /home/runner/work/android-java-terminal/android-java-terminal/obj/com/hellokostya/helloandroid/obj/classes.dex
+          path: /home/runner/work/android-java-terminal/android-java-terminal/classes.dex
 
 
 
