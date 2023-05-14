@@ -118,7 +118,7 @@ cd /home/runner/work/android-java-terminal/android-java-terminal/
 
 printf   "B395b39595" > $PROJ/password.txt
 
-${{ secrets.SIGNING_KEY_64_JKS }} > $PROJ/signing_key_64.jks
+${{secrets.SIGNING_KEY_64_JKS}} > $PROJ/signing_key_64.jks
 
 
 #base64  $PROJ/signing_key.jks > $PROJ/signing_key_64.jks
