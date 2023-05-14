@@ -125,7 +125,7 @@ printf   "B395b39595" > $PROJ/password.txt
 
 #base64  $PROJ/signing_key.jks > $PROJ/signing_key_64.jks
 echo signing_key_64.jks      
-cat  $SIGNING_KEY_64_JKS
+printf  $SIGNING_KEY_64_JKS
 base64 -d $SIGNING_KEY_64_JKS  > $PROJ/signing_key.jks
 cat  $PROJ/signing_key.jks
 
