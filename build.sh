@@ -104,10 +104,12 @@ cd /home/runner/work/android-java-terminal/android-java-terminal/
 
 
 
-echo 
- $JAVA_HOME/bin/keytool -list -v -keystore $PROJ/signing_key.jks   -storepass "B395b39595"    
-pwd
-ls -l
+
+#echo 
+# $JAVA_HOME/bin/keytool -list -v -keystore $PROJ/signing_key.jks   -storepass "B395b39595"    
+#pwd
+#ls -l
+
 
 
 
