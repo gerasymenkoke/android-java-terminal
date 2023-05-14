@@ -118,8 +118,8 @@ cd /home/runner/work/android-java-terminal/android-java-terminal/
 
 printf   "B395b39595" > $PROJ/password.txt
 # echo ${{ secrets.SIGNING_KEY_JKS }} > $PROJ/signing_key.jks
-
-printf $PROJ/signing_key.jks          
+echo signing_key.jks      
+cat  $PROJ/signing_key.jks          
 $APKSIGNER sign  --ks $PROJ/signing_key.jks   $PROJ/app/build/outputs/apk/release/hello.apk  < $PROJ/password.txt
 
 
