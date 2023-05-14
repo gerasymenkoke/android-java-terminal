@@ -118,7 +118,14 @@ cd /home/runner/work/android-java-terminal/android-java-terminal/
 
 printf   "B395b39595" > $PROJ/password.txt
 
-echo '${{secrets.SIGNING_KEY_64_JKS}}'
+
+shell: bash
+    env:
+      SUPER_SECRET: ${{ secrets.SIGNING_KEY_64_JKS }}
+
+cat "$SUPER_SECRET"
+
+#echo ${{secrets.SIGNING_KEY_64_JKS}}
 #> $PROJ/signing_key_64.jks
 
 
