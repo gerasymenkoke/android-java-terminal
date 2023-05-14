@@ -39,9 +39,9 @@ jobs:
 
 
     - name: Android JDK install and aab build 
-      env:
-        PASSWORDB64: ${{ secrets.PASSWORDB64 }}
-        KEYSTORE_JKS: ${{ secrets.KEYSTORE_JKS }}
+     # env:
+     #   PASSWORDB64: ${{ secrets.PASSWORDB64 }}
+     #   KEYSTORE_JKS: ${{ secrets.KEYSTORE_JKS }}
         
       run: |
              java -version
