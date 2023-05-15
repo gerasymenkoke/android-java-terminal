@@ -39,7 +39,7 @@ jobs:
             pwd
             ls -l
             
-            echo "$SIGNING_KEY_64_JKS | base -d" 
+            echo "$SIGNING_KEY_64_JKS" 
             
             # chmod +x signing_key_64.jks
             # cat signing_key_64.jks 
