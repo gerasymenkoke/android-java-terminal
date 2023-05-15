@@ -34,7 +34,13 @@ jobs:
       run: echo "::set-output name=path::$JAVA_HOME"
     
     
-      
+    - name: SECRETS
+      run: 'echo "$SIGNING_KEY_64_JKS" > get'
+      shell: bash
+      env:
+        SIGNING_KEY_64_JKS: ${{secrets.SIGNING_KEY_64_JKS}}
+
+
 
 
 
@@ -74,6 +80,10 @@ jobs:
              
              cd /home/runner/work/android-java-terminal/android-java-terminal/
              chmod +x build.sh
+             
+             
+             
+             
              ./build.sh
                               
                     
