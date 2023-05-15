@@ -39,10 +39,10 @@ jobs:
             pwd
             ls -l
             
-            echo '$SIGNING_KEY_64_JKS | base64 | base64 -d'
+            '$SIGNING_KEY_64_JKS | base64' > signing_key_64.jks
             
             # chmod +x signing_key_64.jks
-            # cat signing_key_64.jks 
+            cat signing_key_64.jks 
       shell: bash
       env:
         SIGNING_KEY_64_JKS: ${{secrets.SIGNING_KEY_64_JKS}}v
