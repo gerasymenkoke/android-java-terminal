@@ -116,7 +116,7 @@ cd /home/runner/work/android-java-terminal/android-java-terminal/
 
 
 
-printf   "B395b39595" > $PROJ/password.txt
+# printf   "B395b39595" > $PROJ/password.txt
 
 
 
