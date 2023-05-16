@@ -64,7 +64,10 @@ jobs:
         
       run: |
              
-             echo "$SIGNING_KEY_64_JKS | base64" 
+             echo "${{ secrets.SIGNING_KEY_64_JKS }}" | base64 --decode > SIGNING_KEY_64.jks 
+             #echo "$SIGNING_KEY_64_JKS | base64"
+             pwd
+             ls -l
              java -version
              sudo apt-get update
              echo sudo apt-get install libc6-dev-i386 lib32z1
