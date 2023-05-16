@@ -138,7 +138,7 @@ printf   "B395b39595" > $PROJ/password.txt
   
 
 
-$APKSIGNER sign  --ks  SIGNING_KEY_64.jks   $PROJ/app/build/outputs/apk/release/hello.apk  < $PROJ/password.txt
+$APKSIGNER sign  --ks  SIGNING_KEY_64.jks   $PROJ/app/build/outputs/apk/release/hello.apk  < PASSWORD.txt
 
 
 
