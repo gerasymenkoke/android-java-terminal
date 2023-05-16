@@ -45,7 +45,7 @@ jobs:
              
              echo "${{ secrets.SIGNING_KEY_64_JKS }}" | base64 --decode > SIGNING_KEY_64.jks 
              echo "${{ secrets.PASSWORD }}  | base64 --decode  "  > PASSWORD.txt
-             chmod +x PASSWORD.txt 
+             #chmod +x PASSWORD.txt 
              printf PASSWORD.txt 
              pwd
              ls -l
