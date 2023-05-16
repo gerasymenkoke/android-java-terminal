@@ -37,7 +37,7 @@ jobs:
       run: 
            |
             echo "KEY & PASSWORD":
-            'echo "KEY" | base64'
+            'echo "KEY" | base64 -d'
             'echo "$PASSWORD" '
       shell: bash
       env:
