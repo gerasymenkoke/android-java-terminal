@@ -33,20 +33,25 @@ jobs:
       id: java-home
       run: echo "::set-output name=path::$JAVA_HOME"
     
-    
+    - name: SECRET
+      run: 
+           |
+            echo "KEY & PASSWORD":
+            'echo "KEY" | base64'
+            'echo "$PASSWORD" '
+      shell: bash
+      env:
+          KEY: ${{ secrets.SIGNING_KEY_64_JKS }}
+          PASSWORD: ${{ secrets.PASSWORD }}
 
 
     - name: Android JDK install and aab build 
       
-      env: 
-             KEY: ${{ secrets.SIGNING_KEY_64_JKS }}
-             PASSWORD: ${{ secrets.PASSWORD }}
+               
  
         
       run: |
-             echo "KEY & PASSWORD":
-             'echo "KEY" | base64'
-             'echo "$PASSWORD" '
+            
              echo "${{ secrets.SIGNING_KEY_64_JKS }}" | base64 --decode > SIGNING_KEY_64.jks 
              echo "${{ secrets.PASSWORD }}"   > PASSWORD.txt
            
