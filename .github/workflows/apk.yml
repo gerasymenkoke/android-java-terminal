@@ -34,30 +34,37 @@ jobs:
       run: echo "::set-output name=path::$JAVA_HOME"
     
     
-    - name: SECRETS
-      run: | 
-            pwd
-            ls -l
+  #  - name: SECRETS
+  #    run: | 
+  #          pwd
+  #          ls -l
             
-            echo "$SIGNING_KEY_64_JKS" 
+  #          echo "$SIGNING_KEY_64_JKS" 
             
             # chmod +x signing_key_64.jks
             # cat signing_key_64.jks 
-      shell: bash
-      env:
-        SIGNING_KEY_64_JKS: ${{secrets.SIGNING_KEY_64_JKS}}v
+  #    shell: bash
+  #    env:
+  #    SIGNING_KEY_64_JKS: ${{secrets.SIGNING_KEY_64_JKS}}
        
 
 
 
 
     - name: Android JDK install and aab build 
+      shell: bash
+      env:
+        SIGNING_KEY_64_JKS: ${{secrets.SIGNING_KEY_64_JKS}}
+
+    
      # env:
      #   SIGNING_KEY_64_JKS: ${{ secrets.SIGNING_KEY_64_JKS }}
      #   PASSWORDB64: ${{ secrets.PASSWORDB64 }}
      #   KEYSTORE_JKS: ${{ secrets.KEYSTORE_JKS }}
         
       run: |
+             
+             echo "$SIGNING_KEY_64_JKS | base64" 
              java -version
              sudo apt-get update
              echo sudo apt-get install libc6-dev-i386 lib32z1
