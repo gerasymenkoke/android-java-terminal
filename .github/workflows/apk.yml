@@ -36,14 +36,14 @@ jobs:
     
     
     - name: SECRET_KEY 
-      #run:   'echo "$KEY" | base64 -d '  
+      run:   'echo "$KEY" | base64 -d '  
       shell: bash
       env:
           KEY: ${{ secrets.SIGNING_KEY_64_JKS }}
           
 
     - name: SECRET_PASWORD 
-      #run:  'echo "$PASSWORD" | base64 -d '
+      run:  'echo "$PASSWORD" | base64 -d '
       shell: bash
       env:
           PASSWORD: ${{ secrets.PASSWORD }}
