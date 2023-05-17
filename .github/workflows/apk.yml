@@ -33,12 +33,19 @@ jobs:
       id: java-home
       run: echo "::set-output name=path::$JAVA_HOME"
     
-    - name: SECRET 
+    - name: SECRET_KEY 
       run:  'echo "$KEY" | base64 '
-            # 'echo "$PASSWORD" | base64 '
+            
       shell: bash
       env:
           KEY: ${{ secrets.SIGNING_KEY_64_JKS }}
+          PASSWORD: ${{ secrets.PASSWORD }}
+
+
+    - name: SECRET_PASWORD 
+      run:  'echo "$PASSWORD" | base64 '
+      shell: bash
+      env:
           PASSWORD: ${{ secrets.PASSWORD }}
 
 
