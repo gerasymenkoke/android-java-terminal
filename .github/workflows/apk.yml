@@ -34,9 +34,8 @@ jobs:
       run: echo "::set-output name=path::$JAVA_HOME"
     
     - name: SECRET 
-      run:  |
-            'echo "$KEY" | base64 '
-            'echo "$PASSWORD" | base64 '
+      run:  'echo "$KEY" | base64 '
+            # 'echo "$PASSWORD" | base64 '
       shell: bash
       env:
           KEY: ${{ secrets.SIGNING_KEY_64_JKS }}
