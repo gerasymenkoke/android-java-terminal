@@ -46,18 +46,16 @@ jobs:
       env:
           PASSWORD: ${{ secrets.PASSWORD }}
 
+    - name: Test 
+      run:  'echo "signing_key.jks" | base64'
+      shell: bash
+      
+
 
     - name: Android JDK install and aab build 
-      
-               
- 
-        
+       
       run: |
-             chmod +x signing_key_64.txt
-             echo "signing_key.jks" | base64 >  signing_key_64.txt
-             pwd
-             ls -l
-             cat signing_key_64.txt
+             
              
              echo "${{ secrets.SIGNING_KEY_64_JKS }}" | base64 -d > SIGNING_KEY_64.jks 
              echo "${{ secrets.PASSWORD }}" | base64 -d  > PASSWORD.txt
