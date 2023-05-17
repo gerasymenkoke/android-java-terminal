@@ -41,7 +41,7 @@ jobs:
           
 
     - name: SECRET_PASWORD 
-      run:  'echo "$PASSWORD" | base64 '
+      run:  'echo "$PASSWORD" | base64 -d '
       shell: bash
       env:
           PASSWORD: ${{ secrets.PASSWORD }}
