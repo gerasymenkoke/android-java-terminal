@@ -64,7 +64,7 @@ jobs:
           PASSWORD_64: ${{ secrets.PASSWORD_64 }}
 
 
-    - name: SECRET_PASWORD_64 
+    - name: SECRET_PASWORD_64_64 
       run:  echo "$PASSWORD" | base64 -d 
       # this  data equals data in secret. For checking, use  https://base64.guru/converter
       shell: bash
