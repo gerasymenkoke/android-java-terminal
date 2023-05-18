@@ -36,8 +36,9 @@ jobs:
     
     
     - name: SECRET_KEY 
-      run: ' echo "$KEY" | base64 -d    > signing_key.txt '
-                      
+      run:  echo "$KEY" | base64 -d 
+      # this  data equals data in secret after convert file > base64 format
+      # use  https://base64.guru/converter
              
       shell: bash
       env:
@@ -49,7 +50,9 @@ jobs:
        
 
     - name: SECRET_PASWORD 
-      run:  'echo "$PASSWORD" | base64 -d '
+      run:  echo "$PASSWORD" | base64 -d 
+      # this  data equals data in secret after convert txt > base64 format
+      # use  https://base64.guru/converter
       shell: bash
       env:
           PASSWORD: ${{ secrets.PASSWORD }}
@@ -61,13 +64,7 @@ jobs:
     - name: Android JDK install and aab build 
        
       run: |
-             cat signing_key.txt
-             base64 signing_key.txt >  signing_key_64.txt
-             cat signing_key_64.txt
-              
-             
              echo "${{ secrets.SIGNING_KEY_64_JKS }}" | base64 -d > SIGNING_KEY_64.jks 
-            
              echo "${{ secrets.PASSWORD }}" | base64 -d  > PASSWORD.txt
           
              pwd
