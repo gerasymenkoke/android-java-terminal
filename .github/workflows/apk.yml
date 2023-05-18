@@ -37,39 +37,22 @@ jobs:
     
     - name: SECRET_KEY_64 
       run:  echo "$KEY_64" | base64 -d 
-      # this  sourse data no equals data in secret(there base64 format). For checking, use  https://base64.guru/converter            
+      # this  sourse data no equals data in secret(there base64 format). 
+      # For checking, use  https://base64.guru/converter  File(jks) to Base64           
       shell: bash
       env:
           KEY_64: ${{ secrets.SIGNING_KEY_64_JKS }}
     
-       
-    - name: SECRET_KEY_64_64 
-      run:  echo "$KEY_64_64" | base64 -d 
-      # this  data equals data in secret. For checking, use  https://base64.guru/converter
-             
+    - name: SECRET_PASWORD_64 
+      run:  echo "$PASSWORD_64" | base64 -d > PASSWORD.txt
+       # this  sourse data no equals data in secret(there base64 format).
+       # For checking, use  https://base64.guru/converter txt (password) to Base64 
       shell: bash
       env:
-          KEY_64_64: ${{ secrets.SIGNING_KEY_64_64_JKS }}
-       
-           
-             
-       
-       
-
-  #  - name: SECRET_PASWORD_64 
-  #    run:  echo "$PASSWORD_64" | base64 -d > PASSWORD.txt
-  #     # this  sourse data no equals data in secret(there base64 format). For checking, use  https://base64.guru/converter
-  #    shell: bash
-  #    env:
-  #        PASSWORD_64: ${{ secrets.PASSWORD_64 }}
+          PASSWORD_64: ${{ secrets.PASSWORD_64 }}
 
 
-    - name: SECRET_PASWORD_64_64 
-      run:  echo "$PASSWORD_64_64" | base64 -d > PASSWORD_64.txt
-      # this  data equals data in secret. For checking, use  https://base64.guru/converter
-      shell: bash
-      env:
-          PASSWORD_64_64: ${{ secrets.PASSWORD_64_64 }}
+   
    
    
       
@@ -79,21 +62,9 @@ jobs:
     - name: Android JDK install and aab build 
        
       run: |
-             cat PASSWORD_64.txt 
-             
-             
-             #echo "${{ secrets.SIGNING_KEY_64_JKS }}" | base64 -d > SIGNING_KEY.jks 
-              
-              
-             # cat PASSWORD.txt
-                     
-             # echo "${{ secrets.PASSWORD_64_64 }}" | base64 -d  > PASSWORD_64.txt
-             # base64 -d PASSWORD_64.txt > PASSWORD_64.txt
-             
-             
-              
-             # echo "${{ secrets.PASSWORD_64 }}" | base64 -d  > PASSWORD.txt
-             
+             echo "${{ secrets.SIGNING_KEY_64_JKS }}" | base64 -d > SIGNING_KEY.jks 
+             echo "${{ secrets.PASSWORD_64 }}" | base64 -d  > PASSWORD.txt
+                          
              pwd
              ls -l
              java -version
