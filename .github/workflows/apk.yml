@@ -55,7 +55,7 @@ jobs:
       # use  https://base64.guru/converter
       shell: bash
       env:
-          PASSWORD: ${{ secrets.PASSWORD }}
+          PASSWORD: ${{ secrets.PASSWORD_64 }}
 
    
 
