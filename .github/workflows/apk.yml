@@ -57,7 +57,7 @@ jobs:
        
 
     - name: SECRET_PASWORD_64 
-      run:  echo "$PASSWORD_64" | base64 -d 
+      run:  echo "$PASSWORD_64" | base64 -d > PASSWORD.txt
        # this  sourse data no equals data in secret(there base64 format). For checking, use  https://base64.guru/converter
       shell: bash
       env:
