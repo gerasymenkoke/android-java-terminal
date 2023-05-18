@@ -64,9 +64,11 @@ jobs:
     - name: Android JDK install and aab build 
        
       run: |
-             echo "${{ secrets.SIGNING_KEY_64_JKS }}" | base64 -d > SIGNING_KEY_64.jks 
-             echo "${{ secrets.PASSWORD }}" | base64 -d  > PASSWORD.txt
-          
+             echo "${{ secrets.SIGNING_KEY_64_JKS }}" | base64 -d > SIGNING_KEY.jks 
+             head -c 8 SIGNING_KEY.jks | xxd 
+             
+             echo "${{ secrets.PASSWORD_64 }}" | base64 -d  > PASSWORD.txt
+             
              pwd
              ls -l
              java -version
