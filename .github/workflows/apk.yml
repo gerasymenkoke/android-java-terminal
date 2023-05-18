@@ -52,8 +52,7 @@ jobs:
           KEY_64_64: ${{ secrets.SIGNING_KEY_64_64_JKS }}
        
            
-       
-       
+             
        
 
     - name: SECRET_PASWORD_64 
