@@ -38,7 +38,8 @@ jobs:
     - name: SECRET_KEY_64 
       run:  echo "$KEY_64" | base64 -d 
       # this  sourse data no equals data in secret(there base64 format). 
-      # For checking, use  https://base64.guru/converter  File(jks) to Base64           
+      # For checking, use  https://base64.guru/converter  
+      # HEX(below make copy paste an result xxd -p SIGNING_KEY.jks) to Base64           
       shell: bash
       env:
           KEY_64: ${{ secrets.SIGNING_KEY_64_JKS }}
