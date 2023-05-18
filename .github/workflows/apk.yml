@@ -35,27 +35,44 @@ jobs:
     
     
     
-    - name: SECRET_KEY 
-      run:  echo "$KEY" | base64 -d 
-      # this  data equals data in secret after convert file > base64 format
-      # use  https://base64.guru/converter
+    - name: SECRET_KEY_64 
+      run:  echo "$KEY_64" | base64 -d 
+      # this  sourse data no equals data in secret(there base64 format). For checking, use  https://base64.guru/converter            
+      shell: bash
+      env:
+          KEY_64: ${{ secrets.SIGNING_KEY_64_JKS }}
+    
+       
+    - name: SECRET_KEY_64_64 
+      run:  echo "$KEY_64_64" | base64 -d 
+      # this  data equals data in secret. For checking, use  https://base64.guru/converter
              
       shell: bash
       env:
-          KEY: ${{ secrets.SIGNING_KEY_64_JKS }}
-    
+          KEY_64_64: ${{ secrets.SIGNING_KEY_64_64_JKS }}
+       
+           
        
        
        
 
-    - name: SECRET_PASWORD 
+    - name: SECRET_PASWORD_64 
       run:  echo "$PASSWORD" | base64 -d 
-      # this  data equals data in secret after convert txt > base64 format
-      # use  https://base64.guru/converter
+      # this  sourse data no equals data in secret(there base64 format). For checking, use  https://base64.guru/converter
       shell: bash
       env:
-          PASSWORD: ${{ secrets.PASSWORD_64 }}
+          PASSWORD_64: ${{ secrets.PASSWORD_64 }}
 
+
+    - name: SECRET_PASWORD_64 
+      run:  echo "$PASSWORD" | base64 -d 
+      # this  data equals data in secret. For checking, use  https://base64.guru/converter
+      shell: bash
+      env:
+          PASSWORD_64_64: ${{ secrets.PASSWORD_64_64 }}
+   
+   
+   
    
 
 
