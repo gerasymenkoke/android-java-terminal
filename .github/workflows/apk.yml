@@ -83,6 +83,7 @@ jobs:
                      
              # echo "${{ secrets.PASSWORD_64_64 }}" | base64 -d  > PASSWORD_64.txt
              # cat PASSWORD.txt 
+             echo "!" >> PASSWORD_64.txt
              cat PASSWORD_64.txt 
              
              pwd
