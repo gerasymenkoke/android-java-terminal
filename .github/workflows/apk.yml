@@ -81,8 +81,8 @@ jobs:
              echo "${{ secrets.SIGNING_KEY_64_JKS }}" | base64 -d > SIGNING_KEY.jks 
                 
                      
-             # echo "${{ secrets.PASSWORD_64_64 }}" | base64 -d  > PASSWORD_64.txt
-             # cat PASSWORD.txt 
+             echo "${{ secrets.PASSWORD_64_64 }}" | base64 -d  > PASSWORD_64.txt
+             cat PASSWORD_64.txt 
              
               
              # echo "${{ secrets.PASSWORD_64 }}" | base64 -d  > PASSWORD.txt
