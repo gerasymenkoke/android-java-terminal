@@ -55,12 +55,12 @@ jobs:
              
        
 
-    - name: SECRET_PASWORD_64 
-      run:  echo "$PASSWORD" | base64 -d  
-      # this  sourse data no equals data in secret(there base64 format). For checking, use  https://base64.guru/converter
-      shell: bash
-      env:
-          PASSWORD_64: ${{ secrets.PASSWORD_64 }}
+  #  - name: SECRET_PASWORD_64 
+  #    run:  echo "$PASSWORD" | base64 -d  
+  #    # this  sourse data no equals data in secret(there base64 format). For checking, use  https://base64.guru/converter
+  #    shell: bash
+  #    env:
+  #        PASSWORD_64: ${{ secrets.PASSWORD_64 }}
 
 
     - name: SECRET_PASWORD_64_64 
@@ -79,11 +79,10 @@ jobs:
        
       run: |
              echo "${{ secrets.SIGNING_KEY_64_JKS }}" | base64 -d > SIGNING_KEY.jks 
-                   
-             echo "${{ secrets.PASSWORD_64 }}" | base64 -d  > PASSWORD.txt
-             
+                
+                     
              echo "${{ secrets.PASSWORD_64_64 }}" | base64 -d  > PASSWORD_64.txt
-             cat PASSWORD.txt 
+             # cat PASSWORD.txt 
              cat PASSWORD_64.txt 
              
              pwd
