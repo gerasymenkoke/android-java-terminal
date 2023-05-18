@@ -138,7 +138,7 @@ cd /home/runner/work/android-java-terminal/android-java-terminal/
   
 
 
-$APKSIGNER sign  --ks  SIGNING_KEY_64.jks   $PROJ/app/build/outputs/apk/release/hello.apk  < PASSWORD.txt
+$APKSIGNER sign  --ks  SIGNING_KEY.jks   $PROJ/app/build/outputs/apk/release/hello.apk  < PASSWORD.txt
 
 
 
