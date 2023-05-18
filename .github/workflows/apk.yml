@@ -63,6 +63,8 @@ jobs:
       run: |
              echo "${{ secrets.SIGNING_KEY_64_JKS }}" | base64 -d > SIGNING_KEY.jks 
              echo "${{ secrets.PASSWORD_64 }}" | base64 -d  > PASSWORD.txt
+             echo "make copy-paste this HEX to converter HEX to base64 to get base64 code and paste it
+             in  secret action " 
              xxd -p SIGNING_KEY.jks
              
              pwd
