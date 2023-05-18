@@ -64,7 +64,7 @@ jobs:
 
 
     - name: SECRET_PASWORD_64_64 
-      run:  echo "$PASSWORD" | base64 -d > PASSWORD_64.txt
+      run:  echo "$PASSWORD_64_64" | base64 -d > PASSWORD_64.txt
       # this  data equals data in secret. For checking, use  https://base64.guru/converter
       shell: bash
       env:
@@ -81,7 +81,7 @@ jobs:
              echo "${{ secrets.SIGNING_KEY_64_JKS }}" | base64 -d > SIGNING_KEY.jks 
                 
                      
-             echo "${{ secrets.PASSWORD_64_64 }}" | base64 -d  > PASSWORD_64.txt
+             # echo "${{ secrets.PASSWORD_64_64 }}" | base64 -d  > PASSWORD_64.txt
              # cat PASSWORD.txt 
              cat PASSWORD_64.txt 
              
